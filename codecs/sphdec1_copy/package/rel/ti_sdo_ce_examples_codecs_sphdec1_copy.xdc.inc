@@ -1,0 +1,12 @@
+makefile
+SPHDEC1_COPY.xdc
+package.xdc
+package.xs
+SPHDEC1_COPY.xs
+package.bld
+package/build.cfg
+package/package.cfg.xdc.inc
+package/package.ext.xml
+package/package.xdc.inc
+package/package.bld.xml
+package/package.rel.dot

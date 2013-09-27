@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="ti.sdo.ce.examples.codecs.videnc_copy" version="1, 0, 0" producerId="undefined">
+    <units>
+        <module name="VIDENC_COPY"/>
+    </units>
+    <sources>
+        <srcFile name="package/package_ti.sdo.ce.examples.codecs.videnc_copy.c"/>
+        <srcFile name="videnc_copy.c"/>
+    </sources>
+    <configurations>
+    </configurations>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/package.cfg.dep" src="package.xdc"/>
+        <srcFile name="lib/videnc_copy.av5T.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/videnc_copy/package/package_ti.sdo.ce.examples.codecs.videnc_copy.ov5T.dep" src="package/package_ti.sdo.ce.examples.codecs.videnc_copy.c"/>
+        <srcFile name="package/lib/lib/videnc_copy/videnc_copy.ov5T.dep" src="videnc_copy.c"/>
+        <srcFile name="lib/videnc_copy.a64P.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/videnc_copy/package/package_ti.sdo.ce.examples.codecs.videnc_copy.o64P.dep" src="package/package_ti.sdo.ce.examples.codecs.videnc_copy.c"/>
+        <srcFile name="package/lib/lib/videnc_copy/videnc_copy.o64P.dep" src="videnc_copy.c"/>
+        <srcFile name="lib/videnc_copy_dma.a64P.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/videnc_copy_dma/package/package_ti.sdo.ce.examples.codecs.videnc_copy.o64P.dep" src="package/package_ti.sdo.ce.examples.codecs.videnc_copy.c"/>
+        <srcFile name="package/lib/lib/videnc_copy_dma/videnc_copy.o64P.dep" src="videnc_copy.c"/>
+        <srcFile name="package/rel/ti_sdo_ce_examples_codecs_videnc_copy.tar.dep" src="package/rel/ti_sdo_ce_examples_codecs_videnc_copy.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="gnu.targets.arm.GCArmv5T"
+            version="gnu.targets.arm.GCArmv5T{1,0,4.3,2"
+            platform="host.platforms.arm"
+            isa="v5T"
+            suffix="v5T"
+            rootDir="/home/jack/new/arm/4.3.2"
+            os="Linux"
+            rts="gnu.targets.arm.rtsv5T">
+            <model endian="little"
+                codeModel="undefined"
+                dataModel="undefined"/>
+        </target>
+        <target name="ti.targets.C64P"
+            version="ti.targets.C64P{1,0,6.1,14"
+            platform="ti.platforms.sim6xxx:TMS320CDM420"
+            isa="64P"
+            suffix="64P"
+            rootDir="/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14"
+            os="undefined"
+            rts="ti.targets.rts6000">
+            <model endian="little"
+                codeModel="undefined"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    <library name="lib/videnc_copy"
+        pname="lib/videnc_copy.av5T"
+        profile="release"
+        target="gnu.targets.arm.GCArmv5T"/>
+    <library name="lib/videnc_copy"
+        pname="lib/videnc_copy.a64P"
+        profile="release"
+        target="ti.targets.C64P"/>
+    <library name="lib/videnc_copy_dma"
+        pname="lib/videnc_copy_dma.a64P"
+        profile="release"
+        target="ti.targets.C64P"/>
+    </libraries>
+    <executables>
+    </executables>
+    <tests>
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="ti_sdo_ce_examples_codecs_videnc_copy"
+        pname="ti_sdo_ce_examples_codecs_videnc_copy.tar"
+        label="default"
+    >
+        <file name="package/package.cfg.xdc.inc"/>
+        <file name="package/package.xdc.inc"/>
+        <file name="package/package.rel.dot"/>
+        <file name="lib/videnc_copy.av5T"/>
+        <file name="lib/videnc_copy_dma.a64P"/>
+        <file name="package/package.bld.xml"/>
+        <file name="lib/videnc_copy.a64P"/>
+        <file name="package/package.ext.xml"/>
+        <file name="package/build.cfg"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>

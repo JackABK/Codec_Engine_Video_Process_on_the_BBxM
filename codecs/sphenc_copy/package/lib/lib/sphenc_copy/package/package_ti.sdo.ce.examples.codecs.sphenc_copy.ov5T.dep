@@ -1,0 +1,8 @@
+  package/lib/lib/sphenc_copy/package/package_ti.sdo.ce.examples.codecs.sphenc_copy.ov5T:   package/package_ti.sdo.ce.examples.codecs.sphenc_copy.c   /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/xdc/std.h   /home/jack/new/arm/4.3.2/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.2/include/stdarg.h   /home/jack/new/arm/4.3.2/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.2/include/stddef.h   /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/gnu/targets/arm/std.h   /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/gnu/targets/arm/GCArmv5T.h   /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/gnu/targets/std.h
+package/package_ti.sdo.ce.examples.codecs.sphenc_copy.c:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/xdc/std.h:
+/home/jack/new/arm/4.3.2/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.2/include/stdarg.h:
+/home/jack/new/arm/4.3.2/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.2/include/stddef.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/gnu/targets/arm/std.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/gnu/targets/arm/GCArmv5T.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/gnu/targets/std.h:

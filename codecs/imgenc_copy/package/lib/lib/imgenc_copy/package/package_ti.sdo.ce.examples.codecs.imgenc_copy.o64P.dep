@@ -1,0 +1,7 @@
+package/lib/lib/imgenc_copy/package/package_ti.sdo.ce.examples.codecs.imgenc_copy.o64P: package/package_ti.sdo.ce.examples.codecs.imgenc_copy.c /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/xdc/std.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stdarg.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stddef.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/ti/targets/std.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stdint.h 
+package/package_ti.sdo.ce.examples.codecs.imgenc_copy.c:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/xdc/std.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stdarg.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stddef.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/ti/targets/std.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stdint.h:

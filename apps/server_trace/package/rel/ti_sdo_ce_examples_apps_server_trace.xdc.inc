@@ -1,0 +1,11 @@
+makefile
+package.bld
+trace.c
+package.xdc
+remote.cfg
+main_native.c
+package/build.cfg
+package/package.ext.xml
+package/package.xdc.inc
+package/package.bld.xml
+package/package.rel.dot

@@ -1,0 +1,26 @@
+package/lib/lib/sphenc_copy/sphenc_copy.ov5T: sphenc_copy.c   /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/xdc/std.h   /home/jack/new/arm/4.3.2/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.2/include/stdarg.h   /home/jack/new/arm/4.3.2/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.2/include/stddef.h   /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/gnu/targets/arm/std.h   /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/gnu/targets/arm/GCArmv5T.h   /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/gnu/targets/std.h   /home/jack/new/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/string.h   /home/jack/new/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/features.h   /home/jack/new/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/predefs.h   /home/jack/new/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/cdefs.h   /home/jack/new/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/wordsize.h   /home/jack/new/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/gnu/stubs.h   /home/jack/new/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/string.h   /home/jack/new/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/string2.h   /home/jack/new/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/stdlib.h   /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/dm/isphenc.h   /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/ialg.h   /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/xdas.h   /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/dm/xdm.h   /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/dm/ispeech.h   /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/codec-engine_2_26_01_09/packages/ti/sdo/ce/trace/gt.h   /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/framework-components_2_25_03_07/packages/ti/sdo/utils/trace/gt.h   sphenc_copy_ti.h sphenc_copy_ti_priv.h
+sphenc_copy.c:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/xdc/std.h:
+/home/jack/new/arm/4.3.2/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.2/include/stdarg.h:
+/home/jack/new/arm/4.3.2/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.2/include/stddef.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/gnu/targets/arm/std.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/gnu/targets/arm/GCArmv5T.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/gnu/targets/std.h:
+/home/jack/new/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/string.h:
+/home/jack/new/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/features.h:
+/home/jack/new/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/predefs.h:
+/home/jack/new/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/cdefs.h:
+/home/jack/new/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/wordsize.h:
+/home/jack/new/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/gnu/stubs.h:
+/home/jack/new/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/string.h:
+/home/jack/new/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/string2.h:
+/home/jack/new/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/stdlib.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/dm/isphenc.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/ialg.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/xdas.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/dm/xdm.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/dm/ispeech.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/codec-engine_2_26_01_09/packages/ti/sdo/ce/trace/gt.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/framework-components_2_25_03_07/packages/ti/sdo/utils/trace/gt.h:
+sphenc_copy_ti.h:
+sphenc_copy_ti_priv.h:

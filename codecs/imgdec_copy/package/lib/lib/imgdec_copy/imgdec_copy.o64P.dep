@@ -1,0 +1,17 @@
+package/lib/lib/imgdec_copy/imgdec_copy.o64P: imgdec_copy.c /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/xdc/std.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/string.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/dm/iimgdec.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/codec-engine_2_26_01_09/packages/ti/sdo/ce/trace/gt.h ./imgdec_copy_ti.h ./imgdec_copy_ti_priv.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stdarg.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stddef.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/ti/targets/std.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/linkage.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/ialg.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/xdas.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/dm/xdm.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/framework-components_2_25_03_07/packages/ti/sdo/utils/trace/gt.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stdint.h 
+imgdec_copy.c:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/xdc/std.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/string.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/dm/iimgdec.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/codec-engine_2_26_01_09/packages/ti/sdo/ce/trace/gt.h:
+./imgdec_copy_ti.h:
+./imgdec_copy_ti_priv.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stdarg.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stddef.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/ti/targets/std.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/linkage.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/ialg.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/xdas.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/dm/xdm.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/framework-components_2_25_03_07/packages/ti/sdo/utils/trace/gt.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stdint.h:

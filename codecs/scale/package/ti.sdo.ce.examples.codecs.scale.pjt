@@ -1,0 +1,10 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+[Project Settings]
+ProjectName="ti.sdo.ce.examples.codecs.scale"
+ProjectType=External
+CPUFamily=TMS320C64XX
+Tool="CustomBuilder"
+Config="Package"
+[Source Files]
+Source="../scale_ti_impl.c"
+Source="../package/package_ti.sdo.ce.examples.codecs.scale.c"

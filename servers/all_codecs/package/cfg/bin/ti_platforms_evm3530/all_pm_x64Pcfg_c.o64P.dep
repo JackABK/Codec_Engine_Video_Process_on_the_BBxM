@@ -1,0 +1,25 @@
+package/cfg/bin/ti_platforms_evm3530/all_pm_x64Pcfg_c.o64P: package/cfg/bin/ti_platforms_evm3530/all_pm_x64Pcfg_c.c package/cfg/bin/ti_platforms_evm3530/all_pm_x64Pcfg.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/std.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/swi.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/tsk.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/log.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/tistdtypes.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/fxn.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/sts.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/hwi.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stdarg.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stddef.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/knl.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/prd.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/sem.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/sys.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/trg.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/_hook.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/_log.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/trc.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/atm.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/que.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/obj.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/mem.h 
+package/cfg/bin/ti_platforms_evm3530/all_pm_x64Pcfg_c.c:
+package/cfg/bin/ti_platforms_evm3530/all_pm_x64Pcfg.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/std.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/swi.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/tsk.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/log.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/tistdtypes.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/fxn.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/sts.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/hwi.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stdarg.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stddef.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/knl.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/prd.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/sem.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/sys.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/trg.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/_hook.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/_log.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/trc.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/atm.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/que.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/obj.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/dspbios_5_41_03_17/packages/ti/bios/include/mem.h:

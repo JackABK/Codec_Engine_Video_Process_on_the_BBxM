@@ -1,0 +1,16 @@
+package/lib/lib/audenc_copy/audenc_copy.o64P: audenc_copy.c /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/xdc/std.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/string.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/dm/iaudenc.h ./audenc_copy_ti.h ./audenc_copy_ti_priv.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stdarg.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stddef.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/ti/targets/std.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/linkage.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/ialg.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/xdas.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/dm/xdm.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/dm/iaudio.h /home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stdint.h 
+audenc_copy.c:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/xdc/std.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/string.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/dm/iaudenc.h:
+./audenc_copy_ti.h:
+./audenc_copy_ti_priv.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stdarg.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stddef.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdctools_3_16_03_36/packages/ti/targets/std.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/linkage.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/ialg.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/xdas.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/dm/xdm.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/xdais_6_26_00_02/packages/ti/xdais/dm/iaudio.h:
+/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14/include/stdint.h:

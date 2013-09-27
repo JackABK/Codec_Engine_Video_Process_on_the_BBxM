@@ -1,0 +1,16 @@
+package.xdc
+package.xs
+AUDDEC1_IRES.xdc
+AUDDEC1_IRES.xs
+package/ti.sdo.ce.examples.codecs.auddec1_ires.sch
+package/.vers_g160
+package/.vers_r170
+package/.vers_b150
+package/.vers_c150
+package/.xdc-u17
+package/ti_sdo_ce_examples_codecs_auddec1_ires.java
+package/ti_sdo_ce_examples_codecs_auddec1_ires.class
+package/package_ti.sdo.ce.examples.codecs.auddec1_ires.c
+package/package.defs.h
+package/package.doc.xml
+package/ti.sdo.ce.examples.codecs.auddec1_ires.ccs
