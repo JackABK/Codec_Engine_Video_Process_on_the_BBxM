@@ -516,7 +516,6 @@ static Void encode_decode(VIDENC_Handle enc, VIDDEC_Handle dec, FILE *in,
 
         
 
-        //memset(encodedBuf, 'n', 1024 );
         /* write to file */
         //fwrite(encodedBuf, EFRAMESIZE, 1, out);
 
