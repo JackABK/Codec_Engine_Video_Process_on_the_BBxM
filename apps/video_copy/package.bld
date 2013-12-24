@@ -130,6 +130,7 @@ function addExe(targ, platform, cfg)
      * .cfg script.
      */
     var srcs = ["app.c"];
+	srcs.push("v4l2grab.c"); /*JackABK added*/
     if (targ.os == undefined) {
         /* BIOS app */
         srcs.push("main_BIOS.c");
