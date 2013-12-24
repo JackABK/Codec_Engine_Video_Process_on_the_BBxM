@@ -92,10 +92,18 @@
 #endif
 
 
+/*Image Display ??*/
+#define USE_IMAGE_DISPLAY
+
+
+
 #define NSAMPLES    320*240  /* must be multiple of 128 for cache/DMA reasons */
 #define IFRAMESIZE  (NSAMPLES * 2 * sizeof(Int8))  /* raw frame (input) */
 #define EFRAMESIZE  (NSAMPLES * 3 * sizeof(Int8))  /* encoded frame */
 #define OFRAMESIZE  (NSAMPLES * sizeof(Int8))  /* decoded frame (output) */
+
+
+
 static XDAS_Int8 *inBuf;
 static XDAS_Int8 *encodedBuf;
 static XDAS_Int8 *outBuf;
@@ -414,8 +422,10 @@ static Void encode_decode(VIDENC_Handle enc, VIDDEC_Handle dec, FILE *in,
 
 
     /* opencv create init image */
+	#ifdef USE_IMAGE_DISPLAY
     //cvNamedWindow("sobel",CV_WINDOW_AUTOSIZE);
     //cvResizeWindow("sobel",320,240);//怕畫面太大讓人看不完,所以顯示視窗設小一點
+	#endif
     CvSize size=cvSize(320,240);
     frame=cvCreateImage(size,IPL_DEPTH_8U,3);
     frame_gray=cvCreateImage(size,IPL_DEPTH_8U,1);
@@ -436,112 +446,112 @@ static Void encode_decode(VIDENC_Handle enc, VIDDEC_Handle dec, FILE *in,
     //for (n = 0; fread(inBuf, IFRAMESIZE, 1, in) == 1; n++) {
 
     /*===============v4l2 grab frame by Camera======================*/
-    while(count <  300){
+	 while(count <  300){
 
-        v4l2_grab();
-        //inBuf = (XDAS_Int8*) buffers[0].start; //buffers[0] access the yuv422 raw data
-        memcpy(inBuf,buffers[0].start,IFRAMESIZE);
+			 v4l2_grab();
+			 //inBuf = (XDAS_Int8*) buffers[0].start; //buffers[0] access the yuv422 raw data
+			 memcpy(inBuf,buffers[0].start,IFRAMESIZE);
 
 #ifdef CACHE_ENABLED
 #ifdef xdc_target__isaCompatible_64P
-        /*
-         *  fread() on this processor is implemented using CCS's stdio, which
-         *  is known to write into the cache, not physical memory.  To meet
-         *  xDAIS DMA Rule 7, we must writeback the cache into physical
-         *  memory.  Also, per DMA Rule 7, we must invalidate the buffer's
-         *  cache before providing it to any xDAIS algorithm.
-         */
-        Memory_cacheWbInv(inBuf, IFRAMESIZE);
+			 /*
+			  *  fread() on this processor is implemented using CCS's stdio, which
+			  *  is known to write into the cache, not physical memory.  To meet
+			  *  xDAIS DMA Rule 7, we must writeback the cache into physical
+			  *  memory.  Also, per DMA Rule 7, we must invalidate the buffer's
+			  *  cache before providing it to any xDAIS algorithm.
+			  */
+			 Memory_cacheWbInv(inBuf, IFRAMESIZE);
 #else
 #error Unvalidated config - add appropriate fread-related cache maintenance
 #endif
-        /* Per DMA Rule 7, our output buffer cache lines must be cleaned */
-        Memory_cacheInv(encodedBuf, EFRAMESIZE);
+			 /* Per DMA Rule 7, our output buffer cache lines must be cleaned */
+			 Memory_cacheInv(encodedBuf, EFRAMESIZE);
 #endif
 
-        GT_1trace(curMask, GT_1CLASS, "App-> Processing frame %d...\n", count);
+			 GT_1trace(curMask, GT_1CLASS, "App-> Processing frame %d...\n", count);
 
-        /* encode the frame */
-        status = VIDENC_process(enc, &inBufDesc, &encodedBufDesc, &encInArgs,
-            &encOutArgs);
+			 /* encode the frame */
+			 status = VIDENC_process(enc, &inBufDesc, &encodedBufDesc, &encInArgs,
+							 &encOutArgs);
 
-        GT_2trace(curMask, GT_2CLASS,
-            "App-> Encoder frame %d process returned - 0x%x)\n",
-            count, status);
+			 GT_2trace(curMask, GT_2CLASS,
+							 "App-> Encoder frame %d process returned - 0x%x)\n",
+							 count, status);
 
 #ifdef CACHE_ENABLED
-        /* Writeback this outBuf from the previous call.  Also, as encodedBuf
-         * is an inBuf to the next process call, we must invalidate it also, to
-         * clean buffer lines.
-         */
-        Memory_cacheWbInv(encodedBuf, EFRAMESIZE);
+			 /* Writeback this outBuf from the previous call.  Also, as encodedBuf
+			  * is an inBuf to the next process call, we must invalidate it also, to
+			  * clean buffer lines.
+			  */
+			 Memory_cacheWbInv(encodedBuf, EFRAMESIZE);
 
-        /* Per DMA Rule 7, our output buffer cache lines must be cleaned */
-        Memory_cacheInv(outBuf, OFRAMESIZE);
+			 /* Per DMA Rule 7, our output buffer cache lines must be cleaned */
+			 Memory_cacheInv(outBuf, OFRAMESIZE);
 #endif
 
-        if (status != VIDENC_EOK) {
-            GT_3trace(curMask, GT_7CLASS,
-                "App-> Encoder frame %d processing FAILED, status = 0x%x, "
-                "extendedError = 0x%x\n", count, status, encOutArgs.extendedError);
-            break;
-        }
+			 if (status != VIDENC_EOK) {
+					 GT_3trace(curMask, GT_7CLASS,
+									 "App-> Encoder frame %d processing FAILED, status = 0x%x, "
+									 "extendedError = 0x%x\n", count, status, encOutArgs.extendedError);
+					 break;
+			 }
 
 
 
-/***************************decode part (Unuse)***********************************/
-        /* decode the frame */
-//#if 0
-        status = VIDDEC_process(dec, &encodedBufDesc, &outBufDesc, &decInArgs,
-           &decOutArgs);
+			 /***************************decode part (Unuse)***********************************/
+			 /* decode the frame */
+			 //#if 0
+			 status = VIDDEC_process(dec, &encodedBufDesc, &outBufDesc, &decInArgs,
+							 &decOutArgs);
 
-        GT_2trace(curMask, GT_2CLASS,
-            "App-> Decoder frame %d process returned - 0x%x)\n",
-            n, status);
+			 GT_2trace(curMask, GT_2CLASS,
+							 "App-> Decoder frame %d process returned - 0x%x)\n",
+							 n, status);
 
-        if (status != VIDDEC_EOK) {
-            GT_3trace(curMask, GT_7CLASS,
-                "App-> Decoder frame %d processing FAILED, status = 0x%x, "
-                "extendedError = 0x%x\n", n, status, decOutArgs.extendedError);
-            break;
-        }
-//#endif
+			 if (status != VIDDEC_EOK) {
+					 GT_3trace(curMask, GT_7CLASS,
+									 "App-> Decoder frame %d processing FAILED, status = 0x%x, "
+									 "extendedError = 0x%x\n", n, status, decOutArgs.extendedError);
+					 break;
+			 }
+			 //#endif
 
 
 #ifdef CACHE_ENABLED
-        /* Writeback the outBuf. */
-        Memory_cacheWb(outBuf, OFRAMESIZE);
+			 /* Writeback the outBuf. */
+			 Memory_cacheWb(outBuf, OFRAMESIZE);
 #endif
 
 
-        
-
-        /* write to file */
-        //fwrite(encodedBuf, EFRAMESIZE, 1, out);
-
-        frame->imageData =  encoded[0];
-        frame_gray->imageData = dst[0];
-        //cvCvtColor(frame,frame_gray,CV_BGR2GRAY);
-
-        cvShowImage("sobel",frame_gray);
-        int key=cvWaitKey(33);
-        //cvSaveImage("22.bmp",frame_gray,0);
-        printf("the %d frame are completed \n",count);
-        count++;
 
 
+			 /* write to file */
+			 //fwrite(encodedBuf, EFRAMESIZE, 1, out);
 
-    }//end while 
+			 frame->imageData =  encoded[0];
+			 frame_gray->imageData = dst[0];
+			 //cvCvtColor(frame,frame_gray,CV_BGR2GRAY);
 
+#ifdef USE_IMAGE_DISPLAY
+#endif
 
+			 //cvSaveImage("22.bmp",frame_gray,0);
 
+			 cvShowImage("sobel",frame_gray);
+			 int key=cvWaitKey(33);
+			 printf("the %d frame are completed \n",count);
+			 count++;
+	 }//end while 
 
-    //cvDestroyWindow("sobel"); 
     cvReleaseImage(&frame);
     cvReleaseImage(&frame_gray);
     cvReleaseImage(&frame_Smooth);
     cvReleaseImage(&frame_sobel);
     cvReleaseImage(&frame_sobel_8U);
+	#ifdef USE_IMAGE_DISPLAY
+    cvDestroyWindow("sobel"); 
+	#endif    
 
     GT_1trace(curMask, GT_1CLASS, "%d frames encoded/decoded\n", n);
 }
@@ -614,7 +624,7 @@ int init_v4l2(void)
     }
     
     //set fmt
-        fmt.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+    fmt.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
     fmt.fmt.pix.pixelformat = V4L2_PIX_FMT_YUYV;
     fmt.fmt.pix.height = IMAGEHEIGHT;
     fmt.fmt.pix.width = IMAGEWIDTH;
@@ -655,13 +665,14 @@ int v4l2_grab(void)
 {
     unsigned int n_buffers;
     
-    //request for 4 buffers 
+    //request for 4 buffers , but I only need to used one buffers , since I only used one camera. 
     req.count=4;
     req.type=V4L2_BUF_TYPE_VIDEO_CAPTURE;
     req.memory=V4L2_MEMORY_MMAP;
     if(ioctl(fd,VIDIOC_REQBUFS,&req)==-1)
     {
         printf("request for buffers error\n");
+        return(FALSE);
     }
 
     //mmap for buffers
@@ -690,10 +701,11 @@ int v4l2_grab(void)
         if (buffers[n_buffers].start == MAP_FAILED)
         {
             printf("buffer map error\n");
+			/*not return*/
             return(FALSE);
         }
     }
-        
+
     //queue
     for (n_buffers = 0; n_buffers < req.count; n_buffers++)
     {
@@ -706,8 +718,49 @@ int v4l2_grab(void)
     
     ioctl(fd, VIDIOC_DQBUF, &buf);
 
-    printf("grab yuyv OK\n");
-    return(TRUE);
+
+	#if 0
+	buf.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+    buf.memory = V4L2_MEMORY_MMAP;
+	//buf.index = 0;
+
+    //queue
+	for (n_buffers = 0; n_buffers < req.count; n_buffers++)
+	{
+			buf.index = n_buffers;
+			if(-1 == ioctl(fd, VIDIOC_QBUF, &buf))
+			{
+					perror("Query Buffer");
+					return(FALSE);
+			}
+	} 
+
+	if(-1 == ioctl(fd, VIDIOC_STREAMON, &buf.type))
+	{
+			perror("Start Capture");
+			return(FALSE);
+	}
+	fd_set fds;
+	FD_ZERO(&fds);
+	FD_SET(fd, &fds);
+	struct timeval tv = {0};
+	tv.tv_sec = 2;
+	int r = select(fd+1, &fds, NULL, NULL, &tv);
+	if(-1 == r)
+	{
+			perror("Waiting for Frame");
+			return(FALSE);
+	}
+	if(-1 == ioctl(fd, VIDIOC_DQBUF, &buf))
+	{
+			perror("Retrieving Frame");
+			return(FALSE);
+	}
+	#endif
+
+
+	printf("grab yuyv OK\n");
+	return(TRUE);
 }
 
 
