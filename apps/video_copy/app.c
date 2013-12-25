@@ -413,12 +413,9 @@ static Void encode_decode(VIDENC_Handle enc, VIDDEC_Handle dec, FILE *in,
      captureStart();
 
 
-    //for (n = 0; fread(inBuf, IFRAMESIZE, 1, in) == 1; n++) {
-
     /*===============v4l2 grab frame by Camera======================*/
     while(1){
-        mainLoop();
-        //inBuf = (XDAS_Int8*) buffers[0].start; //buffers[0] access the yuv422 raw data
+        mainLoop(); /*this is the v4l2grab frame*/
         memcpy(inBuf,buffers[0].start,IFRAMESIZE);
 
 #ifdef CACHE_ENABLED
@@ -467,10 +464,8 @@ static Void encode_decode(VIDENC_Handle enc, VIDDEC_Handle dec, FILE *in,
         }
 
 
-
 /***************************decode part (Unuse)***********************************/
-        /* decode the frame */
-//#if 0
+/************************** decode the frame**************************************/
         status = VIDDEC_process(dec, &encodedBufDesc, &outBufDesc, &decInArgs,
            &decOutArgs);
 
@@ -484,16 +479,12 @@ static Void encode_decode(VIDENC_Handle enc, VIDDEC_Handle dec, FILE *in,
                 "extendedError = 0x%x\n", n, status, decOutArgs.extendedError);
             break;
         }
-//#endif
 
 
 #ifdef CACHE_ENABLED
         /* Writeback the outBuf. */
         Memory_cacheWb(outBuf, OFRAMESIZE);
 #endif
-
-
-        
 
         /* write to file */
         //fwrite(encodedBuf, EFRAMESIZE, 1, out);
@@ -510,9 +501,8 @@ static Void encode_decode(VIDENC_Handle enc, VIDDEC_Handle dec, FILE *in,
         printf("the %d frame are completed \n",count);
         count++;
 
+    }/*end while*/
 
-
-    }//end while 
 #ifdef USE_OPENCV_DISPLAY
     cvDestroyWindow("sobel"); 
 #endif 
