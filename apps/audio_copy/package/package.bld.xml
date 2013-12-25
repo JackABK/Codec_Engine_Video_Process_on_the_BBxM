@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="ti.sdo.ce.examples.apps.audio_copy" version="1, 0, 0" producerId="undefined">
+    <units>
+    </units>
+    <sources>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_local_x64Pcfg.s62"/>
+        <srcFile name="app.c"/>
+        <srcFile name="main_BIOS.c"/>
+        <srcFile name="main_native.c"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_local_xv5T.c"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_local_x64Pcfg_c.c"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_remote_xv5T.c"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_local_x64P.c"/>
+    </sources>
+    <configurations>
+        <srcFile name="local.tcf"/>
+        <srcFile name="remote.cfg"/>
+        <srcFile name="local.cfg"/>
+    </configurations>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_local_x64P.mak" src="package.bld"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_local_x64Pcfg.o64P.dep" src="package/cfg/bin/ti_platforms_evm3530/app_local_x64Pcfg.s62"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_local/app.o64P.dep" src="app.c"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_local/main_BIOS.o64P.dep" src="main_BIOS.c"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_local_x64Pcfg_c.o64P.dep" src="package/cfg/bin/ti_platforms_evm3530/app_local_x64Pcfg_c.c"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_local_x64P.o64P.dep" src="package/cfg/bin/ti_platforms_evm3530/app_local_x64P.c"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_local_x64P.dep" src="package/cfg/bin/ti_platforms_evm3530/app_local_x64P.cfg"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_local_xv5T.mak" src="package.bld"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_local/main_native.ov5T.dep" src="main_native.c"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_local/app.ov5T.dep" src="app.c"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_local_xv5T.ov5T.dep" src="package/cfg/bin/ti_platforms_evm3530/app_local_xv5T.c"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_local_xv5T.dep" src="package/cfg/bin/ti_platforms_evm3530/app_local_xv5T.cfg"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_remote_xv5T.mak" src="package.bld"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_remote/main_native.ov5T.dep" src="main_native.c"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_remote_xv5T.ov5T.dep" src="package/cfg/bin/ti_platforms_evm3530/app_remote_xv5T.c"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_remote/app.ov5T.dep" src="app.c"/>
+        <srcFile name="package/cfg/bin/ti_platforms_evm3530/app_remote_xv5T.dep" src="package/cfg/bin/ti_platforms_evm3530/app_remote_xv5T.cfg"/>
+        <srcFile name="package/rel/ti_sdo_ce_examples_apps_audio_copy.tar.dep" src="package/rel/ti_sdo_ce_examples_apps_audio_copy.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="gnu.targets.arm.GCArmv5T"
+            version="gnu.targets.arm.GCArmv5T{1,0,4.3,2"
+            platform="host.platforms.arm"
+            isa="v5T"
+            suffix="v5T"
+            rootDir="/home/jack/new/arm/4.3.2"
+            os="Linux"
+            rts="gnu.targets.arm.rtsv5T">
+            <model endian="little"
+                codeModel="undefined"
+                dataModel="undefined"/>
+        </target>
+        <target name="ti.targets.C64P"
+            version="ti.targets.C64P{1,0,6.1,14"
+            platform="ti.platforms.sim6xxx:TMS320CDM420"
+            isa="64P"
+            suffix="64P"
+            rootDir="/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14"
+            os="undefined"
+            rts="ti.targets.rts6000">
+            <model endian="little"
+                codeModel="undefined"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    </libraries>
+    <executables>
+    <executable name="bin/ti_platforms_evm3530/app_local"
+        pname="bin/ti_platforms_evm3530/app_local.x64P"
+        target="ti.targets.C64P"
+        platform="ti.platforms.evm3530"
+        profile="release"
+        xCfgScript="package/cfg/bin/ti_platforms_evm3530/app_local_x64P.cfg"
+        xCfgPrefix="package/cfg/bin/ti_platforms_evm3530/app_local_x64P"
+        cfgScript="local.tcf"
+        />
+    <executable name="bin/ti_platforms_evm3530/app_local"
+        pname="bin/ti_platforms_evm3530/app_local.xv5T"
+        target="gnu.targets.arm.GCArmv5T"
+        platform="ti.platforms.evm3530"
+        profile="release"
+        xCfgScript="package/cfg/bin/ti_platforms_evm3530/app_local_xv5T.cfg"
+        xCfgPrefix="package/cfg/bin/ti_platforms_evm3530/app_local_xv5T"
+        cfgScript="local.cfg"
+        />
+    <executable name="bin/ti_platforms_evm3530/app_remote"
+        pname="bin/ti_platforms_evm3530/app_remote.xv5T"
+        target="gnu.targets.arm.GCArmv5T"
+        platform="ti.platforms.evm3530"
+        profile="release"
+        xCfgScript="package/cfg/bin/ti_platforms_evm3530/app_remote_xv5T.cfg"
+        xCfgPrefix="package/cfg/bin/ti_platforms_evm3530/app_remote_xv5T"
+        cfgScript="remote.cfg"
+        />
+    </executables>
+    <tests>
+    <test exeName="bin/ti_platforms_evm3530/app_local.x64P"
+        args=""
+        groupName="bin/ti_platforms_evm3530/app_local.x64P"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs=""
+        />
+    <test exeName="bin/ti_platforms_evm3530/app_local.xv5T"
+        args=""
+        groupName="bin/ti_platforms_evm3530/app_local.xv5T"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs=""
+        />
+    <test exeName="bin/ti_platforms_evm3530/app_remote.xv5T"
+        args=""
+        groupName="bin/ti_platforms_evm3530/app_remote.xv5T"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs=""
+        />
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="ti_sdo_ce_examples_apps_audio_copy"
+        pname="ti_sdo_ce_examples_apps_audio_copy.tar"
+        label="default"
+    >
+        <file name="package/build.cfg"/>
+        <file name="package/package.ext.xml"/>
+        <file name="package/package.xdc.inc"/>
+        <file name="package/package.bld.xml"/>
+        <file name="package/package.rel.dot"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>

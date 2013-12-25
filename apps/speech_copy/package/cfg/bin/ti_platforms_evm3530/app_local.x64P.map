@@ -1,0 +1,3745 @@
+******************************************************************************
+               TMS320C6x Linker Unix v6.1.14                   
+******************************************************************************
+>> Linked Thu Oct  3 22:37:36 2013
+
+OUTPUT FILE NAME:   <bin/ti_platforms_evm3530/app_local.x64P>
+ENTRY POINT SYMBOL: "_c_int00"  address: 800517e0
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  IRAM                  107f8000   00008000  00000000  00008000  RWIX
+  CACHE_L2              10800000   00010000  00000000  00010000  RWIX
+  L1PSRAM               10e00000   00008000  00000000  00008000  RWIX
+  L1DSRAM               10f04000   0000c000  0000c000  00000000  RWIX
+  CACHE_L1D             10f10000   00008000  00000000  00008000  RWIX
+  DDR2                  80000000   08000000  000531f4  07face0c  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.vers      0    00000000    00000044     COPY SECTION
+                  00000000    00000044     app_local_x64Pcfg.o64P (.vers)
+
+.pinit     0    80000000    00000000     UNINITIALIZED
+
+xdc.meta   0    00000000    0000013f     COPY SECTION
+                  00000000    0000013f     app_local_x64P.o64P (xdc.meta)
+
+.L1DSRAM$heap 
+*          0    10f04000    0000c000     UNINITIALIZED
+                  10f04000    0000c000     --HOLE--
+
+.prd       0    80000000    00000000     UNINITIALIZED
+
+.data      0    80000000    00000000     UNINITIALIZED
+
+.text      0    80000000    0001aca0     
+                  80000000    00006340     ce.a64P : Engine.o64P (.text)
+                  80006340    00001800             : visa.o64P (.text)
+                  80007b40    00000f00             : Server.o64P (.text)
+                  80008a40    00000e80     osal_bios.a64P : Memory_BIOS.o64P (.text)
+                  800098c0    00000c20     app.o64P (.text)
+                  8000a4e0    00000be0     Algorithm_BIOS.a64P : Algorithm_BIOS.o64P (.text)
+                  8000b0c0    00000b60     gt.a64P : gt.o64P (.text:__GT_trace)
+                  8000bc20    00000ae0     XdmUtils.a64P : XdmUtils.o64P (.text)
+                  8000c700    00000880     speech.a64P : sphenc.o64P (.text)
+                  8000cf80    00000860                 : sphdec.o64P (.text)
+                  8000d7e0    000007e0     rts64plus.lib : divd.obj (.text:__divd)
+                  8000dfc0    000007a0     osal_bios.a64P : Global_BIOS.o64P (.text)
+                  8000e760    00000700     dskt2.a64P : dskt2_scratch.o64P (.text:__DSKT2_initializeAndUseSharedScratch)
+                  8000ee60    00000640     osal_bios.a64P : Thread_BIOS.o64P (.text)
+                  8000f4a0    000005c0     sphenc_copy.a64P : sphenc_copy.o64P (.text)
+                  8000fa60    00000580     sphdec_copy.a64P : sphdec_copy.o64P (.text)
+                  8000ffe0    00000460     rts64plus.lib : _printfi.obj (.text:__getarg_diouxp)
+                  80010440    00000460                   : _printfi.obj (.text:__setfield)
+                  800108a0    00000460                   : fwrite.obj (.text:_fwrite)
+                  80010d00    000003e0     dskt2.a64P : dskt2_scratch.o64P (.text:__DSKT2_assignInstanceMemory)
+                  800110e0    000003a0     rts64plus.lib : _printfi.obj (.text:__printfi)
+                  80011480    00000340     gt.a64P : gt.o64P (.text:__GT_set)
+                  800117c0    00000320     rts64plus.lib : _printfi.obj (.text:_fcvt)
+                  80011ae0    00000300     dskt2.a64P : dskt2crea.o64P (.text:_DSKT2_createAlg3)
+                  80011de0    00000300     rts64plus.lib : _printfi.obj (.text:_ecvt)
+                  800120e0    00000300                   : fputs.obj (.text:_fputs)
+                  800123e0    000002e0                   : _printfi.obj (.text:__pproc_fge)
+                  800126c0    000002e0                   : _printfi.obj (.text:__pproc_fwp)
+                  800129a0    000002a0                   : fread.obj (.text:_fread)
+                  80012c40    00000280     dskt2.a64P : dskt2_scratch.o64P (.text:__DSKT2_init)
+                  80012ec0    00000280     rts64plus.lib : _printfi.obj (.text:__pconv_e)
+                  80013140    00000260                   : imath64.obj (.text:__divull)
+                  800133a0    00000260                   : mpyd.obj (.text:__mpyd)
+                  80013600    00000240                   : addd.obj (.text:__addd)
+                  80013840    00000240     osal_bios.a64P : Sem_BIOS.o64P (.text)
+                  80013a80    00000220     rts64plus.lib : frcaddd.obj (.text:__frcaddd)
+                  80013ca0    00000220                   : _printfi.obj (.text:__pproc_diouxp)
+                  80013ec0    00000220     gt.a64P : gt.o64P (.text:_setMask)
+                  800140e0    00000220     ipc_bios.a64P : Comm_BIOS.o64P (.text)
+                  80014300    00000200     rts64plus.lib : frcmpyd_div.obj (.text:__frcmpyd_div)
+                  80014500    00000200                   : _printfi.obj (.text:__pproc_str)
+                  80014700    00000200     osal_bios.a64P : GT_config_BIOS.o64P (.text)
+                  80014900    000001e0     utils.a64P : Load.o64P (.text)
+                  80014ae0    000001c0     rts64plus.lib : _printfi.obj (.text:__mcpy)
+                  80014ca0    000001c0     osal_bios.a64P : Lock_BIOS.o64P (.text)
+                  80014e60    000001a0     rts64plus.lib : trgdrv.obj (.text:_HOSTrename)
+                  80015000    000001a0                   : imath40.obj (.text:__divul)
+                  800151a0    000001a0                   : fopen.obj (.text:__openfile)
+                  80015340    000001a0     gt.a64P : gt.o64P (.text:_addModName)
+                  800154e0    000001a0     rts64plus.lib : setvbuf.obj (.text:_setvbuf)
+                  80015680    00000180                   : _printfi.obj (.text:__pconv_g)
+                  80015800    00000160                   : lowlev.obj (.text:_open)
+                  80015960    00000140     dskt2.a64P : dskt2actv.o64P (.text:_DSKT2_activateAlg)
+                  80015aa0    00000140     rts64plus.lib : _bufread.obj (.text:__buff_read)
+                  80015be0    00000140                   : fputc.obj (.text:_fputc)
+                  80015d20    00000140                   : lowlev.obj (.text:_getdevice)
+                  80015e60    00000140     main_BIOS.o64P (.text)
+                  80015fa0    00000120     dskt2.a64P : dskt2free.o64P (.text:_DSKT2_freeAlg)
+                  800160c0    00000120                : dskt2_scratch.o64P (.text:__DSKT2_getScratchRequestInfo)
+                  800161e0    00000120     rts64plus.lib : frcmpyd.obj (.text:__frcmpyd)
+                  80016300    00000120                   : _printfi.obj (.text:__pproc_fflags)
+                  80016420    00000120                   : fopen.obj (.text:__search_fp)
+                  80016540    00000120                   : fclose.obj (.text:_fclose)
+                  80016660    00000100                   : trgdrv.obj (.text:_HOSTlseek)
+                  80016760    00000100     dskt2.a64P : dskt2_scratch.o64P (.text:__DSKT2_exitScratch)
+                  80016860    00000100     rts64plus.lib : _printfi.obj (.text:__ltostr)
+                  80016960    00000100     dskt2.a64P : dskt2_permute.o64P (.text:__rotateListElements)
+                  80016a60    00000100     rts64plus.lib : _io_perm.obj (.text:__wrt_ok)
+                  80016b60    00000100                   : fflush.obj (.text:_fflush)
+                  80016c60    000000e0     dskt2.a64P : dskt2_scratch.o64P (.text:_DSKT2_getMemRecs)
+                  80016d40    000000e0                : dskt2_lock.o64P (.text:_DSKT2_initLocks)
+                  80016e20    000000e0     rts64plus.lib : trgdrv.obj (.text:_HOSTopen)
+                  80016f00    000000e0     dskt2.a64P : dskt2_scratch.o64P (.text:__DSKT2_allocateInInternal)
+                  80016fe0    000000e0                : dskt2_scratch.o64P (.text:__DSKT2_dequeueMemTab)
+                  800170c0    000000e0                : dskt2_scratch.o64P (.text:__DSKT2_spaceToSeg)
+                  800171a0    000000e0     rts64plus.lib : cmpd.obj (.text:__cmpd)
+                  80017280    000000e0                   : _printfi.obj (.text:__div)
+                  80017360    000000e0                   : atoi.obj (.text:_atoi)
+                  80017440    000000e0                   : lowlev.obj (.text:_close)
+                  80017520    000000e0                   : exit.obj (.text:_exit)
+                  80017600    000000e0                   : memset.obj (.text:_memset)
+                  800176e0    000000e0     gt.a64P : gt.o64P (.text:_wildcardUpdate)
+                  800177c0    000000e0     osal_bios.a64P : Trace.o64P (.text)
+                  800178a0    000000c0     rts64plus.lib : trgdrv.obj (.text:_HOSTread)
+                  80017960    000000c0                   : trgdrv.obj (.text:_HOSTunlink)
+                  80017a20    000000c0                   : trgdrv.obj (.text:_HOSTwrite)
+                  80017ae0    000000c0     bios.a64P : staticpool_open.o64P (.text:_STATICPOOL_open)
+                  80017ba0    000000c0     dskt2.a64P : dskt2_scratch.o64P (.text:__DSKT2_freeAllocatedMemory)
+                  80017c60    000000c0                : dskt2_scratch.o64P (.text:__DSKT2_isSharedScratchAddr)
+                  80017d20    000000c0     rts64plus.lib : fopen.obj (.text:__cleanup)
+                  80017de0    000000c0                   : divu.obj (.text:__divu)
+                  80017ea0    000000c0                   : fflush.obj (.text:__doflush)
+                  80017f60    000000c0                   : vsnprintf.obj (.text:__outs)
+                  80018020    000000c0                   : fseek.obj (.text:_fseek)
+                  800180e0    000000c0                   : lowlev.obj (.text:_lseek)
+                  800181a0    000000c0                   : ltoa.obj (.text:_ltoa)
+                  80018260    000000c0                   : lowlev.obj (.text:_read)
+                  80018320    000000c0                   : lowlev.obj (.text:_write)
+                  800183e0    000000c0     bios.a64P : tsk_stup.o64P (.text)
+                  800184a0    000000a0     dskt2.a64P : dskt2dact.o64P (.text:_DSKT2_deactivateAlg)
+                  80018540    000000a0     rts64plus.lib : trgdrv.obj (.text:_HOSTclose)
+                  800185e0    000000a0     dskt2.a64P : dskt2_scratch.o64P (.text:__DSKT2_allocateFromSharedScratch)
+                  80018680    000000a0                : dskt2_scratch.o64P (.text:__DSKT2_allocateInDesignatedSpace)
+                  80018720    000000a0                : dskt2_scratch.o64P (.text:__DSKT2_enqueueMemTab)
+                  800187c0    000000a0                : dskt2_scratch.o64P (.text:__DSKT2_freeInstanceMemory)
+                  80018860    000000a0     rts64plus.lib : imath40.obj (.text:__divli)
+                  80018900    000000a0                   : _printfi.obj (.text:__ecpy)
+                  800189a0    000000a0                   : _printfi.obj (.text:__fcpy)
+                  80018a40    000000a0                   : fixdli.obj (.text:__fixdli)
+                  80018ae0    000000a0                   : _printfi.obj (.text:__pconv_f)
+                  80018b80    000000a0                   : _io_perm.obj (.text:__rd_ok)
+                  80018c20    000000a0                   : remu.obj (.text:__remu)
+                  80018cc0    000000a0                   : lowlev.obj (.text:_finddevice)
+                  80018d60    000000a0                   : memcpy64.obj (.text:_memcpy)
+                  80018e00    000000a0                   : printf.obj (.text:_printf)
+                  80018ea0    000000a0                   : lowlev.obj (.text:_tabinit)
+                  80018f40    00000080     dskt2.a64P : dskt2_scratch.o64P (.text:_DSKT2_getNumMemRecs)
+                  80018fc0    00000080     bios.a64P : staticpool_alloc.o64P (.text:_STATICPOOL_alloc)
+                  80019040    00000080     dskt2.a64P : dskt2_permute.o64P (.text:__DSKT2_Permute_iterateNext)
+                  800190c0    00000080                : dskt2_permute.o64P (.text:__DSKT2_Permute_setInitialState)
+                  80019140    00000080     gt.a64P : gt.o64P (.text:__GT_create)
+                  800191c0    00000080     rts64plus.lib : fixdi.obj (.text:__fixdi)
+                  80019240    00000080                   : fltlid.obj (.text:__fltlid)
+                  800192c0    00000080                   : llshift.obj (.text:__llshl)
+                  80019340    00000080                   : sprintf.obj (.text:__outs)
+                  800193c0    00000080                   : renormd.obj (.text:__renormd)
+                  80019440    00000080     dskt2.a64P : dskt2_permute.o64P (.text:__rotateSubgroup)
+                  800194c0    00000080     gt.a64P : gt.o64P (.text:_applyOp)
+                  80019540    00000080             : gt.o64P (.text:_findElem)
+                  800195c0    00000080     rts64plus.lib : fprintf.obj (.text:_fprintf)
+                  80019640    00000080                   : strstr.obj (.text:_strstr)
+                  800196c0    00000080                   : lowlev.obj (.text:_unlink)
+                  80019740    00000080                   : vsnprintf.obj (.text:_vsnprintf)
+                  800197c0    00000080                   : trgmsg.obj (.text:_writemsg)
+                  80019840    00000080     osal_bios.a64P : Log_BIOS.o64P (.text)
+                  800198c0    00000060     gt.a64P : CBuf.o64P (.text:_CBuf_create)
+                  80019920    00000060     app_local_x64P.o64P (.text:_CERuntime_init)
+                  80019980    00000060     dskt2.a64P : dskt2crea.o64P (.text:_DSKT2_createAlgExt)
+                  800199e0    00000060                : dskt2_scratch.o64P (.text:__DSKT2_useSharedScratch)
+                  80019a40    00000060     rts64plus.lib : llshift.obj (.text:__llshru)
+                  80019aa0    00000060                   : imath64.obj (.text:__subcull)
+                  80019b00    00000060                   : fopen.obj (.text:_fopen)
+                  80019b60    00000060                   : memccpy.obj (.text:_memccpy)
+                  80019bc0    00000060                   : trgmsg.obj (.text:_readmsg)
+                  80019c20    00000060                   : sprintf.obj (.text:_sprintf)
+                  80019c80    00000060     osal_bios.a64P : Queue_BIOS.o64P (.text)
+                  80019ce0    00000040     gt.a64P : CBuf.o64P (.text:_CBuf_putc)
+                  80019d20    00000040             : CBuf.o64P (.text:_CBuf_puts)
+                  80019d60    00000040     dskt2.a64P : dskt2_lock.o64P (.text:_DSKT2_acquireLock)
+                  80019da0    00000040                : dskt2crea.o64P (.text:_DSKT2_createAlg)
+                  80019de0    00000040                : dskt2_lock.o64P (.text:_DSKT2_getContext)
+                  80019e20    00000040                : dskt2_lock.o64P (.text:_DSKT2_releaseLock)
+                  80019e60    00000040                : dskt2_lock.o64P (.text:_DSKT2_setContext)
+                  80019ea0    00000040     gt.a64P : gt.o64P (.text:_GT_curTime)
+                  80019ee0    00000040             : gt.o64P (.text:_GT_init)
+                  80019f20    00000040     dskt2.a64P : dskt2_scratch.o64P (.text:__DSKT2_decrScratchReferenceCount)
+                  80019f60    00000040                : dskt2_scratch.o64P (.text:__DSKT2_incrScratchReferenceCount)
+                  80019fa0    00000040                : dskt2_scratch.o64P (.text:__DSKT2_throwMPUMemException)
+                  80019fe0    00000040                : dskt2_scratch.o64P (.text:__DSKT2_usesInternalScratch)
+                  8001a020    00000040     rts64plus.lib : isinf.obj (.text:___isinf)
+                  8001a060    00000040                   : _printfi.obj (.text:___isnan)
+                  8001a0a0    00000040                   : divd.obj (.text:___isnan)
+                  8001a0e0    00000040                   : assert.obj (.text:__abort_msg)
+                  8001a120    00000040                   : negd.obj (.text:__negd)
+                  8001a160    00000040                   : vsnprintf.obj (.text:__outc)
+                  8001a1a0    00000040                   : imath40.obj (.text:__remli)
+                  8001a1e0    00000040                   : subd.obj (.text:__subd)
+                  8001a220    00000040     gt.a64P : gt.o64P (.text:_error)
+                  8001a260    00000040     app_local_x64P.o64P (.text:_ti_sdo_ce_osal_bios_init)
+                  8001a2a0    00000040     osal_bios.a64P : SemMP_BIOS.o64P (.text)
+                  8001a2e0    00000040     osal_bios_load.a64P : Global_BIOS_load_Load.o64P (.text)
+                  8001a320    00000040     utils.a64P : c64p_getltime.o64P (.text)
+                  8001a360    00000020     app_local_x64P.o64P (.text:_DMAN3_CE_exit)
+                  8001a380    00000020     app_local_x64P.o64P (.text:_DMAN3_CE_init)
+                  8001a3a0    00000020     app_local_x64P.o64P (.text:_DMAN3_grantDmaChannels)
+                  8001a3c0    00000020     app_local_x64P.o64P (.text:_DMAN3_releaseDmaChannels)
+                  8001a3e0    00000020     gt.a64P : gt.o64P (.text:_GT_getModNameFlags)
+                  8001a400    00000020     app_local_x64P.o64P (.text:_RMAN_activateAllResources)
+                  8001a420    00000020     app_local_x64P.o64P (.text:_RMAN_assignResources)
+                  8001a440    00000020     app_local_x64P.o64P (.text:_RMAN_deactivateAllResources)
+                  8001a460    00000020     app_local_x64P.o64P (.text:_RMAN_exit)
+                  8001a480    00000020     app_local_x64P.o64P (.text:_RMAN_freeResources)
+                  8001a4a0    00000020     app_local_x64P.o64P (.text:_RMAN_init)
+                  8001a4c0    00000020     bios.a64P : staticpool_free.o64P (.text:_STATICPOOL_free)
+                  8001a4e0    00000020     rts64plus.lib : negll.obj (.text:__negll)
+                  8001a500    00000020                   : _lock.obj (.text:__nop)
+                  8001a520    00000020                   : fprintf.obj (.text:__outc)
+                  8001a540    00000020                   : printf.obj (.text:__outc)
+                  8001a560    00000020                   : sprintf.obj (.text:__outc)
+                  8001a580    00000020                   : fprintf.obj (.text:__outs)
+                  8001a5a0    00000020                   : printf.obj (.text:__outs)
+                  8001a5c0    00000020                   : _lock.obj (.text:__register_lock)
+                  8001a5e0    00000020                   : _lock.obj (.text:__register_unlock)
+                  8001a600    00000020                   : exit.obj (.text:_abort)
+                  8001a620    00000020     gt.a64P : gt.o64P (.text:_getModNameFlagsAddr)
+                  8001a640    00000020     rts64plus.lib : remove.obj (.text:_remove)
+                  8001a660    00000020     gt.a64P : gt.o64P (.text:_setModNameFlags)
+                  8001a680    00000020     ipc_bios.a64P : Processor_noOS.o64P (.text)
+                  8001a6a0    00000020     osal_bios.a64P : LockMP_noOS.o64P (.text)
+                  8001a6c0    00000020     bios.a64P : mem_stat.o64P ($Tramp$S$$_MEM_stat)
+                  8001a6e0    00000020               : mem_getBaseAddress.o64P ($Tramp$S$$_MEM_getBaseAddress)
+                  8001a700    00000020               : mem_free.o64P ($Tramp$S$$_MEM_free)
+                  8001a720    00000020               : mem_allo.o64P ($Tramp$S$$_MEM_alloc)
+                  8001a740    00000020               : mem_rede.o64P ($Tramp$S$$_MEM_redefine)
+                  8001a760    00000020     bios3430.a64P : bcache_all.o64P ($Tramp$S$$_BCACHE_wbInvAll)
+                  8001a780    00000020                   : bcache_block.o64P ($Tramp$S$$_BCACHE_wbInv)
+                  8001a7a0    00000020                   : bcache_block.o64P ($Tramp$S$$_BCACHE_wb)
+                  8001a7c0    00000020                   : bcache_block.o64P ($Tramp$S$$_BCACHE_inv)
+                  8001a7e0    00000020     bios.a64P : sys_atex.o64P ($Tramp$S$$_SYS_atexit)
+                  8001a800    00000020               : sys_abor.o64P ($Tramp$S$$_SYS_abort)
+                  8001a820    00000020               : mem_vall.o64P ($Tramp$S$$_MEM_valloc)
+                  8001a840    00000020               : tsk_yiel.o64P ($Tramp$S$$_TSK_yield)
+                  8001a860    00000020               : tsk_stat.o64P ($Tramp$S$$_TSK_stat)
+                  8001a880    00000020               : tsk_setp.o64P ($Tramp$S$$_TSK_setpri)
+                  8001a8a0    00000020               : tsk_dele.o64P ($Tramp$S$$_TSK_delete)
+                  8001a8c0    00000020               : tsk_crea.o64P ($Tramp$S$$_TSK_create)
+                  8001a8e0    00000020               : sem_pend_counting.o64P ($Tramp$S$$_SEM_pend)
+                  8001a900    00000020               : sem_post_asm.o64P ($Tramp$S$$_SEM_post)
+                  8001a920    00000020               : sem_dele.o64P ($Tramp$S$$_SEM_delete)
+                  8001a940    00000020               : sem_crea.o64P ($Tramp$S$$_SEM_create)
+                  8001a960    00000020               : msgq_free.o64P ($Tramp$S$$_MSGQ_free)
+                  8001a980    00000020               : msgq_locate.o64P ($Tramp$S$$_MSGQ_locate)
+                  8001a9a0    00000020               : msgq_put.o64P ($Tramp$S$$_MSGQ_put)
+                  8001a9c0    00000020               : msgq_release.o64P ($Tramp$S$$_MSGQ_release)
+                  8001a9e0    00000020               : msgq_getsrcqueue.o64P ($Tramp$S$$_MSGQ_getSrcQueue)
+                  8001aa00    00000020               : msgq_get.o64P ($Tramp$S$$_MSGQ_get)
+                  8001aa20    00000020               : msgq_close.o64P ($Tramp$S$$_MSGQ_close)
+                  8001aa40    00000020               : msgq_open.o64P ($Tramp$S$$_MSGQ_open)
+                  8001aa60    00000020               : msgq_alloc.o64P ($Tramp$S$$_MSGQ_alloc)
+                  8001aa80    00000020               : swi_self.o64P ($Tramp$S$$_SWI_self)
+                  8001aaa0    00000020               : sys_prin.o64P ($Tramp$S$$_SYS_vprintf)
+                  8001aac0    00000020               : sys_prin.o64P ($Tramp$S$$_SYS_printf)
+                  8001aae0    00000020               : clk_countspms.o64P ($Tramp$S$$_CLK_countspms)
+                  8001ab00    00000020     bios3430.a64P : clk2430_gethtime.o64P ($Tramp$S$$_CLK_gethtime)
+                  8001ab20    00000020     bios.a64P : malloc.o64P ($Tramp$S$$_free)
+                  8001ab40    00000020               : malloc.o64P ($Tramp$S$$_malloc)
+                  8001ab60    00000020               : tsk_disa.o64P ($Tramp$S$$_TSK_disable)
+                  8001ab80    00000020               : tsk_disa.o64P ($Tramp$S$$_TSK_enable)
+                  8001aba0    00000020               : que_get.o64P ($Tramp$S$$_QUE_put)
+                  8001abc0    00000020               : lck.o64P ($Tramp$S$$_LCK_post)
+                  8001abe0    00000020               : lck.o64P ($Tramp$S$$_LCK_pend)
+                  8001ac00    00000020               : que_get.o64P ($Tramp$S$$_QUE_get)
+                  8001ac20    00000020     log8.a64P : log_printf4.o64P ($Tramp$S$$_LOG_printf4)
+                  8001ac40    00000020               : log_ts.o64P ($Tramp$S$$_LOG_event)
+                  8001ac60    00000020     bios.a64P : hwi_c.o64P ($Tramp$S$$_HWI_disable)
+                  8001ac80    00000020               : hwi_c.o64P ($Tramp$S$$_HWI_restore)
+
+.hst       0    80000000    00000000     UNINITIALIZED
+
+.pip       0    80000000    00000000     UNINITIALIZED
+
+.far       0    8001aca0    000195bc     UNINITIALIZED
+                  8001aca0    00018b28     app_local_x64P.o64P (.far)
+                  800337c8    000002d0     dskt2.a64P : dskt2_lock.o64P (.far)
+                  80033a98    00000194     rts64plus.lib : defs.obj (.far)
+                  80033c2c    00000004     app_local_x64Pcfg.o64P (.far)
+                  80033c30    000000d8     bios.a64P : knl.o64P (.far)
+                  80033d08    000000d0     rts64plus.lib : trgdrv.obj (.far)
+                  80033dd8    000000cc                   : lowlev.obj (.far)
+                  80033ea4    0000005c     bios.a64P : tsk.o64P (.far)
+                  80033f00    00000058     sphdec_copy.a64P : sphdec_copy.o64P (.far)
+                  80033f58    00000058     sphenc_copy.a64P : sphenc_copy.o64P (.far)
+                  80033fb0    00000054     bios.a64P : obj_init.o64P (.far)
+                  80034004    00000050               : tsk_stup.o64P (.far)
+                  80034054    00000004               : mem_defi.o64P (.far)
+                  80034058    0000003c               : sys_stri.o64P (.far)
+                  80034094    00000004     bios3430.a64P : bcache_wait.o64P (.far)
+                  80034098    00000038     ce.a64P : Engine.o64P (.far)
+                  800340d0    00000020     bios.a64P : sys.o64P (.far)
+                  800340f0    0000001c     osal_bios.a64P : Thread_BIOS.o64P (.far)
+                  8003410c    00000018                    : Memory_BIOS.o64P (.far)
+                  80034124    00000004     bios3430.a64P : clk2430_data.o64P (.far)
+                  80034128    00000014     ce.a64P : package_ti.sdo.ce.o64P (.far)
+                  8003413c    00000004     gt.a64P : CBuf.o64P (.far)
+                  80034140    00000014     ipc_bios.a64P : Processor_noOS.o64P (.far)
+                  80034154    00000010     bios.a64P : exc.o64P (.far)
+                  80034164    00000010               : knl_tick.o64P (.far)
+                  80034174    00000010               : tsk_setp.o64P (.far)
+                  80034184    00000010               : tsk_yiel.o64P (.far)
+                  80034194    00000004     osal_bios.a64P : Queue_BIOS.o64P (.far)
+                  80034198    00000010     dskt2.a64P : dskt2_scratch.o64P (.far)
+                  800341a8    00000010     osal_bios.a64P : Global_BIOS.o64P (.far)
+                  800341b8    00000010                    : Lock_BIOS.o64P (.far)
+                  800341c8    0000000c     bios.a64P : utl_putc.o64P (.far)
+                  800341d4    0000000c     bios3430.a64P : bcache_table.o64P (.far)
+                  800341e0    0000000c     ipc_bios.a64P : Comm_BIOS.o64P (.far)
+                  800341ec    0000000c     rts64plus.lib : exit.obj (.far)
+                  800341f8    00000008     Algorithm_BIOS.a64P : Algorithm_BIOS.o64P (.far)
+                  80034200    00000008     XdmUtils.a64P : XdmUtils.o64P (.far)
+                  80034208    00000008     bios.a64P : sem_crea.o64P (.far)
+                  80034210    00000008     ce.a64P : Server.o64P (.far)
+                  80034218    00000008             : visa.o64P (.far)
+                  80034220    00000008     dskt2.a64P : dskt2crea.o64P (.far)
+                  80034228    00000008     main_BIOS.o64P (.far)
+                  80034230    00000008     osal_bios.a64P : Sem_BIOS.o64P (.far)
+                  80034238    00000008     rts64plus.lib : _lock.obj (.far)
+                  80034240    00000008                   : divd.obj (.far)
+                  80034248    00000008     speech.a64P : sphdec.o64P (.far)
+                  80034250    00000008                 : sphenc.o64P (.far)
+                  80034258    00000004     rts64plus.lib : fopen.obj (.far)
+
+.DDR2$heap 
+*          0    8003425c    00010000     UNINITIALIZED
+                  8003425c    00010000     --HOLE--
+
+.args      0    8004425c    00000004     
+                  8004425c    00000004     --HOLE-- [fill = 0]
+
+.bios      0    80044260    00005da0     
+                  80044260    000005c0     bios.a64P : sys_prin.o64P (.bios)
+                  80044820    00000520               : exc.o64P (.bios)
+                  80044d40    000004e0               : hwi_disp_asm.o64P (.bios)
+                  80045220    000004c0               : swi.o64P (.bios)
+                  800456e0    00000380               : prd.o64P (.bios)
+                  80045a60    00000340               : tsk_crea.o64P (.bios)
+                  80045da0    000002a0               : malloc.o64P (.bios)
+                  80046040    00000240               : knl_run.o64P (.bios)
+                  80046280    00000240               : mem_defi.o64P (.bios)
+                  800464c0    00000220               : mem_rede.o64P (.bios)
+                  800466e0    00000200               : sem_pend.o64P (.bios)
+                  800468e0    00000200     bios3430.a64P : clk2430.o64P (.bios)
+                  80046ae0    000001e0     bios.a64P : mem_allo.o64P (.bios:.near)
+                  80046cc0    000001e0               : exc_asm.o64P (.bios)
+                  80046ea0    000001e0               : knl_tick.o64P (.bios)
+                  80047080    000001c0               : mem_free.o64P (.bios:.near)
+                  80047240    000001c0               : sem_dopo.o64P (.bios)
+                  80047400    000001c0               : tsk_dele.o64P (.bios)
+                  800475c0    000001c0               : tsk_setp.o64P (.bios)
+                  80047780    000001c0     bios3430.a64P : clk.o64P (.bios)
+                  80047940    000001a0     bios.a64P : tsk_setu.o64P (.bios)
+                  80047ae0    00000180               : knl_swit.o64P (.bios)
+                  80047c60    00000140               : autoinit.o64P (.bios)
+                  80047da0    00000140               : knl_read.o64P (.bios)
+                  80047ee0    00000140               : mem_stat.o64P (.bios)
+                  80048020    00000140               : msgq_open.o64P (.bios)
+                  80048160    00000140               : tsk_exit.o64P (.bios)
+                  800482a0    00000140     bios3430.a64P : bcache_init.o64P (.bios)
+                  800483e0    00000120     bios.a64P : gbl_cacheinit64P.o64P (.bios)
+                  80048500    00000120               : knl_chec.o64P (.bios)
+                  80048620    00000120               : tsk_stup.o64P (.bios)
+                  80048740    00000100               : msgq_locate.o64P (.bios)
+                  80048840    00000100               : msgq_stup.o64P (.bios)
+                  80048940    00000100     bios3430.a64P : bcache_block.o64P (.bios)
+                  80048a40    000000e0     bios.a64P : msgq_locatelocal.o64P (.bios)
+                  80048b20    000000e0               : sem_post_asm.o64P (.bios)
+                  80048c00    000000c0               : knl_exit.o64P (.bios)
+                  80048cc0    000000c0               : msgq_alloc.o64P (.bios)
+                  80048d80    000000c0               : tsk_yiel.o64P (.bios)
+                  80048e40    000000a0               : knl_star.o64P (.bios)
+                  80048ee0    000000a0               : msgq_close.o64P (.bios)
+                  80048f80    000000a0               : msgq_get.o64P (.bios)
+                  80049020    000000a0               : msgq_put.o64P (.bios)
+                  800490c0    000000a0               : sem_post.o64P (.bios)
+                  80049160    000000a0               : sys_exit.o64P (.bios)
+                  80049200    000000a0               : tsk_stat.o64P (.bios)
+                  800492a0    000000a0     log8.a64P : log_ts.o64P (.bios)
+                  80049340    00000080     bios.a64P : atm.o64P (.bios)
+                  800493c0    00000080               : knl_ipos.o64P (.bios)
+                  80049440    00000080               : knl_post.o64P (.bios)
+                  800494c0    00000080               : lck.o64P (.bios)
+                  80049540    00000080               : obj_crea.o64P (.bios)
+                  800495c0    00000080               : sem_crea.o64P (.bios)
+                  80049640    00000080               : tsk_disa.o64P (.bios)
+                  800496c0    00000080     bios3430.a64P : bcache_all.o64P (.bios)
+                  80049740    00000080                   : bcache_wait.o64P (.bios)
+                  800497c0    00000080     log8.a64P : log5_ts.o64P (.bios)
+                  80049840    00000060     bios.a64P : mem_vall.o64P (.bios:.near)
+                  800498a0    00000060               : sys_erro.o64P (.bios:.near)
+                  80049900    00000060               : fxn.o64P (.bios)
+                  80049960    00000060               : hwi_c.o64P (.bios)
+                  800499c0    00000060               : msgq_release.o64P (.bios)
+                  80049a20    00000060               : obj_dele.o64P (.bios)
+                  80049a80    00000060               : sem_pend_binary.o64P (.bios)
+                  80049ae0    00000060               : sem_pend_counting.o64P (.bios)
+                  80049b40    00000060               : sts.o64P (.bios)
+                  80049ba0    00000060               : sys_abor.o64P (.bios)
+                  80049c00    00000060               : trg.o64P (.bios)
+                  80049c60    00000060               : utl_putc.o64P (.bios)
+                  80049cc0    00000040               : c62_c.o64P (.bios)
+                  80049d00    00000040               : mem_getBaseAddress.o64P (.bios)
+                  80049d40    00000040               : msgq_free.o64P (.bios)
+                  80049d80    00000040               : msgq_getsrcqueue.o64P (.bios)
+                  80049dc0    00000040               : que_get.o64P (.bios)
+                  80049e00    00000040               : utl_doab.o64P (.bios)
+                  80049e40    00000020               : clk_countspms.o64P (.bios)
+                  80049e60    00000020               : fxn_c.o64P (.bios)
+                  80049e80    00000020               : gbl_vers.o64P (.bios)
+                  80049ea0    00000020               : hook_setenv.o64P (.bios)
+                  80049ec0    00000020               : idl.o64P (.bios)
+                  80049ee0    00000020               : sem_dele.o64P (.bios)
+                  80049f00    00000020               : sts_set.o64P (.bios)
+                  80049f20    00000020               : swi_self.o64P (.bios)
+                  80049f40    00000020               : sys_atex.o64P (.bios)
+                  80049f60    00000020               : sys_one.o64P (.bios)
+                  80049f80    00000020               : utl_doer.o64P (.bios)
+                  80049fa0    00000020               : utl_halt.o64P (.bios)
+                  80049fc0    00000020     bios3430.a64P : clk2430_gethtime.o64P (.bios)
+                  80049fe0    00000020     log8.a64P : log_printf4.o64P (.bios)
+
+.const     0    8004a000    00005ae8     
+                  8004a000    00001926     ce.a64P : Engine.o64P (.const)
+                  8004b926    00000002     rts64plus.lib : fputs.obj (.const:.string)
+                  8004b928    000010c8     app_local_x64P.o64P (.const:.string)
+                  8004c9f0    000007e0     ce.a64P : visa.o64P (.const)
+                  8004d1d0    00000558     Algorithm_BIOS.a64P : Algorithm_BIOS.o64P (.const)
+                  8004d728    00000455     XdmUtils.a64P : XdmUtils.o64P (.const)
+                  8004db7d    000003b1     osal_bios.a64P : Memory_BIOS.o64P (.const)
+                  8004df2e    00000002     --HOLE-- [fill = 0]
+                  8004df30    00000301     app.o64P (.const:.string)
+                  8004e231    000002d1     speech.a64P : sphdec.o64P (.const)
+                  8004e502    000002d1                 : sphenc.o64P (.const)
+                  8004e7d3    00000253     osal_bios.a64P : Global_BIOS.o64P (.const)
+                  8004ea26    0000024f     ce.a64P : Server.o64P (.const)
+                  8004ec75    00000003     rts64plus.lib : assert.obj (.const:.string)
+                  8004ec78    000001f9     gt.a64P : gt.o64P (.const)
+                  8004ee71    00000003     --HOLE-- [fill = 0]
+                  8004ee74    000001f0     bios.a64P : sys_stri.o64P (.const)
+                  8004f064    000001ae     sphdec_copy.a64P : sphdec_copy.o64P (.const:.string)
+                  8004f212    000001ae     sphenc_copy.a64P : sphenc_copy.o64P (.const:.string)
+                  8004f3c0    00000193     bios.a64P : exc.o64P (.const)
+                  8004f553    00000004               : mem_allo.o64P (.const)
+                  8004f557    00000001     --HOLE-- [fill = 0]
+                  8004f558    00000101     rts64plus.lib : ctype.obj (.const:__ctypes_)
+                  8004f659    00000082     dskt2.a64P : dskt2_scratch.o64P (.const)
+                  8004f6db    0000007a     osal_bios.a64P : Thread_BIOS.o64P (.const)
+                  8004f755    00000078                    : Sem_BIOS.o64P (.const)
+                  8004f7cd    00000067     ce.a64P : package_ti.sdo.ce.o64P (.const)
+                  8004f834    00000060     main_BIOS.o64P (.const:.string)
+                  8004f894    0000004e     bios.a64P : pool_init.o64P (.const)
+                  8004f8e2    0000004e               : tsk_stup.o64P (.const)
+                  8004f930    00000032               : mem_rede.o64P (.const)
+                  8004f962    00000032     ipc_bios.a64P : Comm_BIOS.o64P (.const)
+                  8004f994    0000002c     bios.a64P : msgq_init.o64P (.const)
+                  8004f9c0    00000024               : msgq_stup.o64P (.const)
+                  8004f9e4    00000023     rts64plus.lib : _printfi.obj (.const:.string)
+                  8004fa07    00000023     bios.a64P : utl_doab.o64P (.const)
+                  8004fa2a    00000022               : utl_doer.o64P (.const)
+                  8004fa4c    00000004               : mem_free.o64P (.const)
+                  8004fa50    00000018     dskt2.a64P : dskt2_scratch.o64P (.const:_$P$T0$2)
+                  8004fa68    00000018     bios.a64P : msgq.o64P (.const)
+                  8004fa80    00000012     osal_bios.a64P : GT_config_BIOS.o64P (.const)
+                  8004fa92    00000002     --HOLE-- [fill = 0]
+                  8004fa94    00000001     bios.a64P : sem_crea.o64P (.const)
+                  8004fa95    00000003     --HOLE-- [fill = 0]
+                  8004fa98    00000011               : sys_prin.o64P (.const:_digtohex)
+                  8004faa9    00000003     --HOLE-- [fill = 0]
+                  8004faac    00000010               : staticpool_vt.o64P (.const)
+                  8004fabc    00000001               : tsk.o64P (.const)
+                  8004fabd    00000003     --HOLE-- [fill = 0]
+                  8004fac0    0000000c     ce.a64P : Engine.o64P (.const:_$P$T0$2)
+                  8004facc    0000000c     bios.a64P : staticpool_open.o64P (.const)
+                  8004fad8    00000009     ipc_bios.a64P : Processor_noOS.o64P (.const)
+                  8004fae1    00000007     bios.a64P : sys_prin.o64P (.const)
+
+.cinit     0    8004fae8    0000175c     
+                  8004fae8    000004cc     app_local_x64P.o64P (.cinit)
+                  8004ffb4    00000004     --HOLE-- [fill = 0]
+                  8004ffb8    00000354     app_local_x64Pcfg.o64P (.cinit)
+                  8005030c    00000004     --HOLE-- [fill = 0]
+                  80050310    0000026c     bios.a64P : biosdata.o64P (.cinit)
+                  8005057c    00000004     --HOLE-- [fill = 0]
+                  80050580    000001a4               : knl.o64P (.cinit)
+                  80050724    00000004     --HOLE-- [fill = 0]
+                  80050728    000000b0               : swi.o64P (.cinit)
+                  800507d8    0000009c     ce.a64P : Engine.o64P (.cinit)
+                  80050874    00000004     --HOLE-- [fill = 0]
+                  80050878    0000009c     dskt2.a64P : dskt2_scratch.o64P (.cinit)
+                  80050914    00000004     --HOLE-- [fill = 0]
+                  80050918    0000007c     gt.a64P : gt.o64P (.cinit)
+                  80050994    00000004     --HOLE-- [fill = 0]
+                  80050998    0000007c     utils.a64P : Load.o64P (.cinit)
+                  80050a14    00000004     --HOLE-- [fill = 0]
+                  80050a18    00000078     sphdec_copy.a64P : sphdec_copy.o64P (.cinit)
+                  80050a90    00000078     sphenc_copy.a64P : sphenc_copy.o64P (.cinit)
+                  80050b08    00000070     bios.a64P : tsk.o64P (.cinit)
+                  80050b78    00000060               : tsk_stup.o64P (.cinit)
+                  80050bd8    0000005c     rts64plus.lib : defs.obj (.cinit)
+                  80050c34    00000004     --HOLE-- [fill = 0]
+                  80050c38    0000005c                   : lowlev.obj (.cinit)
+                  80050c94    00000004     --HOLE-- [fill = 0]
+                  80050c98    0000004c     app.o64P (.cinit)
+                  80050ce4    00000004     --HOLE-- [fill = 0]
+                  80050ce8    0000004a     osal_bios.a64P : Global_BIOS.o64P (.cinit)
+                  80050d32    00000006     --HOLE-- [fill = 0]
+                  80050d38    00000044     bios.a64P : sys_stri.o64P (.cinit)
+                  80050d7c    00000004     --HOLE-- [fill = 0]
+                  80050d80    0000003c               : exc.o64P (.cinit)
+                  80050dbc    00000004     --HOLE-- [fill = 0]
+                  80050dc0    00000038     osal_bios.a64P : Thread_BIOS.o64P (.cinit)
+                  80050df8    00000034     bios.a64P : hwi.o64P (.cinit)
+                  80050e2c    00000004     --HOLE-- [fill = 0]
+                  80050e30    00000034     ce.a64P : package_ti.sdo.ce.o64P (.cinit)
+                  80050e64    00000004     --HOLE-- [fill = 0]
+                  80050e68    0000002c     bios.a64P : utl_putc.o64P (.cinit)
+                  80050e94    00000004     --HOLE-- [fill = 0]
+                  80050e98    0000002c     osal_bios.a64P : GT_config_BIOS.o64P (.cinit)
+                  80050ec4    00000004     --HOLE-- [fill = 0]
+                  80050ec8    0000002c     rts64plus.lib : exit.obj (.cinit)
+                  80050ef4    00000004     --HOLE-- [fill = 0]
+                  80050ef8    0000002a     osal_bios.a64P : Lock_BIOS.o64P (.cinit)
+                  80050f22    00000006     --HOLE-- [fill = 0]
+                  80050f28    00000024     bios.a64P : obj_init.o64P (.cinit)
+                  80050f4c    00000004     --HOLE-- [fill = 0]
+                  80050f50    00000024     ipc_bios.a64P : Processor_noOS.o64P (.cinit)
+                  80050f74    00000004     --HOLE-- [fill = 0]
+                  80050f78    00000022     osal_bios.a64P : Memory_BIOS.o64P (.cinit)
+                  80050f9a    00000006     --HOLE-- [fill = 0]
+                  80050fa0    00000020                    : Sem_BIOS.o64P (.cinit)
+                  80050fc0    0000001c     bios.a64P : exc_asm.o64P (.cinit)
+                  80050fdc    00000004     --HOLE-- [fill = 0]
+                  80050fe0    0000001c               : mem_defi.o64P (.cinit)
+                  80050ffc    00000004     --HOLE-- [fill = 0]
+                  80051000    0000001c               : sys.o64P (.cinit)
+                  8005101c    00000004     --HOLE-- [fill = 0]
+                  80051020    0000001c     main_BIOS.o64P (.cinit)
+                  8005103c    00000004     --HOLE-- [fill = 0]
+                  80051040    0000001c     rts64plus.lib : _lock.obj (.cinit)
+                  8005105c    00000004     --HOLE-- [fill = 0]
+                  80051060    0000001a     ce.a64P : Server.o64P (.cinit)
+                  8005107a    00000006     --HOLE-- [fill = 0]
+                  80051080    0000001a     speech.a64P : sphdec.o64P (.cinit)
+                  8005109a    00000006     --HOLE-- [fill = 0]
+                  800510a0    0000001a                 : sphenc.o64P (.cinit)
+                  800510ba    00000006     --HOLE-- [fill = 0]
+                  800510c0    00000018     bios.a64P : knl_tick.o64P (.cinit)
+                  800510d8    00000018               : tsk_setp.o64P (.cinit)
+                  800510f0    00000018               : tsk_yiel.o64P (.cinit)
+                  80051108    00000014     bios3430.a64P : bcache_table.o64P (.cinit)
+                  8005111c    00000004     --HOLE-- [fill = 0]
+                  80051120    00000010     bios.a64P : sem_crea.o64P (.cinit)
+                  80051130    00000010     ce.a64P : visa.o64P (.cinit)
+                  80051140    00000010     rts64plus.lib : divd.obj (.cinit)
+                  80051150    0000000e     dskt2.a64P : dskt2crea.o64P (.cinit)
+                  8005115e    00000002     --HOLE-- [fill = 0]
+                  80051160    0000000c     bios.a64P : knl_star.o64P (.cinit)
+                  8005116c    00000004     --HOLE-- [fill = 0]
+                  80051170    0000000c               : knl_swit.o64P (.cinit)
+                  8005117c    00000004     --HOLE-- [fill = 0]
+                  80051180    0000000c               : msgq.o64P (.cinit)
+                  8005118c    00000004     --HOLE-- [fill = 0]
+                  80051190    0000000c               : pool.o64P (.cinit)
+                  8005119c    00000004     --HOLE-- [fill = 0]
+                  800511a0    0000000c               : tsk_disa.o64P (.cinit)
+                  800511ac    00000004     --HOLE-- [fill = 0]
+                  800511b0    0000000c     bios3430.a64P : bcache_wait.o64P (.cinit)
+                  800511bc    00000004     --HOLE-- [fill = 0]
+                  800511c0    0000000c     ipc_bios.a64P : Comm_BIOS.o64P (.cinit)
+                  800511cc    00000004     --HOLE-- [fill = 0]
+                  800511d0    0000000c     osal_bios.a64P : Trace.o64P (.cinit)
+                  800511dc    00000004     --HOLE-- [fill = 0]
+                  800511e0    0000000c     rts64plus.lib : fopen.obj (.cinit)
+                  800511ec    00000004     --HOLE-- [fill = 0]
+                  800511f0    0000000a     Algorithm_BIOS.a64P : Algorithm_BIOS.o64P (.cinit)
+                  800511fa    00000006     --HOLE-- [fill = 0]
+                  80051200    0000000a     XdmUtils.a64P : XdmUtils.o64P (.cinit)
+                  8005120a    00000006     --HOLE-- [fill = 0]
+                  80051210    0000000a     bios.a64P : msgq_init.o64P (.cinit)
+                  8005121a    00000006     --HOLE-- [fill = 0]
+                  80051220    0000000a               : msgq_stup.o64P (.cinit)
+                  8005122a    00000006     --HOLE-- [fill = 0]
+                  80051230    0000000a               : pool_init.o64P (.cinit)
+                  8005123a    00000006     --HOLE-- [fill = 0]
+                  80051240    00000004     (.pad.cinit) [fill = 0]
+
+.printf    0    8004fae8    0000001a     COPY SECTION
+                  8004fae8    0000001a     app_local_x64Pcfg.o64P (.printf)
+
+.sts       0    80051244    00000010     
+                  80051244    00000010     app_local_x64Pcfg.o64P (.sts)
+
+.trcdata   0    80051254    0000000c     
+                  80051254    0000000c     bios.a64P : trc.o64P (.trcdata)
+
+.sysinit   0    80051260    00000760     
+                  80051260    00000320     app_local_x64Pcfg.o64P (.sysinit)
+                  80051580    00000140     bios.a64P : msgq_init.o64P (.sysinit)
+                  800516c0    00000120               : pool_init.o64P (.sysinit)
+                  800517e0    000000c0               : boot.o64P (.sysinit)
+                  800518a0    000000a0               : mem_init.o64P (.sysinit)
+                  80051940    00000060               : tsk_init.o64P (.sysinit)
+                  800519a0    00000020               : obj_init.o64P (.sysinit)
+
+.bss       0    800519c0    0000046c     UNINITIALIZED
+                  800519c0    00000100     bios.a64P : hwi_disp_asm.o64P (.bss)
+                  80051ac0    000000cc               : biosdata.o64P (.bss)
+                  80051b8c    0000009c               : swi.o64P (.bss)
+                  80051c28    00000048               : knl.o64P (.bss)
+                  80051c70    00000030     app_local_x64P.o64P (.bss)
+                  80051ca0    0000002c     dskt2.a64P : dskt2_scratch.o64P (.bss)
+                  80051ccc    00000020     app.o64P (.bss)
+                  80051cec    00000020     app_local_x64Pcfg.o64P (.bss)
+                  80051d0c    00000004     bios.a64P : clk_data2.o64P (.bss)
+                  80051d10    00000020               : exc_asm.o64P (.bss)
+                  80051d30    00000020     ce.a64P : Engine.o64P (.bss)
+                  80051d50    00000020     utils.a64P : Load.o64P (.bss)
+                  80051d70    00000018     bios.a64P : hwi.o64P (.bss)
+                  80051d88    00000018     gt.a64P : gt.o64P (.bss)
+                  80051da0    00000010     bios.a64P : exc.o64P (.bss)
+                  80051db0    0000000c               : tsk.o64P (.bss)
+                  80051dbc    0000000c     osal_bios.a64P : GT_config_BIOS.o64P (.bss)
+                  80051dc8    0000000c                    : Global_BIOS.o64P (.bss)
+                  80051dd4    00000008     bios.a64P : clk_data.o64P (.bss)
+                  80051ddc    00000008               : sys.o64P (.bss)
+                  80051de4    00000008     ce.a64P : package_ti.sdo.ce.o64P (.bss)
+                  80051dec    00000006     osal_bios.a64P : Lock_BIOS.o64P (.bss)
+                  80051df2    00000002     Algorithm_BIOS.a64P : Algorithm_BIOS.o64P (.bss)
+                  80051df4    00000004     bios.a64P : knl_star.o64P (.bss)
+                  80051df8    00000004               : mem_asm.o64P (.bss)
+                  80051dfc    00000004               : mem_defi.o64P (.bss)
+                  80051e00    00000004               : msgq.o64P (.bss)
+                  80051e04    00000004               : pool.o64P (.bss)
+                  80051e08    00000004               : tsk_disa.o64P (.bss)
+                  80051e0c    00000004     ce.a64P : Server.o64P (.bss)
+                  80051e10    00000004     main_BIOS.o64P (.bss)
+                  80051e14    00000004     osal_bios.a64P : Thread_BIOS.o64P (.bss)
+                  80051e18    00000004                    : Trace.o64P (.bss)
+                  80051e1c    00000002     XdmUtils.a64P : XdmUtils.o64P (.bss)
+                  80051e1e    00000002     bios.a64P : msgq_init.o64P (.bss)
+                  80051e20    00000002               : msgq_stup.o64P (.bss)
+                  80051e22    00000002               : pool_init.o64P (.bss)
+                  80051e24    00000002     osal_bios.a64P : Memory_BIOS.o64P (.bss)
+                  80051e26    00000002                    : Sem_BIOS.o64P (.bss)
+                  80051e28    00000002     speech.a64P : sphdec.o64P (.bss)
+                  80051e2a    00000002                 : sphenc.o64P (.bss)
+
+.mem       0    80051e2c    00000004     UNINITIALIZED
+                  80051e2c    00000004     app_local_x64Pcfg.o64P (.mem)
+
+.TSK_idle$stk 
+*          0    80051e30    00000400     UNINITIALIZED
+                  80051e30    00000400     app_local_x64Pcfg.o64P (.TSK_idle$stk)
+
+.stack     0    80052230    00000400     UNINITIALIZED
+                  80052230    00000400     --HOLE--
+
+.cio       0    80052630    00000120     UNINITIALIZED
+                  80052630    00000120     rts64plus.lib : trgmsg.obj (.cio)
+
+.switch    0    80052750    0000008c     
+                  80052750    00000040     ce.a64P : Server.o64P (.switch)
+                  80052790    0000003c     dskt2.a64P : dskt2_scratch.o64P (.switch)
+                  800527cc    00000010     gt.a64P : gt.o64P (.switch)
+
+.sys       0    800527dc    00000010     UNINITIALIZED
+                  800527dc    00000010     app_local_x64Pcfg.o64P (.sys)
+
+.clk       0    800527ec    00000008     UNINITIALIZED
+                  800527ec    00000008     app_local_x64Pcfg.o64P (.clk)
+
+.idl       0    800527f4    00000008     UNINITIALIZED
+                  800527f4    00000008     app_local_x64Pcfg.o64P (.idl)
+
+.ti_sdo_ce_osal_LOG_Buffer$buf 
+*          0    80052800    00000400     UNINITIALIZED
+                  80052800    00000400     app_local_x64Pcfg.o64P (.ti_sdo_ce_osal_LOG_Buffer$buf)
+
+.hwi_vec   0    80052c00    00000200     
+                  80052c00    00000200     app_local_x64Pcfg.o64P (.hwi_vec)
+
+.trace     0    80052e00    00000200     
+                  80052e00    00000200     --HOLE-- [fill = 00000000]
+
+.LOG_system$buf 
+*          0    80053000    00000100     UNINITIALIZED
+                  80053000    00000100     app_local_x64Pcfg.o64P (.LOG_system$buf)
+
+.tsk       0    80053100    00000060     UNINITIALIZED
+                  80053100    00000060     app_local_x64Pcfg.o64P (.tsk)
+
+.gblinit   0    80053160    00000034     
+                  80053160    00000034     app_local_x64Pcfg.o64P (.gblinit)
+
+.log       0    80053194    00000030     
+                  80053194    00000030     app_local_x64Pcfg.o64P (.log)
+
+.swi       0    800531c4    0000002c     UNINITIALIZED
+                  800531c4    0000002c     app_local_x64Pcfg.o64P (.swi)
+
+.idlcal    0    800531f0    00000008     UNINITIALIZED
+                  800531f0    00000008     app_local_x64Pcfg.o64P (.idlcal)
+
+
+FAR CALL TRAMPOLINES
+
+callee name               trampoline name
+   callee addr  tramp addr   call addr  call info
+--------------  -----------  ---------  ----------------
+$.bios:bios.a64P<mem_stat.o64P>$0x0  $Tramp$S$$_MEM_stat
+   80047ee0     8001a6c0     80008a84   osal_bios.a64P : Memory_BIOS.o64P (.text)
+                             80008aa4                  : Memory_BIOS.o64P (.text)
+                             8000e8c0   dskt2.a64P : dskt2_scratch.o64P (.text:__DSKT2_initializeAndUseSharedScratch)
+$.bios:bios.a64P<mem_getBaseAddress.o64P>$0x0  $Tramp$S$$_MEM_getBaseAddress
+   80049d00     8001a6e0     80008ad0   osal_bios.a64P : Memory_BIOS.o64P (.text)
+$.bios:.near:bios.a64P<mem_free.o64P>$0x0  $Tramp$S$$_MEM_free
+   80047080     8001a700     80008b70   osal_bios.a64P : Memory_BIOS.o64P (.text)
+                             80008b94                  : Memory_BIOS.o64P (.text)
+                             80009160                  : Memory_BIOS.o64P (.text)
+                             800092c0                  : Memory_BIOS.o64P (.text)
+                             800092e0                  : Memory_BIOS.o64P (.text)
+                             8000ed5c   dskt2.a64P : dskt2_scratch.o64P (.text:__DSKT2_initializeAndUseSharedScratch)
+                             8000ee30              : dskt2_scratch.o64P (.text:__DSKT2_initializeAndUseSharedScratch)
+                             80011c34              : dskt2crea.o64P (.text:_DSKT2_createAlg3)
+                             80011ca8              : dskt2crea.o64P (.text:_DSKT2_createAlg3)
+                             80014834   osal_bios.a64P : GT_config_BIOS.o64P (.text)
+                             80016084   dskt2.a64P : dskt2free.o64P (.text:_DSKT2_freeAlg)
+                             80016814              : dskt2_scratch.o64P (.text:__DSKT2_exitScratch)
+                             80017090              : dskt2_scratch.o64P (.text:__DSKT2_dequeueMemTab)
+                             80017c10              : dskt2_scratch.o64P (.text:__DSKT2_freeAllocatedMemory)
+$.bios:.near:bios.a64P<mem_allo.o64P>$0x0  $Tramp$S$$_MEM_alloc
+   80046ae0     8001a720     80008c6c   osal_bios.a64P : Memory_BIOS.o64P (.text)
+                             80008c90                  : Memory_BIOS.o64P (.text)
+                             800093b4                  : Memory_BIOS.o64P (.text)
+                             800093d0                  : Memory_BIOS.o64P (.text)
+                             80009830                  : Memory_BIOS.o64P (.text)
+$.bios:bios.a64P<mem_rede.o64P>$0x0  $Tramp$S$$_MEM_redefine
+   800464c0     8001a740     80008d80   osal_bios.a64P : Memory_BIOS.o64P (.text)
+$.bios:bios3430.a64P<bcache_all.o64P>$0x4c  $Tramp$S$$_BCACHE_wbInvAll
+   8004970c     8001a760     800094a4   osal_bios.a64P : Memory_BIOS.o64P (.text)
+                             800094b0                  : Memory_BIOS.o64P (.text)
+$.bios:bios3430.a64P<bcache_block.o64P>$0xcc  $Tramp$S$$_BCACHE_wbInv
+   80048a0c     8001a780     80009560   osal_bios.a64P : Memory_BIOS.o64P (.text)
+                             80009580                  : Memory_BIOS.o64P (.text)
+$.bios:bios3430.a64P<bcache_block.o64P>$0xe0  $Tramp$S$$_BCACHE_wb
+   80048a20     8001a7a0     8000963c   osal_bios.a64P : Memory_BIOS.o64P (.text)
+                             80009658                  : Memory_BIOS.o64P (.text)
+$.bios:bios3430.a64P<bcache_block.o64P>$0xf0  $Tramp$S$$_BCACHE_inv
+   80048a30     8001a7c0     8000971c   osal_bios.a64P : Memory_BIOS.o64P (.text)
+                             80009738                  : Memory_BIOS.o64P (.text)
+$.bios:bios.a64P<sys_atex.o64P>$0x0  $Tramp$S$$_SYS_atexit
+   80049f40     8001a7e0     8000e6c0   osal_bios.a64P : Global_BIOS.o64P (.text)
+$.bios:bios.a64P<sys_abor.o64P>$0x0  $Tramp$S$$_SYS_abort
+   80049ba0     8001a800     8000e738   osal_bios.a64P : Global_BIOS.o64P (.text)
+                             80015f54   main_BIOS.o64P (.text)
+                             80018448   bios.a64P : tsk_stup.o64P (.text)
+                             80018464             : tsk_stup.o64P (.text)
+                             80019fc8   dskt2.a64P : dskt2_scratch.o64P (.text:__DSKT2_throwMPUMemException)
+$.bios:.near:bios.a64P<mem_vall.o64P>$0x0  $Tramp$S$$_MEM_valloc
+   80049840     8001a820     8000e778   dskt2.a64P : dskt2_scratch.o64P (.text:__DSKT2_initializeAndUseSharedScratch)
+                             8000e900              : dskt2_scratch.o64P (.text:__DSKT2_initializeAndUseSharedScratch)
+                             80011b64              : dskt2crea.o64P (.text:_DSKT2_createAlg3)
+                             80011b7c              : dskt2crea.o64P (.text:_DSKT2_createAlg3)
+                             80012c6c              : dskt2_scratch.o64P (.text:__DSKT2_init)
+                             80012c9c              : dskt2_scratch.o64P (.text:__DSKT2_init)
+                             80012cb0              : dskt2_scratch.o64P (.text:__DSKT2_init)
+                             80012ce4              : dskt2_scratch.o64P (.text:__DSKT2_init)
+                             80012cf8              : dskt2_scratch.o64P (.text:__DSKT2_init)
+                             80012d38              : dskt2_scratch.o64P (.text:__DSKT2_init)
+                             80012d68              : dskt2_scratch.o64P (.text:__DSKT2_init)
+                             80014848   osal_bios.a64P : GT_config_BIOS.o64P (.text)
+                             80016f74   dskt2.a64P : dskt2_scratch.o64P (.text:__DSKT2_allocateInInternal)
+                             800186bc              : dskt2_scratch.o64P (.text:__DSKT2_allocateInDesignatedSpace)
+                             80018730              : dskt2_scratch.o64P (.text:__DSKT2_enqueueMemTab)
+$.bios:bios.a64P<tsk_yiel.o64P>$0x40  $Tramp$S$$_TSK_yield
+   80048dc0     8001a840     8000ee90   osal_bios.a64P : Thread_BIOS.o64P (.text)
+                             8000eeac                  : Thread_BIOS.o64P (.text)
+$.bios:bios.a64P<tsk_stat.o64P>$0x0  $Tramp$S$$_TSK_stat
+   80049200     8001a860     8000ef04   osal_bios.a64P : Thread_BIOS.o64P (.text)
+                             8000ef20                  : Thread_BIOS.o64P (.text)
+$.bios:bios.a64P<tsk_setp.o64P>$0x130  $Tramp$S$$_TSK_setpri
+   800476f0     8001a880     8000ef90   osal_bios.a64P : Thread_BIOS.o64P (.text)
+                             8000efac                  : Thread_BIOS.o64P (.text)
+$.bios:bios.a64P<tsk_dele.o64P>$0x0  $Tramp$S$$_TSK_delete
+   80047400     8001a8a0     8000f2b0   osal_bios.a64P : Thread_BIOS.o64P (.text)
+                             8000f2cc                  : Thread_BIOS.o64P (.text)
+$.bios:bios.a64P<tsk_crea.o64P>$0x0  $Tramp$S$$_TSK_create
+   80045a60     8001a8c0     8000f450   osal_bios.a64P : Thread_BIOS.o64P (.text)
+                             80015f0c   main_BIOS.o64P (.text)
+                             80015f20   main_BIOS.o64P (.text)
+$.bios:bios.a64P<sem_pend_counting.o64P>$0x0  $Tramp$S$$_SEM_pend
+   80049ae0     8001a8e0     8001384c   osal_bios.a64P : Sem_BIOS.o64P (.text)
+                             80014820                  : GT_config_BIOS.o64P (.text)
+                             80014e14                  : Lock_BIOS.o64P (.text)
+                             80019d8c   dskt2.a64P : dskt2_lock.o64P (.text:_DSKT2_acquireLock)
+$.bios:bios.a64P<sem_post_asm.o64P>$0x0  $Tramp$S$$_SEM_post
+   80048b20     8001a900     80013840   osal_bios.a64P : Sem_BIOS.o64P (.text)
+                             80014804                  : GT_config_BIOS.o64P (.text)
+                             80014cc0                  : Lock_BIOS.o64P (.text)
+                             80019e44   dskt2.a64P : dskt2_lock.o64P (.text:_DSKT2_releaseLock)
+$.bios:bios.a64P<sem_dele.o64P>$0x0  $Tramp$S$$_SEM_delete
+   80049ee0     8001a920     80013904   osal_bios.a64P : Sem_BIOS.o64P (.text)
+                             80014d04                  : Lock_BIOS.o64P (.text)
+$.bios:bios.a64P<sem_crea.o64P>$0x0  $Tramp$S$$_SEM_create
+   800495c0     8001a940     80013978   osal_bios.a64P : Sem_BIOS.o64P (.text)
+                             8001398c                  : Sem_BIOS.o64P (.text)
+                             800148c4                  : GT_config_BIOS.o64P (.text)
+                             80014d4c                  : Lock_BIOS.o64P (.text)
+$.bios:bios.a64P<msgq_free.o64P>$0x0  $Tramp$S$$_MSGQ_free
+   80049d40     8001a960     80014130   ipc_bios.a64P : Comm_BIOS.o64P (.text)
+$.bios:bios.a64P<msgq_locate.o64P>$0x0  $Tramp$S$$_MSGQ_locate
+   80048740     8001a980     800140f8   ipc_bios.a64P : Comm_BIOS.o64P (.text)
+$.bios:bios.a64P<msgq_put.o64P>$0x0  $Tramp$S$$_MSGQ_put
+   80049020     8001a9a0     800140f0   ipc_bios.a64P : Comm_BIOS.o64P (.text)
+$.bios:bios.a64P<msgq_release.o64P>$0x0  $Tramp$S$$_MSGQ_release
+   800499c0     8001a9c0     800140e8   ipc_bios.a64P : Comm_BIOS.o64P (.text)
+$.bios:bios.a64P<msgq_getsrcqueue.o64P>$0x0  $Tramp$S$$_MSGQ_getSrcQueue
+   80049d80     8001a9e0     80014114   ipc_bios.a64P : Comm_BIOS.o64P (.text)
+$.bios:bios.a64P<msgq_get.o64P>$0x0  $Tramp$S$$_MSGQ_get
+   80048f80     8001aa00     80014124   ipc_bios.a64P : Comm_BIOS.o64P (.text)
+$.bios:bios.a64P<msgq_close.o64P>$0x0  $Tramp$S$$_MSGQ_close
+   80048ee0     8001aa20     80014158   ipc_bios.a64P : Comm_BIOS.o64P (.text)
+$.bios:bios.a64P<msgq_open.o64P>$0x0  $Tramp$S$$_MSGQ_open
+   80048020     8001aa40     80014264   ipc_bios.a64P : Comm_BIOS.o64P (.text)
+                             80014280                 : Comm_BIOS.o64P (.text)
+$.bios:bios.a64P<msgq_alloc.o64P>$0x0  $Tramp$S$$_MSGQ_alloc
+   80048cc0     8001aa60     800142f0   ipc_bios.a64P : Comm_BIOS.o64P (.text)
+$.bios:bios.a64P<swi_self.o64P>$0x0  $Tramp$S$$_SWI_self
+   80049f20     8001aa80     80014768   osal_bios.a64P : GT_config_BIOS.o64P (.text)
+$.bios:bios.a64P<sys_prin.o64P>$0x534  $Tramp$S$$_SYS_vprintf
+   80044794     8001aaa0     800147a8   osal_bios.a64P : GT_config_BIOS.o64P (.text)
+                             800147d8                  : GT_config_BIOS.o64P (.text)
+$.bios:bios.a64P<sys_prin.o64P>$0x570  $Tramp$S$$_SYS_printf
+   800447d0     8001aac0     800147a0   osal_bios.a64P : GT_config_BIOS.o64P (.text)
+                             80019fb0   dskt2.a64P : dskt2_scratch.o64P (.text:__DSKT2_throwMPUMemException)
+$.bios:bios.a64P<clk_countspms.o64P>$0x0  $Tramp$S$$_CLK_countspms
+   80049e40     8001aae0     80014910   utils.a64P : Load.o64P (.text)
+$.bios:bios3430.a64P<clk2430_gethtime.o64P>$0x0  $Tramp$S$$_CLK_gethtime
+   80049fc0     8001ab00     80014960   utils.a64P : Load.o64P (.text)
+$.bios:bios.a64P<malloc.o64P>$0x0  $Tramp$S$$_free
+   80045da0     8001ab20     8001554c   rts64plus.lib : setvbuf.obj (.text:_setvbuf)
+                             800165a8                 : fclose.obj (.text:_fclose)
+$.bios:bios.a64P<malloc.o64P>$0x28  $Tramp$S$$_malloc
+   80045dc8     8001ab40     800155d0   rts64plus.lib : setvbuf.obj (.text:_setvbuf)
+$.bios:bios.a64P<tsk_disa.o64P>$0x24  $Tramp$S$$_TSK_disable
+   80049664     8001ab60     80015fc4   dskt2.a64P : dskt2free.o64P (.text:_DSKT2_freeAlg)
+                             80016c68              : dskt2_scratch.o64P (.text:_DSKT2_getMemRecs)
+                             80016fec              : dskt2_scratch.o64P (.text:__DSKT2_dequeueMemTab)
+                             80018754              : dskt2_scratch.o64P (.text:__DSKT2_enqueueMemTab)
+                             80018f48              : dskt2_scratch.o64P (.text:_DSKT2_getNumMemRecs)
+                             80019f28              : dskt2_scratch.o64P (.text:__DSKT2_decrScratchReferenceCount)
+                             80019f68              : dskt2_scratch.o64P (.text:__DSKT2_incrScratchReferenceCount)
+$.bios:bios.a64P<tsk_disa.o64P>$0x0  $Tramp$S$$_TSK_enable
+   80049640     8001ab80     80016018   dskt2.a64P : dskt2free.o64P (.text:_DSKT2_freeAlg)
+                             80016cbc              : dskt2_scratch.o64P (.text:_DSKT2_getMemRecs)
+                             80016d08              : dskt2_scratch.o64P (.text:_DSKT2_getMemRecs)
+                             80017038              : dskt2_scratch.o64P (.text:__DSKT2_dequeueMemTab)
+                             80017088              : dskt2_scratch.o64P (.text:__DSKT2_dequeueMemTab)
+                             80018780              : dskt2_scratch.o64P (.text:__DSKT2_enqueueMemTab)
+                             80018f88              : dskt2_scratch.o64P (.text:_DSKT2_getNumMemRecs)
+                             80018f90              : dskt2_scratch.o64P (.text:_DSKT2_getNumMemRecs)
+                             80019f40              : dskt2_scratch.o64P (.text:__DSKT2_decrScratchReferenceCount)
+                             80019f80              : dskt2_scratch.o64P (.text:__DSKT2_incrScratchReferenceCount)
+$.bios:bios.a64P<que_get.o64P>$0x28  $Tramp$S$$_QUE_put
+   80049de8     8001aba0     80017b60   bios.a64P : staticpool_open.o64P (.text:_STATICPOOL_open)
+                             80019c80   osal_bios.a64P : Queue_BIOS.o64P (.text)
+                             8001a4c0   bios.a64P : staticpool_free.o64P (.text:_STATICPOOL_free)
+$.bios:bios.a64P<lck.o64P>$0x0  $Tramp$S$$_LCK_post
+   800494c0     8001abc0     800183e0   bios.a64P : tsk_stup.o64P (.text)
+$.bios:bios.a64P<lck.o64P>$0x20  $Tramp$S$$_LCK_pend
+   800494e0     8001abe0     80018444   bios.a64P : tsk_stup.o64P (.text)
+$.bios:bios.a64P<que_get.o64P>$0x0  $Tramp$S$$_QUE_get
+   80049dc0     8001ac00     80018ff0   bios.a64P : staticpool_alloc.o64P (.text:_STATICPOOL_alloc)
+                             80019c8c   osal_bios.a64P : Queue_BIOS.o64P (.text)
+$.bios:log8.a64P<log_printf4.o64P>$0x0  $Tramp$S$$_LOG_printf4
+   80049fe0     8001ac20     80019870   osal_bios.a64P : Log_BIOS.o64P (.text)
+$.bios:log8.a64P<log_ts.o64P>$0x0  $Tramp$S$$_LOG_event
+   800492a0     8001ac40     800198a8   osal_bios.a64P : Log_BIOS.o64P (.text)
+$.bios:bios.a64P<hwi_c.o64P>$0x0  $Tramp$S$$_HWI_disable
+   80049960     8001ac60     80019ca0   osal_bios.a64P : Queue_BIOS.o64P (.text)
+$.bios:bios.a64P<hwi_c.o64P>$0x2c  $Tramp$S$$_HWI_restore
+   8004998c     8001ac80     80019cc4   osal_bios.a64P : Queue_BIOS.o64P (.text)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+800519c0   $bss
+800519c0   .bss
+80000000   .data
+80000000   .text
+80051260   BIOS_init
+800514c8   BIOS_start
+00000000   BUF$
+00000001   BUF_ENABLED
+8001a600   C$$EXIT
+80019820   C$$IO$$
+ffffffff   CACHE_L1D
+ffffffff   CACHE_L2
+00000001   CLK$
+800527ec   CLK_A_TABBEG
+00000001   CLK_CALDIV
+00000001   CLK_CALMULT
+00050910   CLK_COUNTSPMS
+00000005   CLK_COUNTSPMSHIGH
+80051ae8   CLK_D_idletime
+80051ae4   CLK_D_isrhook
+80051ae0   CLK_D_tabbeg
+80051adc   CLK_D_timefxn
+00000001   CLK_ENABLEHTIME
+80047780   CLK_F_getltime
+80047790   CLK_F_isr
+800478e0   CLK_F_itime
+80044d40   CLK_HOOKFXN
+00000001   CLK_HTIMEDIV
+00000001   CLK_HTIMEMULT
+00050910   CLK_HTIMEPERLTIME
+00004b00   CLK_INPUTCLK
+00004000   CLK_INTBIT
+00000001   CLK_LTIMEDIV
+00050910   CLK_LTIMEMULT
+000003e8   CLK_MICROSECS
+00004b00   CLK_PRD
+00000000   CLK_PRDHIGH
+49038000   CLK_REGS
+00000000   CLK_RESETTIMER
+80051ad8   CLK_R_time
+00000020   CLK_TCR
+00000000   CLK_TDDR
+00000000   CLK_TDDRHIGH
+80049fc0   CLK_TIMEFXN
+00000000   CLK_TIMERNUM
+00000005   CLK_TIMMODE
+00000001   CLK_USETIMER
+800527f0   CLK_null
+80051d04   DDR2
+8003425c   DDR2$B
+00010000   DDR2$L
+00000000   DEV$
+00000000   DGN$
+00000000   DHL$
+00000000   DHL_gChannelsAvailable
+00000000   DIO$
+00000000   DIO_NUMSWIBASE
+00000000   DIO_NUMTSKBASE
+00000000   DIO_STATIC
+00000000   DPI$
+00000000   ECM$
+00000000   ECM_ENABLE
+ffffffff   ECM_EVTMASK0
+ffffffff   ECM_EVTMASK1
+ffffffff   ECM_EVTMASK2
+ffffffff   ECM_EVTMASK3
+0000000a   EVENT10
+00000064   EVENT100
+00000065   EVENT101
+00000066   EVENT102
+00000067   EVENT103
+00000068   EVENT104
+00000069   EVENT105
+0000006a   EVENT106
+0000006b   EVENT107
+0000006c   EVENT108
+0000006d   EVENT109
+0000000b   EVENT11
+0000006e   EVENT110
+0000006f   EVENT111
+00000070   EVENT112
+00000071   EVENT113
+00000072   EVENT114
+00000073   EVENT115
+00000074   EVENT116
+00000075   EVENT117
+00000076   EVENT118
+00000077   EVENT119
+0000000c   EVENT12
+00000078   EVENT120
+00000079   EVENT121
+0000007a   EVENT122
+0000007b   EVENT123
+0000007c   EVENT124
+0000007d   EVENT125
+0000007e   EVENT126
+0000007f   EVENT127
+0000000d   EVENT13
+0000000e   EVENT14
+0000000f   EVENT15
+00000010   EVENT16
+00000011   EVENT17
+00000012   EVENT18
+00000013   EVENT19
+00000014   EVENT20
+00000015   EVENT21
+00000016   EVENT22
+00000017   EVENT23
+00000018   EVENT24
+00000019   EVENT25
+0000001a   EVENT26
+0000001b   EVENT27
+0000001c   EVENT28
+0000001d   EVENT29
+0000001e   EVENT30
+0000001f   EVENT31
+00000020   EVENT32
+00000021   EVENT33
+00000022   EVENT34
+00000023   EVENT35
+00000024   EVENT36
+00000025   EVENT37
+00000026   EVENT38
+00000027   EVENT39
+00000004   EVENT4
+00000028   EVENT40
+00000029   EVENT41
+0000002a   EVENT42
+0000002b   EVENT43
+0000002c   EVENT44
+0000002d   EVENT45
+0000002e   EVENT46
+0000002f   EVENT47
+00000030   EVENT48
+00000031   EVENT49
+00000005   EVENT5
+00000032   EVENT50
+00000033   EVENT51
+00000034   EVENT52
+00000035   EVENT53
+00000036   EVENT54
+00000037   EVENT55
+00000038   EVENT56
+00000039   EVENT57
+0000003a   EVENT58
+0000003b   EVENT59
+00000006   EVENT6
+0000003c   EVENT60
+0000003d   EVENT61
+0000003e   EVENT62
+0000003f   EVENT63
+00000040   EVENT64
+00000041   EVENT65
+00000042   EVENT66
+00000043   EVENT67
+00000044   EVENT68
+00000045   EVENT69
+00000007   EVENT7
+00000046   EVENT70
+00000047   EVENT71
+00000048   EVENT72
+00000049   EVENT73
+0000004a   EVENT74
+0000004b   EVENT75
+0000004c   EVENT76
+0000004d   EVENT77
+0000004e   EVENT78
+0000004f   EVENT79
+00000008   EVENT8
+00000050   EVENT80
+00000051   EVENT81
+00000052   EVENT82
+00000053   EVENT83
+00000054   EVENT84
+00000055   EVENT85
+00000056   EVENT86
+00000057   EVENT87
+00000058   EVENT88
+00000059   EVENT89
+00000009   EVENT9
+0000005a   EVENT90
+0000005b   EVENT91
+0000005c   EVENT92
+0000005d   EVENT93
+0000005e   EVENT94
+0000005f   EVENT95
+00000060   EVENT96
+00000061   EVENT97
+00000062   EVENT98
+00000063   EVENT99
+80049900   FXN_F_nop
+80049904   FXN_F_run
+80049940   FXN_F_zero
+00000001   GBL$
+00005205   GBL_A_VERSION
+00000000   GBL_BCACHEREADADDR0
+00000000   GBL_BCACHEREADADDR1
+00000000   GBL_BCACHEREADADDR2
+00000000   GBL_BIGENDIAN
+00000000   GBL_CACHE
+00000000   GBL_CALLCSLCFGINIT
+00004e20   GBL_CLKIN
+00000d66   GBL_CLKTYPE
+00001963   GBL_DSPSUBTYPE
+0000003e   GBL_DSPTYPE
+00000000   GBL_ENABLEINST
+00000000   GBL_ENABLE_SK
+00000042   GBL_FOOTPRINT
+00050910   GBL_FREQ
+00000000   GBL_GEMTRUECOMPEN
+00000007   GBL_L1DMODE
+00000000   GBL_L1PMODE
+00000001   GBL_L2CONFIGURE
+00000000   GBL_L2MAR0_31
+0000ffff   GBL_L2MAR128_159
+00000000   GBL_L2MAR160_191
+00000000   GBL_L2MAR192_223
+00000000   GBL_L2MAR224_255
+00000000   GBL_L2MAR32_63
+00000000   GBL_L2MAR64_95
+00000000   GBL_L2MAR96_127
+00000002   GBL_L2MODE
+00000000   GBL_NULL
+00000000   GBL_PROCID
+00000000   GBL_ROM
+00000000   GBL_SUPPORTCSL
+0000dbef   GBL_TRCMASKVALUE
+00000000   GBL_USERINIT
+80049e60   GBL_USERINITFXN
+00000001   GBL_boot
+8005125c   GBL_initdone
+80052230   GBL_stackbeg
+8005262f   GBL_stackend
+00000000   GIO$
+80049e60   GIO_CREATEFXN
+80049e60   GIO_DELETEFXN
+80049e60   GIO_PENDFXN
+80049e60   GIO_POSTFXN
+00000000   HOOK$
+00000000   HOOK_KNLID
+00000000   HST$
+80000000   HST_A_TABBEG
+80000000   HST_A_TABEND
+00000000   HST_DSM
+80051d04   HST_DSMBUFSEG
+00000400   HST_DSMMEMSIZE
+80051b54   HST_D_chanmask
+80051b58   HST_D_tabbeg
+80051b5c   HST_D_tabend
+00000100   HST_MAXFRAMEALLOWED
+00000000   HST_MAXFRAMESET
+00000001   HST_NONE
+00000000   HST_RTDX
+00000001   HWI$
+80052c00   HWI_A_VECS
+00004000   HWI_CFGDISPATCHED
+80051d80   HWI_D_bss
+80051d84   HWI_D_ccmask
+80051d70   HWI_D_spsave
+00000001   HWI_ENABLE_EXC
+80044d40   HWI_F_dispatch
+00000000   HWI_GENERATE_RESET_VEC
+0000000a   HWI_INT10
+00000000   HWI_INT10$hwi
+0000000b   HWI_INT11
+00000000   HWI_INT11$hwi
+0000000c   HWI_INT12
+00000000   HWI_INT12$hwi
+0000000d   HWI_INT13
+00000000   HWI_INT13$hwi
+0000000e   HWI_INT14
+00000000   HWI_INT14$hwi
+0000000f   HWI_INT15
+00000000   HWI_INT15$hwi
+00000004   HWI_INT4
+00000000   HWI_INT4$hwi
+00000005   HWI_INT5
+00000000   HWI_INT5$hwi
+00000006   HWI_INT6
+00000000   HWI_INT6$hwi
+00000007   HWI_INT7
+00000000   HWI_INT7$hwi
+00000008   HWI_INT8
+00000000   HWI_INT8$hwi
+00000009   HWI_INT9
+00000000   HWI_INT9$hwi
+07060504   HWI_INTRMUX1
+0a0a0908   HWI_INTRMUX2
+34330d0b   HWI_INTRMUX3
+00000001   HWI_NMI
+00000000   HWI_NMI$hwi
+00000000   HWI_POLARITYMASK
+00000002   HWI_RESERVED0
+00000000   HWI_RESERVED0$hwi
+00000003   HWI_RESERVED1
+00000000   HWI_RESERVED1$hwi
+00000000   HWI_RESET
+00000000   HWI_RESET$hwi
+00000000   HWI_ZEROTAB
+00000001   IDL$
+800531f0   IDL_A_CALBEG
+800527f4   IDL_A_TABBEG
+00000000   IDL_CALIBRERROR
+00000000   IDL_CALIBRFXN
+80051ac8   IDL_D_calbeg
+80051ac4   IDL_D_calibrate
+80051ac0   IDL_D_tabbeg
+800527f8   IDL_END
+800531f4   IDL_END$
+80049ec0   IDL_F_loop
+00000000   IDL_USECLKIDLTIME
+ffffffff   IRAM
+00000001   ISRC$
+80047c38   KNL_glue
+800531c4   KNL_swi
+00000001   KNL_swi$dorta
+00000000   KNL_swi$ord
+00000000   KNL_swi$pri
+80051248   KNL_swi$sts
+8004faf8   KNL_swi$sts$avgfmt
+00000002   KNL_swi$sts$filter
+00000001   KNL_swi$sts$filtmaxmult
+00000001   KNL_swi$sts$filtsummult
+8004fae8   KNL_swi$sts$maxfmt
+80051244   KNL_swi$sts$stsobj
+8004faf0   KNL_swi$sts$sumfmt
+00000000   KNL_swi$sts$unittype
+00000000   KNL_swi$swi
+80051d08   L1DSRAM
+10f04000   L1DSRAM$B
+0000c000   L1DSRAM$L
+ffffffff   L1PSRAM
+00000001   LCK$
+00000001   LOG$
+80053194   LOG_A_TABBEG
+800531c4   LOG_A_TABEND
+00000002   LOG_A_TABLEN
+80051acc   LOG_D_system
+00000001   LOG_ENABLED
+800492a0   LOG_F_event
+80053194   LOG_system
+80053000   LOG_system$buf
+00000000   LOG_system$datatype
+00000000   LOG_system$log
+00000040   LOG_system$size
+800527f4   Load_cpuloadIdlObj
+800531f0   Load_cpuloadIdlObj$
+00000000   MBX$
+00000001   MEM$
+80051d04   MEM_MALLOCSEG
+00000000   MEM_NULL
+80051d04   MEM_SEGZERO
+00000000   MEM_USEMPC
+00000002   MEM_gNumHeap
+00000001   MSGQ$
+00000001   MSGQ_USEMSGQ
+00000000   OBJ$
+00000000   PIP$
+80000000   PIP_A_TABBEG
+80000000   PIP_A_TABEND
+00000000   PIP_A_TABLEN
+80051ad0   PIP_D_tabbeg
+80051ad4   PIP_D_tablen
+00000064   PIP_OBJSIZE
+00000000   PIP_gNextId
+00000000   PIP_gNumEmbed
+00000001   POOL$
+00000001   POOL_USEPOOL
+00000001   PRD$
+80000000   PRD_A_TABBEG
+80000000   PRD_A_TABEND
+00000000   PRD_A_TABLEN
+80051b10   PRD_D_cur
+80051b14   PRD_D_elapsed
+80051b18   PRD_D_prevtim
+80051b1c   PRD_D_scalar
+80051b20   PRD_D_swihandle
+80051b24   PRD_D_tabbeg
+80051b28   PRD_D_tablen
+80051b2c   PRD_D_thook
+80051b0c   PRD_D_tick
+800456e0   PRD_F_swi
+80045964   PRD_F_tick
+00000001   PRD_SCALAR
+00000000   PRD_SWIHANDLE
+8004706c   PRD_THOOKFXN
+800527ec   PRD_clock
+00000001   PWRM$
+00000000   PWRM_PWRM_CAPSMASK
+0000000a   PWRM_PWRM_CLKTICKSPERSLOT
+00000000   PWRM_PWRM_ENABLE
+00000000   PWRM_PWRM_LOADENABLE
+00000001   PWRM_PWRM_NUMSLOTS
+00000000   PWRM_PWRM_RESOURCETRACKING
+00000000   PWRM_PWRM_SCALING
+80049e60   PWRM_PWRM_SHAREDRESOURCEFXN
+80049e60   PWRM_PWRM_SLOTHOOKFXN
+00000000   PWRM_PWRM_TIMERIDNUM
+00000000   PWRM_PWRM_TIMERINTRMASK
+00000000   PWRM_PWRM_TIMERWUGENMASK
+00000000   PWRM_PWRM_USERRESOURCES
+00000000   PWRM_PWRM_USETIMER
+00000001   QUE$
+80051b30   RTA_D_fromHost
+80051b38   RTA_D_logval
+80051b48   RTA_D_stsval
+80051b34   RTA_D_toHost
+00000000   RTDX$
+00000408   RTDX_BUFMEMSIZE
+80051d04   RTDX_DATAMEMSEG
+00000000   RTDX_MODE
+00000000   RTDX_USERTDX
+00000000   RTDX_USERTEXECUTION
+00000000   SEM$
+00000000   SIO$
+00000000   STS$
+80051244   STS_A_TABBEG
+80051254   STS_A_TABEND
+80049b6c   STS_F_add
+80049b40   STS_F_delta
+80049b88   STS_F_reset
+00000001   SWI$
+800531c4   SWI_A_TABBEG
+800531f0   SWI_A_TABEND
+00000001   SWI_A_TABLEN
+80051ba4   SWI_D_curfxn
+80051b94   SWI_D_curmask
+80051ba0   SWI_D_curmbox
+80051b98   SWI_D_curset
+80051b90   SWI_D_execaddr
+80051bac   SWI_D_inswi
+80051b9c   SWI_D_lock
+80051ba8   SWI_D_rdybeg
+80051bb0   SWI_D_rdytab
+80051b8c   SWI_D_runaddr
+00000000   SWI_EHOOKFXN
+80045404   SWI_EXECFXN
+80045220   SWI_F_enable
+80045404   SWI_F_exec
+8004542c   SWI_F_iexec
+80045290   SWI_F_post
+800454ac   SWI_F_run
+00000000   SWI_IHOOKFXN
+800454ac   SWI_RUNFXN
+00000001   SYS$
+800527dc   SYS$config
+80049e00   SYS_ABORTFXN
+80049f80   SYS_ERRORFXN
+80049fa0   SYS_EXITFXN
+80049c60   SYS_PUTCFXN
+80051258   TRC_R_mask
+80051254   TRC_cinit
+00000001   TSK$
+00000000   TSK_NUM_HOOKS
+00000001   TSK_PRIORITY
+00000000   TSK_READYFXN
+80051d04   TSK_STACKSEG
+00000400   TSK_STACKSIZE
+00000000   TSK_SWITCHFXN
+80049e60   TSK_VCREATEFXN
+80049e60   TSK_VDELETEFXN
+80049e60   TSK_VEXITFXN
+8005310c   TSK_idle
+00000000   TSK_idle$ord
+00000000   TSK_idle$pri
+80051e30   TSK_idle$stack
+800521c8   TSK_idle$stkptr
+00000000   TSK_idle$tsk
+00000000   UDEV$
+80049340   _ATM_andi
+80049340   _ATM_andu
+80049350   _ATM_cleari
+80049350   _ATM_clearu
+80049360   _ATM_deci
+80049360   _ATM_decu
+80049370   _ATM_inci
+80049370   _ATM_incu
+80049384   _ATM_ori
+80049384   _ATM_oru
+80049394   _ATM_seti
+80049394   _ATM_setu
+8000afac   _Algorithm_acquireLock
+8000aea8   _Algorithm_activate
+8000add8   _Algorithm_addGroup
+8000aa20   _Algorithm_create
+8000a914   _Algorithm_deactivate
+8000a750   _Algorithm_delete
+8000a714   _Algorithm_exit
+8000a70c   _Algorithm_getAlgHandle
+8000a704   _Algorithm_getMemRecs
+8000a6fc   _Algorithm_getNumRecs
+8000a6a0   _Algorithm_init
+8000a5a4   _Algorithm_releaseLock
+8000a4e0   _Algorithm_removeGroup
+80048334   _BCACHE_bootInit
+800483b4   _BCACHE_getMar
+80048364   _BCACHE_getSize
+80048a30   _BCACHE_inv
+80049730   _BCACHE_invL1pAll
+80048334   _BCACHE_setCacheToSram
+800482e4   _BCACHE_setMar
+800482a0   _BCACHE_setSize
+80049740   _BCACHE_wait
+80048a20   _BCACHE_wb
+80049720   _BCACHE_wbAll
+80048a0c   _BCACHE_wbInv
+8004970c   _BCACHE_wbInvAll
+80051260   _BIOS_init
+800514c8   _BIOS_start
+80049cec   _C62_clearIFR
+80049cc0   _C62_disableIER
+80049cd8   _C62_enableIER
+8001a320   _C64P_getltime
+8001a334   _C64P_getltime8
+80049cec   _C64_clearIFR
+80049cc0   _C64_disableIER
+80049cd8   _C64_enableIER
+ffffffff   _CACHE_L1D
+ffffffff   _CACHE_L2
+8003413c   _CBuf_ATTRS
+800198c0   _CBuf_create
+80019ce0   _CBuf_putc
+80019d20   _CBuf_puts
+80019920   _CERuntime_init
+00050910   _CLK_COUNTSPMS
+80051dd4   _CLK_DFLTMICROSECS
+80051b08   _CLK_D_countspms
+80051afc   _CLK_D_dirty
+80051dd8   _CLK_D_microseconds
+80051b00   _CLK_D_prd
+80051b04   _CLK_D_tddr
+800478e0   _CLK_F_itime
+00004b00   _CLK_PRD
+49038000   _CLK_REGS
+00000000   _CLK_TDDR
+00000000   _CLK_TIMERNUM
+00000001   _CLK_USETIMER
+80049e40   _CLK_countspms
+80049fc0   _CLK_gethtime
+49038000   _CLK_gptimer
+80033c2c   _CLK_gptimer_enablemask
+80051aec   _CLK_htimeDiv
+80051af0   _CLK_htimeMult
+80051d0c   _CLK_htimePerLtime
+80034124   _CLK_inputClock
+800478e0   _CLK_itime
+80051af4   _CLK_ltimeDiv
+80051af8   _CLK_ltimeMult
+80046944   _CLK_start
+800468e0   _CLK_stop
+800341e0   _Comm_ATTRS
+800142f0   _Comm_alloc
+80014190   _Comm_create
+80014140   _Comm_delete
+80014138   _Comm_exit
+80014130   _Comm_free
+80014124   _Comm_get
+80014120   _Comm_getMsgSize
+80014114   _Comm_getSrcQueue
+80014110   _Comm_init
+800140f8   _Comm_locate
+800140f0   _Comm_put
+800140e8   _Comm_release
+800140e0   _Comm_setSrcQueue
+80051d04   _DDR
+80051d04   _DDR2
+8003425c   _DDR2_base
+00010000   _DDR2_length
+8001a360   _DMAN3_CE_exit
+8001a380   _DMAN3_CE_init
+8001a3a0   _DMAN3_grantDmaChannels
+8001a3c0   _DMAN3_releaseDmaChannels
+80034220   _DSKT2_ALGATTRS
+80019d60   _DSKT2_acquireLock
+80015960   _DSKT2_activateAlg
+80051c7c   _DSKT2_cacheWBInvFxn
+80019da0   _DSKT2_createAlg
+80011ae0   _DSKT2_createAlg3
+80019980   _DSKT2_createAlgExt
+800184a0   _DSKT2_deactivateAlg
+80015fa0   _DSKT2_freeAlg
+80019de0   _DSKT2_getContext
+80016c60   _DSKT2_getMemRecs
+80018f40   _DSKT2_getNumMemRecs
+80016d40   _DSKT2_initLocks
+80019e20   _DSKT2_releaseLock
+80019e60   _DSKT2_setContext
+0000000a   _EVENT10
+00000064   _EVENT100
+00000065   _EVENT101
+00000066   _EVENT102
+00000067   _EVENT103
+00000068   _EVENT104
+00000069   _EVENT105
+0000006a   _EVENT106
+0000006b   _EVENT107
+0000006c   _EVENT108
+0000006d   _EVENT109
+0000000b   _EVENT11
+0000006e   _EVENT110
+0000006f   _EVENT111
+00000070   _EVENT112
+00000071   _EVENT113
+00000072   _EVENT114
+00000073   _EVENT115
+00000074   _EVENT116
+00000075   _EVENT117
+00000076   _EVENT118
+00000077   _EVENT119
+0000000c   _EVENT12
+00000078   _EVENT120
+00000079   _EVENT121
+0000007a   _EVENT122
+0000007b   _EVENT123
+0000007c   _EVENT124
+0000007d   _EVENT125
+0000007e   _EVENT126
+0000007f   _EVENT127
+0000000d   _EVENT13
+0000000e   _EVENT14
+0000000f   _EVENT15
+00000010   _EVENT16
+00000011   _EVENT17
+00000012   _EVENT18
+00000013   _EVENT19
+00000014   _EVENT20
+00000015   _EVENT21
+00000016   _EVENT22
+00000017   _EVENT23
+00000018   _EVENT24
+00000019   _EVENT25
+0000001a   _EVENT26
+0000001b   _EVENT27
+0000001c   _EVENT28
+0000001d   _EVENT29
+0000001e   _EVENT30
+0000001f   _EVENT31
+00000020   _EVENT32
+00000021   _EVENT33
+00000022   _EVENT34
+00000023   _EVENT35
+00000024   _EVENT36
+00000025   _EVENT37
+00000026   _EVENT38
+00000027   _EVENT39
+00000004   _EVENT4
+00000028   _EVENT40
+00000029   _EVENT41
+0000002a   _EVENT42
+0000002b   _EVENT43
+0000002c   _EVENT44
+0000002d   _EVENT45
+0000002e   _EVENT46
+0000002f   _EVENT47
+00000030   _EVENT48
+00000031   _EVENT49
+00000005   _EVENT5
+00000032   _EVENT50
+00000033   _EVENT51
+00000034   _EVENT52
+00000035   _EVENT53
+00000036   _EVENT54
+00000037   _EVENT55
+00000038   _EVENT56
+00000039   _EVENT57
+0000003a   _EVENT58
+0000003b   _EVENT59
+00000006   _EVENT6
+0000003c   _EVENT60
+0000003d   _EVENT61
+0000003e   _EVENT62
+0000003f   _EVENT63
+00000040   _EVENT64
+00000041   _EVENT65
+00000042   _EVENT66
+00000043   _EVENT67
+00000044   _EVENT68
+00000045   _EVENT69
+00000007   _EVENT7
+00000046   _EVENT70
+00000047   _EVENT71
+00000048   _EVENT72
+00000049   _EVENT73
+0000004a   _EVENT74
+0000004b   _EVENT75
+0000004c   _EVENT76
+0000004d   _EVENT77
+0000004e   _EVENT78
+0000004f   _EVENT79
+00000008   _EVENT8
+00000050   _EVENT80
+00000051   _EVENT81
+00000052   _EVENT82
+00000053   _EVENT83
+00000054   _EVENT84
+00000055   _EVENT85
+00000056   _EVENT86
+00000057   _EVENT87
+00000058   _EVENT88
+00000059   _EVENT89
+00000009   _EVENT9
+0000005a   _EVENT90
+0000005b   _EVENT91
+0000005c   _EVENT92
+0000005d   _EVENT93
+0000005e   _EVENT94
+0000005f   _EVENT95
+00000060   _EVENT96
+00000061   _EVENT97
+00000062   _EVENT98
+00000063   _EVENT99
+80044d10   _EXC_clearLastStatus
+80046cc0   _EXC_dispatch
+80044b94   _EXC_exceptionHandler
+80051da0   _EXC_exceptionHook
+80044b60   _EXC_external
+80051da8   _EXC_externalHook
+80044b40   _EXC_getLastStatus
+80044b00   _EXC_init
+80044854   _EXC_internal
+80051da4   _EXC_internalHook
+80044820   _EXC_nmi
+80051dac   _EXC_nmiHook
+80051d18   _EXC_returnPtr
+80046e84   _EXC_setReturnPtr
+80034154   _EXC_status
+80051d10   _EXC_sysTrapTable
+80034098   _Engine_ALGCREATEATTRS
+80006254   _Engine_addStubFxns
+80051d32   _Engine_alwaysCollectDspTrace
+800061a4   _Engine_call
+80006120   _Engine_callAsync
+800060b8   _Engine_callWait
+80051d34   _Engine_ceDebugDspTraceMask
+800019ec   _Engine_close
+8001ae2c   _Engine_config
+8000600c   _Engine_createNode
+800059f0   _Engine_createNode2
+80005478   _Engine_ctrlNode
+800052d4   _Engine_deleteNode
+8000122c   _Engine_fwriteTrace
+80005058   _Engine_getAlgInfo
+80004cf8   _Engine_getAlgInfo2
+80004a58   _Engine_getAlgMemRecs
+800048cc   _Engine_getAlgNumRecs
+800047e0   _Engine_getCodecClassConfig
+800045ac   _Engine_getConstName
+80004448   _Engine_getCpuLoad
+80004444   _Engine_getEngine
+80004188   _Engine_getFxns
+80003f48   _Engine_getLastError
+80003ed0   _Engine_getLocalEngine
+80003f14   _Engine_getMemId
+80003c94   _Engine_getMemStat
+80003c84   _Engine_getName
+80003c58   _Engine_getNodeQueues
+80003a78   _Engine_getNumAlgs
+80003b94   _Engine_getNumAlgs2
+80003910   _Engine_getNumMemSegs
+80001fa8   _Engine_getNumServerAlgs
+80003890   _Engine_getRemoteVisa
+8000380c   _Engine_getServer
+80003660   _Engine_getServerAlgInfo
+8000356c   _Engine_getUsedMem
+80003560   _Engine_hasServer
+800032a0   _Engine_init
+8000220c   _Engine_initFromServer
+80002f18   _Engine_open
+80000860   _Engine_redefineHeap
+800007d4   _Engine_releaseTraceToken
+8000072c   _Engine_requestTraceToken
+800004d8   _Engine_restoreHeap
+80000224   _Engine_setTrace
+80049e60   _FXN_F_nop
+80049904   _FXN_F_run
+80049940   _FXN_F_zero
+00000000   _GBL_CACHE
+80048444   _GBL_cacheInit64P
+80051b64   _GBL_clkIn
+80051b68   _GBL_freq
+80049e80   _GBL_getVersion
+80051b60   _GBL_procId
+8001af00   _GT
+80014860   _GTConfig_biosInit
+80014848   _GTConfig_biosMemAlloc
+80014834   _GTConfig_biosMemFree
+8001482c   _GTConfig_getTime
+80014814   _GTConfig_semPend
+80014800   _GTConfig_semPost
+800147cc   _GTConfig_sysPrintf
+80014784   _GTConfig_sysPrintfError
+80014700   _GTConfig_tskId
+80019ea0   _GT_curTime
+8001a3e0   _GT_getModNameFlags
+80019ee0   _GT_init
+8000e704   _Global_abort
+8000e60c   _Global_atexit
+8001aca0   _Global_buildInfo
+8000e4d4   _Global_exit
+8000e3f0   _Global_getCpuLoad
+8001a2e0   _Global_getLoad
+8000e3ec   _Global_getProcessId
+8000e3e8   _Global_getenv
+8000e350   _Global_init
+8000dfc0   _Global_setSpecialTrace
+8002b7c8   _Global_traceBuffer
+80051c9c   _Global_traceBufferSize
+80051c74   _Global_useLinkArbiter
+80049ea0   _HOOK_setenv
+80018540   _HOSTclose
+80016660   _HOSTlseek
+80016e20   _HOSTopen
+800178a0   _HOSTread
+80014e60   _HOSTrename
+80017960   _HOSTunlink
+80017a20   _HOSTwrite
+80000000   _HST_A_TABBEG
+80000000   _HST_A_TABEND
+00004000   _HWI_CFGDISPATCHED
+80051d7c   _HWI_D_inhwi
+80051d70   _HWI_D_spsave
+80044d40   _HWI_F_dispatch
+0000000a   _HWI_INT10
+0000000b   _HWI_INT11
+0000000c   _HWI_INT12
+0000000d   _HWI_INT13
+0000000e   _HWI_INT14
+0000000f   _HWI_INT15
+00000004   _HWI_INT4
+00000005   _HWI_INT5
+00000006   _HWI_INT6
+00000007   _HWI_INT7
+00000008   _HWI_INT8
+00000009   _HWI_INT9
+00000001   _HWI_NMI
+00000002   _HWI_RESERVED0
+00000003   _HWI_RESERVED1
+00000000   _HWI_RESET
+80052628   _HWI_STKBOTTOM
+80052230   _HWI_STKTOP
+80051d70   _HWI_data
+80049960   _HWI_disable
+800519c0   _HWI_dispatchTab
+80049978   _HWI_enable
+8004998c   _HWI_restore
+80049ec0   _IDL_loop
+ffffffff   _IRAM
+80051c30   _KNL_alarm
+80048500   _KNL_check
+80051c54   _KNL_curqueue
+80051c44   _KNL_curtask
+80051c4c   _KNL_curtime
+80033cd0   _KNL_dummy
+80048c40   _KNL_enter
+80048c00   _KNL_exit
+800485c8   _KNL_idle
+80051c6c   _KNL_idlefxn
+80051c38   _KNL_inactive
+800493c0   _KNL_ipost
+800485f0   _KNL_max
+80051c58   _KNL_maxqueue
+80049440   _KNL_post
+80051c48   _KNL_prevtask
+80051c3c   _KNL_priority
+80033c30   _KNL_queues
+80047da0   _KNL_ready
+80046040   _KNL_run
+80047ae0   _KNL_saveIsrFrame
+80051c40   _KNL_set
+80051c34   _KNL_setpri
+80048e40   _KNL_start
+800531c4   _KNL_swi
+80051c50   _KNL_swiptr
+80047b8c   _KNL_switch
+80051c60   _KNL_tcreatefxn
+80051c64   _KNL_tdeletefxn
+8004706c   _KNL_tick
+80051c68   _KNL_treadyfxn
+80051c5c   _KNL_tswitchfxn
+80051c28   _KNL_wFlag
+80051c2c   _KNL_wList
+80051d08   _L1DHEAP
+80051d08   _L1DSRAM
+10f04000   _L1DSRAM_base
+0000c000   _L1DSRAM_length
+ffffffff   _L1PSRAM
+800494e0   _LCK_pend
+800494c0   _LCK_post
+80053194   _LOG_A_TABBEG
+800531c4   _LOG_A_TABEND
+00000002   _LOG_A_TABLEN
+80051acc   _LOG_D_system
+800492a0   _LOG_event
+800497c0   _LOG_event5
+80049fe0   _LOG_printf4
+80053194   _LOG_system
+00000001   _LOG_ts
+800527f4   _Load_cpuloadIdlObj
+80014ac8   _Load_getMaxLoop
+80014ab8   _Load_getMinLoop
+80014ab0   _Load_getWindow
+80014a98   _Load_getcpuload
+80014950   _Load_idlefxn
+80014948   _Load_init
+80014934   _Load_reset
+80014908   _Load_setPeriod
+80014900   _Load_setWindow
+8001a6b8   _LockMP_acquire
+8001a6b4   _LockMP_create
+8001a6b0   _LockMP_delete
+8001a6ac   _LockMP_getCount
+8001a6a8   _LockMP_getRefCount
+8001a6a4   _LockMP_init
+8001a6a0   _LockMP_release
+800341c4   _Lock_ATTRS
+80014df0   _Lock_acquire
+80014d34   _Lock_create
+80014ce0   _Lock_delete
+80014db0   _Lock_init
+80014ca0   _Lock_release
+80051dec   _Lock_system
+800198a0   _Log_event
+80019898   _Log_init
+80019840   _Log_printf
+80051df8   _MEM
+80034054   _MEM_ATTRS
+80051b6c   _MEM_D_NUMSEGMENTS
+80051b74   _MEM_D_freelist
+80051b78   _MEM_D_lockaddr
+80051b70   _MEM_D_memtab
+80051b7c   _MEM_D_unlockaddr
+80046ae0   _MEM_alloc
+80046280   _MEM_define
+80047080   _MEM_free
+80049d00   _MEM_getBaseAddress
+800518a0   _MEM_init
+80051cec   _MEM_memtab
+800464c0   _MEM_redefine
+80047ee0   _MEM_stat
+80051dfc   _MEM_staticMemtab
+80049840   _MEM_valloc
+80051e00   _MSGQ
+8004fa68   _MSGQ_ATTRS
+8004fa78   _MSGQ_LOCATEASYNCATTRS
+8004fa74   _MSGQ_LOCATEATTRS
+80048cc0   _MSGQ_alloc
+80048ee0   _MSGQ_close
+8001b620   _MSGQ_config
+80049d40   _MSGQ_free
+80048f80   _MSGQ_get
+80049d80   _MSGQ_getSrcQueue
+80051580   _MSGQ_init
+80048740   _MSGQ_locate
+80048a40   _MSGQ_locateLocal
+80048020   _MSGQ_open
+80049020   _MSGQ_put
+800499c0   _MSGQ_release
+80048840   _MSGQ_startup
+80034114   _Memory_DEFAULTPARAMS
+80051d04   _Memory_SEGID
+800097b4   _Memory_alloc
+800096d4   _Memory_cacheInv
+800095f4   _Memory_cacheWb
+80009518   _Memory_cacheWbInv
+80009460   _Memory_cacheWbInvAll
+8000936c   _Memory_contigAlloc
+80009278   _Memory_contigFree
+800091f4   _Memory_contigStat
+800091f0   _Memory_dumpKnownContigBufsList
+800091ec   _Memory_exit
+800090e0   _Memory_free
+80009054   _Memory_getBufferPhysicalAddress
+80008fd0   _Memory_getBufferVirtualAddress
+80008f44   _Memory_getHeapId
+80008f34   _Memory_getNumHeaps
+8002b7b8   _Memory_heapBases
+8002b7b0   _Memory_heapNames
+8002b7c0   _Memory_heapSizes
+80008e04   _Memory_init
+80051c98   _Memory_numHeaps
+80008d28   _Memory_redefine
+80008e00   _Memory_registerContigBuf
+80008de0   _Memory_restoreHeap
+80008c28   _Memory_segAlloc
+80008b2c   _Memory_segFree
+80008a44   _Memory_segStat
+80051c70   _Memory_skipVirtualAddressTranslation
+80008a40   _Memory_unregisterContigBuf
+80049540   _OBJ_create
+80049a20   _OBJ_delete
+800519a0   _OBJ_init
+80033fe8   _OBJ_segtab
+80033fb0   _OBJ_table
+80000000   _PIP_A_TABBEG
+80000000   _PIP_A_TABEND
+80051e04   _POOL
+8002b660   _POOL_config
+800516c0   _POOL_init
+80051b0c   _PRD_D_tick
+800527ec   _PRD_clock
+80034148   _Processor_ATTRS
+8001a690   _Processor_create
+8001a68c   _Processor_delete
+8001a688   _Processor_init
+8001a680   _Processor_wait
+80049dc0   _QUE_get
+80049de8   _QUE_put
+80034194   _Queue_ATTRS
+80019cd4   _Queue_exit
+80019c94   _Queue_extract
+80019c8c   _Queue_get
+80019c88   _Queue_init
+80019c80   _Queue_put
+8001a400   _RMAN_activateAllResources
+8001a420   _RMAN_assignResources
+8001a440   _RMAN_deactivateAllResources
+8001a460   _RMAN_exit
+8001a480   _RMAN_freeResources
+8001a4a0   _RMAN_init
+80034208   _SEM_ATTRS
+800495c0   _SEM_create
+80049ee0   _SEM_delete
+80049ae0   _SEM_pend
+80049a80   _SEM_pendBinary
+800466e0   _SEM_pendEnterKnl
+80048b20   _SEM_post
+80048b20   _SEM_postBinary
+800490c0   _SEM_postEnterKnl
+80033f2c   _SPHDECCOPY_TI_IALG
+80033f00   _SPHDECCOPY_TI_SPHDECCOPY
+8000fca8   _SPHDECCOPY_TI_alloc
+8000fe20   _SPHDECCOPY_TI_control
+8000fd94   _SPHDECCOPY_TI_free
+8000fc4c   _SPHDECCOPY_TI_initObj
+8000fa60   _SPHDECCOPY_TI_process
+8000d484   _SPHDEC_control
+8000d348   _SPHDEC_create
+8000d280   _SPHDEC_delete
+8000cf80   _SPHDEC_process
+80033f84   _SPHENCCOPY_TI_IALG
+80033f58   _SPHENCCOPY_TI_SPHENCCOPY
+8000f710   _SPHENCCOPY_TI_alloc
+8000f884   _SPHENCCOPY_TI_control
+8000f800   _SPHENCCOPY_TI_free
+8000f6b0   _SPHENCCOPY_TI_initObj
+8000f4a0   _SPHENCCOPY_TI_process
+8000cbf8   _SPHENC_control
+8000cab8   _SPHENC_create
+8000c9f0   _SPHENC_delete
+8000c700   _SPHENC_process
+8004faac   _STATICPOOL_FXNS
+80051244   _STS_A_TABBEG
+80051254   _STS_A_TABEND
+80049b6c   _STS_add
+80049b40   _STS_delta
+80049b88   _STS_reset
+80049f00   _STS_set
+80051ba4   _SWI_D_curfxn
+80051b94   _SWI_D_curmask
+80051b98   _SWI_D_curset
+80051b90   _SWI_D_execaddr
+80051bac   _SWI_D_inswi
+80051b9c   _SWI_D_lock
+80051ba8   _SWI_D_rdybeg
+80051b8c   _SWI_D_runaddr
+80051b8c   _SWI_data
+80045290   _SWI_post
+80049f20   _SWI_self
+80051b80   _SYS
+80052e00   _SYS_PUTCBEG
+80052fff   _SYS_PUTCEND
+80049ba0   _SYS_abort
+80049f40   _SYS_atexit
+800498a0   _SYS_error
+80034058   _SYS_errors
+80049160   _SYS_exit
+800340d0   _SYS_exitStack
+80051ddc   _SYS_exitStackPtr
+80051de0   _SYS_exitStackTop
+80049f68   _SYS_one
+800447d0   _SYS_printf
+800447a4   _SYS_sprintf
+80044794   _SYS_vprintf
+80044360   _SYS_vsprintf
+80049f60   _SYS_zero
+8001a2d4   _SemMP_create
+8001a2c4   _SemMP_delete
+8001a2b8   _SemMP_getCount
+8001a2b4   _SemMP_getRefCount
+8001a2b0   _SemMP_init
+8001a2a8   _SemMP_pend
+8001a2a0   _SemMP_post
+80013934   _Sem_create
+800138a0   _Sem_delete
+80013898   _Sem_getCount
+80013864   _Sem_init
+80013848   _Sem_pend
+80013840   _Sem_post
+80008898   _Server_connectTrace
+8000870c   _Server_disconnectTrace
+80008628   _Server_fwriteTrace
+80008518   _Server_getAlgInfo
+80008434   _Server_getCpuLoad
+800082ec   _Server_getMemStat
+800081c0   _Server_getNumAlgs
+80008088   _Server_getNumMemSegs
+80051e0c   _Server_holdingTraceToken
+80007fa4   _Server_init
+80007dd4   _Server_redefineHeap
+80007c88   _Server_restoreHeap
+80007b94   _Server_setTrace
+80051258   _TRC_R_mask
+80049c00   _TRG_stkused
+80051db8   _TSK
+80033ea4   _TSK_ATTRS
+80033ec0   _TSK_config
+80045a60   _TSK_create
+80047400   _TSK_delete
+80049664   _TSK_disable
+80049640   _TSK_enable
+80048160   _TSK_exit
+8005310c   _TSK_idle
+80051940   _TSK_init
+80051db0   _TSK_nTasks
+80051db4   _TSK_pid
+800476f0   _TSK_setpri
+80047940   _TSK_setup
+800486c4   _TSK_startup
+80049200   _TSK_stat
+80033ee0   _TSK_timerSem
+80048dc0   _TSK_yield
+800340f0   _Thread_ATTRS
+8000f2ec   _Thread_create
+8000f270   _Thread_delete
+8000f208   _Thread_exit
+8000f184   _Thread_getenv
+8000f100   _Thread_getname
+8000f084   _Thread_getpri
+8000f030   _Thread_init
+8000f02c   _Thread_join
+8000efd0   _Thread_self
+8000ef50   _Thread_setpri
+8000eec4   _Thread_stat
+8000ee60   _Thread_yield
+80017890   _Trace_bind
+80017888   _Trace_getTrace
+80017884   _Trace_init
+80017858   _Trace_print
+80017834   _Trace_putc
+80051e18   _Trace_system
+800177c0   _Trace_vprint
+80049e00   _UTL_doAbort
+80049f80   _UTL_doError
+80049c60   _UTL_doPutc
+80049fa0   _UTL_halt
+80007a0c   _VISA_allocMsg
+80007908   _VISA_call
+80007804   _VISA_callAsync
+80051c78   _VISA_checked
+80007724   _VISA_create
+80006cd8   _VISA_create2
+80006a88   _VISA_delete
+80006994   _VISA_enter
+80006898   _VISA_exit
+8000672c   _VISA_freeMsg
+80006724   _VISA_getAlgFxns
+800066e4   _VISA_getAlgHandle
+80006668   _VISA_getAlgMemRecs
+800065e8   _VISA_getAlgNumRecs
+800065e0   _VISA_getAlgorithmHandle
+800065d4   _VISA_getCodecClassConfig
+800065cc   _VISA_getContext
+80006544   _VISA_getMaxMsgSize
+80006534   _VISA_isLocal
+80006530   _VISA_setContext
+80006340   _VISA_wait
+8000c6c0   _XdmUtils_init
+8000c538   _XdmUtils_validateExtendedStruct
+8000c358   _XdmUtils_validateSparseBufDesc
+8000c16c   _XdmUtils_validateSparseBufDesc1
+8000bec4   _XdmUtils_validateVideo1BufDesc
+8000bc20   _XdmUtils_validateVideoBufDesc
+8002b708   __ALG_groupRefCount
+8002b668   __ALG_groupUsed
+8002b6b8   __ALG_sems
+8002b758   __Algorithm_lockOwner
+80034094   __BCACHE_emifAddr
+800341d4   __BCACHE_readTable
+80052630   __CIOBUF_
+800478fc   __CLK_lat1beg
+80047920   __CLK_lat1end
+80051c80   __DSKT2_ALLOW_EXTERNAL_SCRATCH
+8001ae38   __DSKT2_DARAM_SCRATCH_SIZES
+80051d04   __DSKT2_HEAP
+80051cbc   __DSKT2_NumYielded
+80019040   __DSKT2_Permute_iterateNext
+800190c0   __DSKT2_Permute_setInitialState
+8001ae88   __DSKT2_SARAM_SCRATCH_SIZES
+80051ca4   __DSKT2_activeAlg
+80051cb8   __DSKT2_algReferenceCount
+80010d00   __DSKT2_assignInstanceMemory
+80051cb4   __DSKT2_createCallbackFxn
+80016fe0   __DSKT2_dequeueMemTab
+80018720   __DSKT2_enqueueMemTab
+800187c0   __DSKT2_freeInstanceMemory
+800160c0   __DSKT2_getScratchRequestInfo
+80051cb0   __DSKT2_heapId
+80012c40   __DSKT2_init
+80051ca8   __DSKT2_lastActiveAlg
+80051ca0   __DSKT2_memTabList
+80034198   __DSKT2_scratchDescTbl
+80051cac   __DSKT2_scratchShareRefCount
+800170c0   __DSKT2_spaceToSeg
+80019fa0   __DSKT2_throwMPUMemException
+800199e0   __DSKT2_useSharedScratch
+80051cc0   __DSKT2_yielded
+80051d08   __DSKT_DARAM0
+80051d08   __DSKT_DARAM1
+80051d08   __DSKT_DARAM2
+80051d04   __DSKT_EPROG
+80051d04   __DSKT_ESDATA
+80051d08   __DSKT_IPROG
+80051d08   __DSKT_SARAM0
+80051d08   __DSKT_SARAM1
+80051d08   __DSKT_SARAM2
+80019140   __GT_create
+80011480   __GT_set
+8000b0c0   __GT_trace
+80051b88   __HOOK_NUMHOOKS
+80051b84   __HOOK_knlId
+80044d40   __HWI_lat1beg
+80044ec8   __HWI_lat1end
+80044ec8   __HWI_lat2beg
+800450a4   __HWI_lat2end1
+80045030   __HWI_lat2end2
+800450c0   __HWI_lat3beg
+80045060   __HWI_lat3end2
+8004854c   __KNL_lat1beg
+800485c8   __KNL_lat1end
+800492a0   __LOG_lat1beg
+8003402c   __MEM_mutex
+48004000   __PWRM_CM_BASEADDR
+5d000000   __PWRM_IVAMMU_BASEADDR
+48306000   __PWRM_PRM_BASEADDR
+48002000   __PWRM_SCM_BASEADDR
+00000000   __PWRM_TIMERBASEADDR
+00000020   __PWRM_TIMERINPUTCLK
+00000000   __PWRM_TIMERINTRMASK
+0000000a   __PWRM_TIMERPERIOD
+00000000   __PWRM_USETIMER
+80049dc0   __QUE_lat1beg
+80049de0   __QUE_lat1end
+80049de8   __QUE_lat2beg
+80049df4   __QUE_lat2end
+80047240   __SEM_dopost
+00000400   __STACK_SIZE
+80018fc0   __STATICPOOL_alloc
+8001a4c0   __STATICPOOL_free
+80017ae0   __STATICPOOL_open
+80045398   __SWI_lat1beg
+80045444   __SWI_lat1end
+80045448   __SWI_lat2beg
+800454a8   __SWI_lat2end
+80045220   __SWI_lat3beg
+8004528c   __SWI_lat3end
+80034004   __TSK_mutex
+00000000   ___ASM__
+000000b8   ___ISA__
+000000d0   ___PLAT__
+000000f8   ___TARG__
+800341f4   ___TI_enable_exit_profile_output
+ffffffff   ___TI_pprof_out_hndl
+ffffffff   ___TI_prof_data_size
+ffffffff   ___TI_prof_data_start
+00000118   ___TRDR__
+ffffffff   ___binit__
+800519c0   ___bss__
+ffffffff   ___c_args__
+8004fae8   ___cinit__
+80000000   ___data__
+80000000   ___edata__
+80051e2c   ___end__
+8001aca0   ___etext__
+8001a020   ___isinf
+ffffffff   ___pinit__
+80000000   ___text__
+8001a0e0   __abort_msg
+80013600   __addd
+80047c60   __auto_init
+80015aa0   __buff_read
+80017d20   __cleanup
+800341ec   __cleanup_ptr
+800171a0   __cmpd
+8004f558   __ctypes_
+8000d7e0   __divd
+80018860   __divli
+80017de0   __divu
+80015000   __divul
+80013140   __divull
+80017ea0   __doflush
+800341f0   __dtors_ptr
+800191c0   __fixdi
+80018a40   __fixdli
+80019240   __fltlid
+80013a80   __frcaddd
+800161e0   __frcmpyd
+80014300   __frcmpyd_div
+80033c28   __ft_end
+80033a98   __ftable
+800192c0   __llshl
+80019a40   __llshru
+80034238   __lock
+800133a0   __mpyd
+8001a120   __negd
+8001a4e0   __negll
+8001a500   __nop
+800110e0   __printfi
+80018b80   __rd_ok
+8001a5c0   __register_lock
+8001a5e0   __register_unlock
+8001a1a0   __remli
+80018c20   __remu
+800193c0   __renormd
+80052230   __stack
+80019aa0   __subcull
+8001a1e0   __subd
+8001aed8   __ti_sdo_utils_trace_GT_params
+80033b88   __tmpnams
+8003423c   __unlock
+80016a60   __wrt_ok
+8001a600   _abort
+80017360   _atoi
+800517e0   _c_int00
+80045fd8   _calloc
+80017440   _close
+80034228   _curMask
+80017520   _exit
+80016540   _fclose
+80016b60   _fflush
+80019b00   _fopen
+800195c0   _fprintf
+80015be0   _fputc
+800120e0   _fputs
+800129a0   _fread
+80045da0   _free
+80018020   _fseek
+800108a0   _fwrite
+800180e0   _lseek
+800181a0   _ltoa
+80015e60   _main
+80045dc8   _malloc
+80045ef8   _memalign
+80019b60   _memccpy
+80018d60   _memcpy
+80017600   _memset
+80015800   _open
+80018e00   _printf
+80015be0   _putc
+80018260   _read
+80019bc0   _readmsg
+80045e2c   _realloc
+8001a640   _remove
+800154e0   _setvbuf
+8000a000   _smain
+80019c20   _sprintf
+80019640   _strstr
+80019920   _ti_sdo_ce_CERuntime_init__F
+80051c72   _ti_sdo_ce_Engine_noCommName
+80034128   _ti_sdo_ce__dummy__
+80034130   _ti_sdo_ce__versionNumArray
+80051de4   _ti_sdo_ce__versionString
+80051de8   _ti_sdo_ce__whatString
+80051c90   _ti_sdo_ce_alg_ALG_maxGroups
+80051c8c   _ti_sdo_ce_alg_ALG_useCache
+80051c88   _ti_sdo_ce_alg_ALG_useHeap
+80051c94   _ti_sdo_ce_alg_ipcKey
+8002b7a8   _ti_sdo_ce_dvtLog
+800531ac   _ti_sdo_ce_osal_LOG_Buffer
+8001a260   _ti_sdo_ce_osal_bios_init
+80034248   _ti_sdo_ce_speech_SPHDEC_curTrace
+80034250   _ti_sdo_ce_speech_SPHENC_curTrace
+800341a0   _ti_sdo_fc_dskt2_GTMask
+80051c84   _ti_sdo_fc_multiProcess
+800196c0   _unlink
+80019740   _vsnprintf
+80018320   _write
+800197c0   _writemsg
+ffffffff   binit
+8004fae8   cinit
+80000000   edata
+80051e2c   end
+8001aca0   etext
+80052c00   hwi0
+80052c20   hwi1
+80052d40   hwi10
+80052d60   hwi11
+80052d80   hwi12
+80052da0   hwi13
+80052dc0   hwi14
+80052de0   hwi15
+80052c40   hwi2
+80052c60   hwi3
+80052c80   hwi4
+80052ca0   hwi5
+80052cc0   hwi6
+80052ce0   hwi7
+80052d00   hwi8
+80052d20   hwi9
+ffffffff   pinit
+800531ac   ti_sdo_ce_osal_LOG_Buffer
+80052800   ti_sdo_ce_osal_LOG_Buffer$buf
+00000001   ti_sdo_ce_osal_LOG_Buffer$datatype
+00000000   ti_sdo_ce_osal_LOG_Buffer$log
+00000100   ti_sdo_ce_osal_LOG_Buffer$size
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000000   BUF$
+00000000   CLK_PRDHIGH
+00000000   CLK_RESETTIMER
+00000000   CLK_TDDR
+00000000   CLK_TDDRHIGH
+00000000   CLK_TIMERNUM
+00000000   DEV$
+00000000   DGN$
+00000000   DHL$
+00000000   DHL_gChannelsAvailable
+00000000   DIO$
+00000000   DIO_NUMSWIBASE
+00000000   DIO_NUMTSKBASE
+00000000   DIO_STATIC
+00000000   DPI$
+00000000   ECM$
+00000000   ECM_ENABLE
+00000000   GBL_BCACHEREADADDR0
+00000000   GBL_BCACHEREADADDR1
+00000000   GBL_BCACHEREADADDR2
+00000000   GBL_BIGENDIAN
+00000000   GBL_CACHE
+00000000   GBL_CALLCSLCFGINIT
+00000000   GBL_ENABLEINST
+00000000   GBL_ENABLE_SK
+00000000   GBL_GEMTRUECOMPEN
+00000000   GBL_L1PMODE
+00000000   GBL_L2MAR0_31
+00000000   GBL_L2MAR160_191
+00000000   GBL_L2MAR192_223
+00000000   GBL_L2MAR224_255
+00000000   GBL_L2MAR32_63
+00000000   GBL_L2MAR64_95
+00000000   GBL_L2MAR96_127
+00000000   GBL_NULL
+00000000   GBL_PROCID
+00000000   GBL_ROM
+00000000   GBL_SUPPORTCSL
+00000000   GBL_USERINIT
+00000000   GIO$
+00000000   HOOK$
+00000000   HOOK_KNLID
+00000000   HST$
+00000000   HST_DSM
+00000000   HST_MAXFRAMESET
+00000000   HST_RTDX
+00000000   HWI_GENERATE_RESET_VEC
+00000000   HWI_INT10$hwi
+00000000   HWI_INT11$hwi
+00000000   HWI_INT12$hwi
+00000000   HWI_INT13$hwi
+00000000   HWI_INT14$hwi
+00000000   HWI_INT15$hwi
+00000000   HWI_INT4$hwi
+00000000   HWI_INT5$hwi
+00000000   HWI_INT6$hwi
+00000000   HWI_INT7$hwi
+00000000   HWI_INT8$hwi
+00000000   HWI_INT9$hwi
+00000000   HWI_NMI$hwi
+00000000   HWI_POLARITYMASK
+00000000   HWI_RESERVED0$hwi
+00000000   HWI_RESERVED1$hwi
+00000000   HWI_RESET
+00000000   HWI_RESET$hwi
+00000000   HWI_ZEROTAB
+00000000   IDL_CALIBRERROR
+00000000   IDL_CALIBRFXN
+00000000   IDL_USECLKIDLTIME
+00000000   KNL_swi$ord
+00000000   KNL_swi$pri
+00000000   KNL_swi$sts$unittype
+00000000   KNL_swi$swi
+00000000   LOG_system$datatype
+00000000   LOG_system$log
+00000000   MBX$
+00000000   MEM_NULL
+00000000   MEM_USEMPC
+00000000   OBJ$
+00000000   PIP$
+00000000   PIP_A_TABLEN
+00000000   PIP_gNextId
+00000000   PIP_gNumEmbed
+00000000   PRD_A_TABLEN
+00000000   PRD_SWIHANDLE
+00000000   PWRM_PWRM_CAPSMASK
+00000000   PWRM_PWRM_ENABLE
+00000000   PWRM_PWRM_LOADENABLE
+00000000   PWRM_PWRM_RESOURCETRACKING
+00000000   PWRM_PWRM_SCALING
+00000000   PWRM_PWRM_TIMERIDNUM
+00000000   PWRM_PWRM_TIMERINTRMASK
+00000000   PWRM_PWRM_TIMERWUGENMASK
+00000000   PWRM_PWRM_USERRESOURCES
+00000000   PWRM_PWRM_USETIMER
+00000000   RTDX$
+00000000   RTDX_MODE
+00000000   RTDX_USERTDX
+00000000   RTDX_USERTEXECUTION
+00000000   SEM$
+00000000   SIO$
+00000000   STS$
+00000000   SWI_EHOOKFXN
+00000000   SWI_IHOOKFXN
+00000000   TSK_NUM_HOOKS
+00000000   TSK_READYFXN
+00000000   TSK_SWITCHFXN
+00000000   TSK_idle$ord
+00000000   TSK_idle$pri
+00000000   TSK_idle$tsk
+00000000   UDEV$
+00000000   _CLK_TDDR
+00000000   _CLK_TIMERNUM
+00000000   _GBL_CACHE
+00000000   _HWI_RESET
+00000000   __PWRM_TIMERBASEADDR
+00000000   __PWRM_TIMERINTRMASK
+00000000   __PWRM_USETIMER
+00000000   ___ASM__
+00000000   ti_sdo_ce_osal_LOG_Buffer$log
+00000001   BUF_ENABLED
+00000001   CLK$
+00000001   CLK_CALDIV
+00000001   CLK_CALMULT
+00000001   CLK_ENABLEHTIME
+00000001   CLK_HTIMEDIV
+00000001   CLK_HTIMEMULT
+00000001   CLK_LTIMEDIV
+00000001   CLK_USETIMER
+00000001   GBL$
+00000001   GBL_L2CONFIGURE
+00000001   GBL_boot
+00000001   HST_NONE
+00000001   HWI$
+00000001   HWI_ENABLE_EXC
+00000001   HWI_NMI
+00000001   IDL$
+00000001   ISRC$
+00000001   KNL_swi$dorta
+00000001   KNL_swi$sts$filtmaxmult
+00000001   KNL_swi$sts$filtsummult
+00000001   LCK$
+00000001   LOG$
+00000001   LOG_ENABLED
+00000001   MEM$
+00000001   MSGQ$
+00000001   MSGQ_USEMSGQ
+00000001   POOL$
+00000001   POOL_USEPOOL
+00000001   PRD$
+00000001   PRD_SCALAR
+00000001   PWRM$
+00000001   PWRM_PWRM_NUMSLOTS
+00000001   QUE$
+00000001   SWI$
+00000001   SWI_A_TABLEN
+00000001   SYS$
+00000001   TSK$
+00000001   TSK_PRIORITY
+00000001   _CLK_USETIMER
+00000001   _HWI_NMI
+00000001   _LOG_ts
+00000001   ti_sdo_ce_osal_LOG_Buffer$datatype
+00000002   GBL_L2MODE
+00000002   HWI_RESERVED0
+00000002   KNL_swi$sts$filter
+00000002   LOG_A_TABLEN
+00000002   MEM_gNumHeap
+00000002   _HWI_RESERVED0
+00000002   _LOG_A_TABLEN
+00000003   HWI_RESERVED1
+00000003   _HWI_RESERVED1
+00000004   EVENT4
+00000004   HWI_INT4
+00000004   _EVENT4
+00000004   _HWI_INT4
+00000005   CLK_COUNTSPMSHIGH
+00000005   CLK_TIMMODE
+00000005   EVENT5
+00000005   HWI_INT5
+00000005   _EVENT5
+00000005   _HWI_INT5
+00000006   EVENT6
+00000006   HWI_INT6
+00000006   _EVENT6
+00000006   _HWI_INT6
+00000007   EVENT7
+00000007   GBL_L1DMODE
+00000007   HWI_INT7
+00000007   _EVENT7
+00000007   _HWI_INT7
+00000008   EVENT8
+00000008   HWI_INT8
+00000008   _EVENT8
+00000008   _HWI_INT8
+00000009   EVENT9
+00000009   HWI_INT9
+00000009   _EVENT9
+00000009   _HWI_INT9
+0000000a   EVENT10
+0000000a   HWI_INT10
+0000000a   PWRM_PWRM_CLKTICKSPERSLOT
+0000000a   _EVENT10
+0000000a   _HWI_INT10
+0000000a   __PWRM_TIMERPERIOD
+0000000b   EVENT11
+0000000b   HWI_INT11
+0000000b   _EVENT11
+0000000b   _HWI_INT11
+0000000c   EVENT12
+0000000c   HWI_INT12
+0000000c   _EVENT12
+0000000c   _HWI_INT12
+0000000d   EVENT13
+0000000d   HWI_INT13
+0000000d   _EVENT13
+0000000d   _HWI_INT13
+0000000e   EVENT14
+0000000e   HWI_INT14
+0000000e   _EVENT14
+0000000e   _HWI_INT14
+0000000f   EVENT15
+0000000f   HWI_INT15
+0000000f   _EVENT15
+0000000f   _HWI_INT15
+00000010   EVENT16
+00000010   _EVENT16
+00000011   EVENT17
+00000011   _EVENT17
+00000012   EVENT18
+00000012   _EVENT18
+00000013   EVENT19
+00000013   _EVENT19
+00000014   EVENT20
+00000014   _EVENT20
+00000015   EVENT21
+00000015   _EVENT21
+00000016   EVENT22
+00000016   _EVENT22
+00000017   EVENT23
+00000017   _EVENT23
+00000018   EVENT24
+00000018   _EVENT24
+00000019   EVENT25
+00000019   _EVENT25
+0000001a   EVENT26
+0000001a   _EVENT26
+0000001b   EVENT27
+0000001b   _EVENT27
+0000001c   EVENT28
+0000001c   _EVENT28
+0000001d   EVENT29
+0000001d   _EVENT29
+0000001e   EVENT30
+0000001e   _EVENT30
+0000001f   EVENT31
+0000001f   _EVENT31
+00000020   CLK_TCR
+00000020   EVENT32
+00000020   _EVENT32
+00000020   __PWRM_TIMERINPUTCLK
+00000021   EVENT33
+00000021   _EVENT33
+00000022   EVENT34
+00000022   _EVENT34
+00000023   EVENT35
+00000023   _EVENT35
+00000024   EVENT36
+00000024   _EVENT36
+00000025   EVENT37
+00000025   _EVENT37
+00000026   EVENT38
+00000026   _EVENT38
+00000027   EVENT39
+00000027   _EVENT39
+00000028   EVENT40
+00000028   _EVENT40
+00000029   EVENT41
+00000029   _EVENT41
+0000002a   EVENT42
+0000002a   _EVENT42
+0000002b   EVENT43
+0000002b   _EVENT43
+0000002c   EVENT44
+0000002c   _EVENT44
+0000002d   EVENT45
+0000002d   _EVENT45
+0000002e   EVENT46
+0000002e   _EVENT46
+0000002f   EVENT47
+0000002f   _EVENT47
+00000030   EVENT48
+00000030   _EVENT48
+00000031   EVENT49
+00000031   _EVENT49
+00000032   EVENT50
+00000032   _EVENT50
+00000033   EVENT51
+00000033   _EVENT51
+00000034   EVENT52
+00000034   _EVENT52
+00000035   EVENT53
+00000035   _EVENT53
+00000036   EVENT54
+00000036   _EVENT54
+00000037   EVENT55
+00000037   _EVENT55
+00000038   EVENT56
+00000038   _EVENT56
+00000039   EVENT57
+00000039   _EVENT57
+0000003a   EVENT58
+0000003a   _EVENT58
+0000003b   EVENT59
+0000003b   _EVENT59
+0000003c   EVENT60
+0000003c   _EVENT60
+0000003d   EVENT61
+0000003d   _EVENT61
+0000003e   EVENT62
+0000003e   GBL_DSPTYPE
+0000003e   _EVENT62
+0000003f   EVENT63
+0000003f   _EVENT63
+00000040   EVENT64
+00000040   LOG_system$size
+00000040   _EVENT64
+00000041   EVENT65
+00000041   _EVENT65
+00000042   EVENT66
+00000042   GBL_FOOTPRINT
+00000042   _EVENT66
+00000043   EVENT67
+00000043   _EVENT67
+00000044   EVENT68
+00000044   _EVENT68
+00000045   EVENT69
+00000045   _EVENT69
+00000046   EVENT70
+00000046   _EVENT70
+00000047   EVENT71
+00000047   _EVENT71
+00000048   EVENT72
+00000048   _EVENT72
+00000049   EVENT73
+00000049   _EVENT73
+0000004a   EVENT74
+0000004a   _EVENT74
+0000004b   EVENT75
+0000004b   _EVENT75
+0000004c   EVENT76
+0000004c   _EVENT76
+0000004d   EVENT77
+0000004d   _EVENT77
+0000004e   EVENT78
+0000004e   _EVENT78
+0000004f   EVENT79
+0000004f   _EVENT79
+00000050   EVENT80
+00000050   _EVENT80
+00000051   EVENT81
+00000051   _EVENT81
+00000052   EVENT82
+00000052   _EVENT82
+00000053   EVENT83
+00000053   _EVENT83
+00000054   EVENT84
+00000054   _EVENT84
+00000055   EVENT85
+00000055   _EVENT85
+00000056   EVENT86
+00000056   _EVENT86
+00000057   EVENT87
+00000057   _EVENT87
+00000058   EVENT88
+00000058   _EVENT88
+00000059   EVENT89
+00000059   _EVENT89
+0000005a   EVENT90
+0000005a   _EVENT90
+0000005b   EVENT91
+0000005b   _EVENT91
+0000005c   EVENT92
+0000005c   _EVENT92
+0000005d   EVENT93
+0000005d   _EVENT93
+0000005e   EVENT94
+0000005e   _EVENT94
+0000005f   EVENT95
+0000005f   _EVENT95
+00000060   EVENT96
+00000060   _EVENT96
+00000061   EVENT97
+00000061   _EVENT97
+00000062   EVENT98
+00000062   _EVENT98
+00000063   EVENT99
+00000063   _EVENT99
+00000064   EVENT100
+00000064   PIP_OBJSIZE
+00000064   _EVENT100
+00000065   EVENT101
+00000065   _EVENT101
+00000066   EVENT102
+00000066   _EVENT102
+00000067   EVENT103
+00000067   _EVENT103
+00000068   EVENT104
+00000068   _EVENT104
+00000069   EVENT105
+00000069   _EVENT105
+0000006a   EVENT106
+0000006a   _EVENT106
+0000006b   EVENT107
+0000006b   _EVENT107
+0000006c   EVENT108
+0000006c   _EVENT108
+0000006d   EVENT109
+0000006d   _EVENT109
+0000006e   EVENT110
+0000006e   _EVENT110
+0000006f   EVENT111
+0000006f   _EVENT111
+00000070   EVENT112
+00000070   _EVENT112
+00000071   EVENT113
+00000071   _EVENT113
+00000072   EVENT114
+00000072   _EVENT114
+00000073   EVENT115
+00000073   _EVENT115
+00000074   EVENT116
+00000074   _EVENT116
+00000075   EVENT117
+00000075   _EVENT117
+00000076   EVENT118
+00000076   _EVENT118
+00000077   EVENT119
+00000077   _EVENT119
+00000078   EVENT120
+00000078   _EVENT120
+00000079   EVENT121
+00000079   _EVENT121
+0000007a   EVENT122
+0000007a   _EVENT122
+0000007b   EVENT123
+0000007b   _EVENT123
+0000007c   EVENT124
+0000007c   _EVENT124
+0000007d   EVENT125
+0000007d   _EVENT125
+0000007e   EVENT126
+0000007e   _EVENT126
+0000007f   EVENT127
+0000007f   _EVENT127
+000000b8   ___ISA__
+000000d0   ___PLAT__
+000000f8   ___TARG__
+00000100   HST_MAXFRAMEALLOWED
+00000100   ti_sdo_ce_osal_LOG_Buffer$size
+00000118   ___TRDR__
+000003e8   CLK_MICROSECS
+00000400   HST_DSMMEMSIZE
+00000400   TSK_STACKSIZE
+00000400   __STACK_SIZE
+00000408   RTDX_BUFMEMSIZE
+00000d66   GBL_CLKTYPE
+00001963   GBL_DSPSUBTYPE
+00004000   CLK_INTBIT
+00004000   HWI_CFGDISPATCHED
+00004000   _HWI_CFGDISPATCHED
+00004b00   CLK_INPUTCLK
+00004b00   CLK_PRD
+00004b00   _CLK_PRD
+00004e20   GBL_CLKIN
+00005205   GBL_A_VERSION
+0000c000   L1DSRAM$L
+0000c000   _L1DSRAM_length
+0000dbef   GBL_TRCMASKVALUE
+0000ffff   GBL_L2MAR128_159
+00010000   DDR2$L
+00010000   _DDR2_length
+00050910   CLK_COUNTSPMS
+00050910   CLK_HTIMEPERLTIME
+00050910   CLK_LTIMEMULT
+00050910   GBL_FREQ
+00050910   _CLK_COUNTSPMS
+07060504   HWI_INTRMUX1
+0a0a0908   HWI_INTRMUX2
+10f04000   L1DSRAM$B
+10f04000   _L1DSRAM_base
+34330d0b   HWI_INTRMUX3
+48002000   __PWRM_SCM_BASEADDR
+48004000   __PWRM_CM_BASEADDR
+48306000   __PWRM_PRM_BASEADDR
+49038000   CLK_REGS
+49038000   _CLK_REGS
+49038000   _CLK_gptimer
+5d000000   __PWRM_IVAMMU_BASEADDR
+80000000   .data
+80000000   .text
+80000000   HST_A_TABBEG
+80000000   HST_A_TABEND
+80000000   PIP_A_TABBEG
+80000000   PIP_A_TABEND
+80000000   PRD_A_TABBEG
+80000000   PRD_A_TABEND
+80000000   _HST_A_TABBEG
+80000000   _HST_A_TABEND
+80000000   _PIP_A_TABBEG
+80000000   _PIP_A_TABEND
+80000000   ___data__
+80000000   ___edata__
+80000000   ___text__
+80000000   edata
+80000224   _Engine_setTrace
+800004d8   _Engine_restoreHeap
+8000072c   _Engine_requestTraceToken
+800007d4   _Engine_releaseTraceToken
+80000860   _Engine_redefineHeap
+8000122c   _Engine_fwriteTrace
+800019ec   _Engine_close
+80001fa8   _Engine_getNumServerAlgs
+8000220c   _Engine_initFromServer
+80002f18   _Engine_open
+800032a0   _Engine_init
+80003560   _Engine_hasServer
+8000356c   _Engine_getUsedMem
+80003660   _Engine_getServerAlgInfo
+8000380c   _Engine_getServer
+80003890   _Engine_getRemoteVisa
+80003910   _Engine_getNumMemSegs
+80003a78   _Engine_getNumAlgs
+80003b94   _Engine_getNumAlgs2
+80003c58   _Engine_getNodeQueues
+80003c84   _Engine_getName
+80003c94   _Engine_getMemStat
+80003ed0   _Engine_getLocalEngine
+80003f14   _Engine_getMemId
+80003f48   _Engine_getLastError
+80004188   _Engine_getFxns
+80004444   _Engine_getEngine
+80004448   _Engine_getCpuLoad
+800045ac   _Engine_getConstName
+800047e0   _Engine_getCodecClassConfig
+800048cc   _Engine_getAlgNumRecs
+80004a58   _Engine_getAlgMemRecs
+80004cf8   _Engine_getAlgInfo2
+80005058   _Engine_getAlgInfo
+800052d4   _Engine_deleteNode
+80005478   _Engine_ctrlNode
+800059f0   _Engine_createNode2
+8000600c   _Engine_createNode
+800060b8   _Engine_callWait
+80006120   _Engine_callAsync
+800061a4   _Engine_call
+80006254   _Engine_addStubFxns
+80006340   _VISA_wait
+80006530   _VISA_setContext
+80006534   _VISA_isLocal
+80006544   _VISA_getMaxMsgSize
+800065cc   _VISA_getContext
+800065d4   _VISA_getCodecClassConfig
+800065e0   _VISA_getAlgorithmHandle
+800065e8   _VISA_getAlgNumRecs
+80006668   _VISA_getAlgMemRecs
+800066e4   _VISA_getAlgHandle
+80006724   _VISA_getAlgFxns
+8000672c   _VISA_freeMsg
+80006898   _VISA_exit
+80006994   _VISA_enter
+80006a88   _VISA_delete
+80006cd8   _VISA_create2
+80007724   _VISA_create
+80007804   _VISA_callAsync
+80007908   _VISA_call
+80007a0c   _VISA_allocMsg
+80007b94   _Server_setTrace
+80007c88   _Server_restoreHeap
+80007dd4   _Server_redefineHeap
+80007fa4   _Server_init
+80008088   _Server_getNumMemSegs
+800081c0   _Server_getNumAlgs
+800082ec   _Server_getMemStat
+80008434   _Server_getCpuLoad
+80008518   _Server_getAlgInfo
+80008628   _Server_fwriteTrace
+8000870c   _Server_disconnectTrace
+80008898   _Server_connectTrace
+80008a40   _Memory_unregisterContigBuf
+80008a44   _Memory_segStat
+80008b2c   _Memory_segFree
+80008c28   _Memory_segAlloc
+80008d28   _Memory_redefine
+80008de0   _Memory_restoreHeap
+80008e00   _Memory_registerContigBuf
+80008e04   _Memory_init
+80008f34   _Memory_getNumHeaps
+80008f44   _Memory_getHeapId
+80008fd0   _Memory_getBufferVirtualAddress
+80009054   _Memory_getBufferPhysicalAddress
+800090e0   _Memory_free
+800091ec   _Memory_exit
+800091f0   _Memory_dumpKnownContigBufsList
+800091f4   _Memory_contigStat
+80009278   _Memory_contigFree
+8000936c   _Memory_contigAlloc
+80009460   _Memory_cacheWbInvAll
+80009518   _Memory_cacheWbInv
+800095f4   _Memory_cacheWb
+800096d4   _Memory_cacheInv
+800097b4   _Memory_alloc
+8000a000   _smain
+8000a4e0   _Algorithm_removeGroup
+8000a5a4   _Algorithm_releaseLock
+8000a6a0   _Algorithm_init
+8000a6fc   _Algorithm_getNumRecs
+8000a704   _Algorithm_getMemRecs
+8000a70c   _Algorithm_getAlgHandle
+8000a714   _Algorithm_exit
+8000a750   _Algorithm_delete
+8000a914   _Algorithm_deactivate
+8000aa20   _Algorithm_create
+8000add8   _Algorithm_addGroup
+8000aea8   _Algorithm_activate
+8000afac   _Algorithm_acquireLock
+8000b0c0   __GT_trace
+8000bc20   _XdmUtils_validateVideoBufDesc
+8000bec4   _XdmUtils_validateVideo1BufDesc
+8000c16c   _XdmUtils_validateSparseBufDesc1
+8000c358   _XdmUtils_validateSparseBufDesc
+8000c538   _XdmUtils_validateExtendedStruct
+8000c6c0   _XdmUtils_init
+8000c700   _SPHENC_process
+8000c9f0   _SPHENC_delete
+8000cab8   _SPHENC_create
+8000cbf8   _SPHENC_control
+8000cf80   _SPHDEC_process
+8000d280   _SPHDEC_delete
+8000d348   _SPHDEC_create
+8000d484   _SPHDEC_control
+8000d7e0   __divd
+8000dfc0   _Global_setSpecialTrace
+8000e350   _Global_init
+8000e3e8   _Global_getenv
+8000e3ec   _Global_getProcessId
+8000e3f0   _Global_getCpuLoad
+8000e4d4   _Global_exit
+8000e60c   _Global_atexit
+8000e704   _Global_abort
+8000ee60   _Thread_yield
+8000eec4   _Thread_stat
+8000ef50   _Thread_setpri
+8000efd0   _Thread_self
+8000f02c   _Thread_join
+8000f030   _Thread_init
+8000f084   _Thread_getpri
+8000f100   _Thread_getname
+8000f184   _Thread_getenv
+8000f208   _Thread_exit
+8000f270   _Thread_delete
+8000f2ec   _Thread_create
+8000f4a0   _SPHENCCOPY_TI_process
+8000f6b0   _SPHENCCOPY_TI_initObj
+8000f710   _SPHENCCOPY_TI_alloc
+8000f800   _SPHENCCOPY_TI_free
+8000f884   _SPHENCCOPY_TI_control
+8000fa60   _SPHDECCOPY_TI_process
+8000fc4c   _SPHDECCOPY_TI_initObj
+8000fca8   _SPHDECCOPY_TI_alloc
+8000fd94   _SPHDECCOPY_TI_free
+8000fe20   _SPHDECCOPY_TI_control
+800108a0   _fwrite
+80010d00   __DSKT2_assignInstanceMemory
+800110e0   __printfi
+80011480   __GT_set
+80011ae0   _DSKT2_createAlg3
+800120e0   _fputs
+800129a0   _fread
+80012c40   __DSKT2_init
+80013140   __divull
+800133a0   __mpyd
+80013600   __addd
+80013840   _Sem_post
+80013848   _Sem_pend
+80013864   _Sem_init
+80013898   _Sem_getCount
+800138a0   _Sem_delete
+80013934   _Sem_create
+80013a80   __frcaddd
+800140e0   _Comm_setSrcQueue
+800140e8   _Comm_release
+800140f0   _Comm_put
+800140f8   _Comm_locate
+80014110   _Comm_init
+80014114   _Comm_getSrcQueue
+80014120   _Comm_getMsgSize
+80014124   _Comm_get
+80014130   _Comm_free
+80014138   _Comm_exit
+80014140   _Comm_delete
+80014190   _Comm_create
+800142f0   _Comm_alloc
+80014300   __frcmpyd_div
+80014700   _GTConfig_tskId
+80014784   _GTConfig_sysPrintfError
+800147cc   _GTConfig_sysPrintf
+80014800   _GTConfig_semPost
+80014814   _GTConfig_semPend
+8001482c   _GTConfig_getTime
+80014834   _GTConfig_biosMemFree
+80014848   _GTConfig_biosMemAlloc
+80014860   _GTConfig_biosInit
+80014900   _Load_setWindow
+80014908   _Load_setPeriod
+80014934   _Load_reset
+80014948   _Load_init
+80014950   _Load_idlefxn
+80014a98   _Load_getcpuload
+80014ab0   _Load_getWindow
+80014ab8   _Load_getMinLoop
+80014ac8   _Load_getMaxLoop
+80014ca0   _Lock_release
+80014ce0   _Lock_delete
+80014d34   _Lock_create
+80014db0   _Lock_init
+80014df0   _Lock_acquire
+80014e60   _HOSTrename
+80015000   __divul
+800154e0   _setvbuf
+80015800   _open
+80015960   _DSKT2_activateAlg
+80015aa0   __buff_read
+80015be0   _fputc
+80015be0   _putc
+80015e60   _main
+80015fa0   _DSKT2_freeAlg
+800160c0   __DSKT2_getScratchRequestInfo
+800161e0   __frcmpyd
+80016540   _fclose
+80016660   _HOSTlseek
+80016a60   __wrt_ok
+80016b60   _fflush
+80016c60   _DSKT2_getMemRecs
+80016d40   _DSKT2_initLocks
+80016e20   _HOSTopen
+80016fe0   __DSKT2_dequeueMemTab
+800170c0   __DSKT2_spaceToSeg
+800171a0   __cmpd
+80017360   _atoi
+80017440   _close
+80017520   _exit
+80017600   _memset
+800177c0   _Trace_vprint
+80017834   _Trace_putc
+80017858   _Trace_print
+80017884   _Trace_init
+80017888   _Trace_getTrace
+80017890   _Trace_bind
+800178a0   _HOSTread
+80017960   _HOSTunlink
+80017a20   _HOSTwrite
+80017ae0   __STATICPOOL_open
+80017d20   __cleanup
+80017de0   __divu
+80017ea0   __doflush
+80018020   _fseek
+800180e0   _lseek
+800181a0   _ltoa
+80018260   _read
+80018320   _write
+800184a0   _DSKT2_deactivateAlg
+80018540   _HOSTclose
+80018720   __DSKT2_enqueueMemTab
+800187c0   __DSKT2_freeInstanceMemory
+80018860   __divli
+80018a40   __fixdli
+80018b80   __rd_ok
+80018c20   __remu
+80018d60   _memcpy
+80018e00   _printf
+80018f40   _DSKT2_getNumMemRecs
+80018fc0   __STATICPOOL_alloc
+80019040   __DSKT2_Permute_iterateNext
+800190c0   __DSKT2_Permute_setInitialState
+80019140   __GT_create
+800191c0   __fixdi
+80019240   __fltlid
+800192c0   __llshl
+800193c0   __renormd
+800195c0   _fprintf
+80019640   _strstr
+800196c0   _unlink
+80019740   _vsnprintf
+800197c0   _writemsg
+80019820   C$$IO$$
+80019840   _Log_printf
+80019898   _Log_init
+800198a0   _Log_event
+800198c0   _CBuf_create
+80019920   _CERuntime_init
+80019920   _ti_sdo_ce_CERuntime_init__F
+80019980   _DSKT2_createAlgExt
+800199e0   __DSKT2_useSharedScratch
+80019a40   __llshru
+80019aa0   __subcull
+80019b00   _fopen
+80019b60   _memccpy
+80019bc0   _readmsg
+80019c20   _sprintf
+80019c80   _Queue_put
+80019c88   _Queue_init
+80019c8c   _Queue_get
+80019c94   _Queue_extract
+80019cd4   _Queue_exit
+80019ce0   _CBuf_putc
+80019d20   _CBuf_puts
+80019d60   _DSKT2_acquireLock
+80019da0   _DSKT2_createAlg
+80019de0   _DSKT2_getContext
+80019e20   _DSKT2_releaseLock
+80019e60   _DSKT2_setContext
+80019ea0   _GT_curTime
+80019ee0   _GT_init
+80019fa0   __DSKT2_throwMPUMemException
+8001a020   ___isinf
+8001a0e0   __abort_msg
+8001a120   __negd
+8001a1a0   __remli
+8001a1e0   __subd
+8001a260   _ti_sdo_ce_osal_bios_init
+8001a2a0   _SemMP_post
+8001a2a8   _SemMP_pend
+8001a2b0   _SemMP_init
+8001a2b4   _SemMP_getRefCount
+8001a2b8   _SemMP_getCount
+8001a2c4   _SemMP_delete
+8001a2d4   _SemMP_create
+8001a2e0   _Global_getLoad
+8001a320   _C64P_getltime
+8001a334   _C64P_getltime8
+8001a360   _DMAN3_CE_exit
+8001a380   _DMAN3_CE_init
+8001a3a0   _DMAN3_grantDmaChannels
+8001a3c0   _DMAN3_releaseDmaChannels
+8001a3e0   _GT_getModNameFlags
+8001a400   _RMAN_activateAllResources
+8001a420   _RMAN_assignResources
+8001a440   _RMAN_deactivateAllResources
+8001a460   _RMAN_exit
+8001a480   _RMAN_freeResources
+8001a4a0   _RMAN_init
+8001a4c0   __STATICPOOL_free
+8001a4e0   __negll
+8001a500   __nop
+8001a5c0   __register_lock
+8001a5e0   __register_unlock
+8001a600   C$$EXIT
+8001a600   _abort
+8001a640   _remove
+8001a680   _Processor_wait
+8001a688   _Processor_init
+8001a68c   _Processor_delete
+8001a690   _Processor_create
+8001a6a0   _LockMP_release
+8001a6a4   _LockMP_init
+8001a6a8   _LockMP_getRefCount
+8001a6ac   _LockMP_getCount
+8001a6b0   _LockMP_delete
+8001a6b4   _LockMP_create
+8001a6b8   _LockMP_acquire
+8001aca0   _Global_buildInfo
+8001aca0   ___etext__
+8001aca0   etext
+8001ae2c   _Engine_config
+8001ae38   __DSKT2_DARAM_SCRATCH_SIZES
+8001ae88   __DSKT2_SARAM_SCRATCH_SIZES
+8001aed8   __ti_sdo_utils_trace_GT_params
+8001af00   _GT
+8001b620   _MSGQ_config
+8002b660   _POOL_config
+8002b668   __ALG_groupUsed
+8002b6b8   __ALG_sems
+8002b708   __ALG_groupRefCount
+8002b758   __Algorithm_lockOwner
+8002b7a8   _ti_sdo_ce_dvtLog
+8002b7b0   _Memory_heapNames
+8002b7b8   _Memory_heapBases
+8002b7c0   _Memory_heapSizes
+8002b7c8   _Global_traceBuffer
+80033a98   __ftable
+80033b88   __tmpnams
+80033c28   __ft_end
+80033c2c   _CLK_gptimer_enablemask
+80033c30   _KNL_queues
+80033cd0   _KNL_dummy
+80033ea4   _TSK_ATTRS
+80033ec0   _TSK_config
+80033ee0   _TSK_timerSem
+80033f00   _SPHDECCOPY_TI_SPHDECCOPY
+80033f2c   _SPHDECCOPY_TI_IALG
+80033f58   _SPHENCCOPY_TI_SPHENCCOPY
+80033f84   _SPHENCCOPY_TI_IALG
+80033fb0   _OBJ_table
+80033fe8   _OBJ_segtab
+80034004   __TSK_mutex
+8003402c   __MEM_mutex
+80034054   _MEM_ATTRS
+80034058   _SYS_errors
+80034094   __BCACHE_emifAddr
+80034098   _Engine_ALGCREATEATTRS
+800340d0   _SYS_exitStack
+800340f0   _Thread_ATTRS
+80034114   _Memory_DEFAULTPARAMS
+80034124   _CLK_inputClock
+80034128   _ti_sdo_ce__dummy__
+80034130   _ti_sdo_ce__versionNumArray
+8003413c   _CBuf_ATTRS
+80034148   _Processor_ATTRS
+80034154   _EXC_status
+80034194   _Queue_ATTRS
+80034198   __DSKT2_scratchDescTbl
+800341a0   _ti_sdo_fc_dskt2_GTMask
+800341c4   _Lock_ATTRS
+800341d4   __BCACHE_readTable
+800341e0   _Comm_ATTRS
+800341ec   __cleanup_ptr
+800341f0   __dtors_ptr
+800341f4   ___TI_enable_exit_profile_output
+80034208   _SEM_ATTRS
+80034220   _DSKT2_ALGATTRS
+80034228   _curMask
+80034238   __lock
+8003423c   __unlock
+80034248   _ti_sdo_ce_speech_SPHDEC_curTrace
+80034250   _ti_sdo_ce_speech_SPHENC_curTrace
+8003425c   DDR2$B
+8003425c   _DDR2_base
+80044360   _SYS_vsprintf
+80044794   _SYS_vprintf
+800447a4   _SYS_sprintf
+800447d0   _SYS_printf
+80044820   _EXC_nmi
+80044854   _EXC_internal
+80044b00   _EXC_init
+80044b40   _EXC_getLastStatus
+80044b60   _EXC_external
+80044b94   _EXC_exceptionHandler
+80044d10   _EXC_clearLastStatus
+80044d40   CLK_HOOKFXN
+80044d40   HWI_F_dispatch
+80044d40   _HWI_F_dispatch
+80044d40   __HWI_lat1beg
+80044ec8   __HWI_lat1end
+80044ec8   __HWI_lat2beg
+80045030   __HWI_lat2end2
+80045060   __HWI_lat3end2
+800450a4   __HWI_lat2end1
+800450c0   __HWI_lat3beg
+80045220   SWI_F_enable
+80045220   __SWI_lat3beg
+8004528c   __SWI_lat3end
+80045290   SWI_F_post
+80045290   _SWI_post
+80045398   __SWI_lat1beg
+80045404   SWI_EXECFXN
+80045404   SWI_F_exec
+8004542c   SWI_F_iexec
+80045444   __SWI_lat1end
+80045448   __SWI_lat2beg
+800454a8   __SWI_lat2end
+800454ac   SWI_F_run
+800454ac   SWI_RUNFXN
+800456e0   PRD_F_swi
+80045964   PRD_F_tick
+80045a60   _TSK_create
+80045da0   _free
+80045dc8   _malloc
+80045e2c   _realloc
+80045ef8   _memalign
+80045fd8   _calloc
+80046040   _KNL_run
+80046280   _MEM_define
+800464c0   _MEM_redefine
+800466e0   _SEM_pendEnterKnl
+800468e0   _CLK_stop
+80046944   _CLK_start
+80046ae0   _MEM_alloc
+80046cc0   _EXC_dispatch
+80046e84   _EXC_setReturnPtr
+8004706c   PRD_THOOKFXN
+8004706c   _KNL_tick
+80047080   _MEM_free
+80047240   __SEM_dopost
+80047400   _TSK_delete
+800476f0   _TSK_setpri
+80047780   CLK_F_getltime
+80047790   CLK_F_isr
+800478e0   CLK_F_itime
+800478e0   _CLK_F_itime
+800478e0   _CLK_itime
+800478fc   __CLK_lat1beg
+80047920   __CLK_lat1end
+80047940   _TSK_setup
+80047ae0   _KNL_saveIsrFrame
+80047b8c   _KNL_switch
+80047c38   KNL_glue
+80047c60   __auto_init
+80047da0   _KNL_ready
+80047ee0   _MEM_stat
+80048020   _MSGQ_open
+80048160   _TSK_exit
+800482a0   _BCACHE_setSize
+800482e4   _BCACHE_setMar
+80048334   _BCACHE_bootInit
+80048334   _BCACHE_setCacheToSram
+80048364   _BCACHE_getSize
+800483b4   _BCACHE_getMar
+80048444   _GBL_cacheInit64P
+80048500   _KNL_check
+8004854c   __KNL_lat1beg
+800485c8   _KNL_idle
+800485c8   __KNL_lat1end
+800485f0   _KNL_max
+800486c4   _TSK_startup
+80048740   _MSGQ_locate
+80048840   _MSGQ_startup
+80048a0c   _BCACHE_wbInv
+80048a20   _BCACHE_wb
+80048a30   _BCACHE_inv
+80048a40   _MSGQ_locateLocal
+80048b20   _SEM_post
+80048b20   _SEM_postBinary
+80048c00   _KNL_exit
+80048c40   _KNL_enter
+80048cc0   _MSGQ_alloc
+80048dc0   _TSK_yield
+80048e40   _KNL_start
+80048ee0   _MSGQ_close
+80048f80   _MSGQ_get
+80049020   _MSGQ_put
+800490c0   _SEM_postEnterKnl
+80049160   _SYS_exit
+80049200   _TSK_stat
+800492a0   LOG_F_event
+800492a0   _LOG_event
+800492a0   __LOG_lat1beg
+80049340   _ATM_andi
+80049340   _ATM_andu
+80049350   _ATM_cleari
+80049350   _ATM_clearu
+80049360   _ATM_deci
+80049360   _ATM_decu
+80049370   _ATM_inci
+80049370   _ATM_incu
+80049384   _ATM_ori
+80049384   _ATM_oru
+80049394   _ATM_seti
+80049394   _ATM_setu
+800493c0   _KNL_ipost
+80049440   _KNL_post
+800494c0   _LCK_post
+800494e0   _LCK_pend
+80049540   _OBJ_create
+800495c0   _SEM_create
+80049640   _TSK_enable
+80049664   _TSK_disable
+8004970c   _BCACHE_wbInvAll
+80049720   _BCACHE_wbAll
+80049730   _BCACHE_invL1pAll
+80049740   _BCACHE_wait
+800497c0   _LOG_event5
+80049840   _MEM_valloc
+800498a0   _SYS_error
+80049900   FXN_F_nop
+80049904   FXN_F_run
+80049904   _FXN_F_run
+80049940   FXN_F_zero
+80049940   _FXN_F_zero
+80049960   _HWI_disable
+80049978   _HWI_enable
+8004998c   _HWI_restore
+800499c0   _MSGQ_release
+80049a20   _OBJ_delete
+80049a80   _SEM_pendBinary
+80049ae0   _SEM_pend
+80049b40   STS_F_delta
+80049b40   _STS_delta
+80049b6c   STS_F_add
+80049b6c   _STS_add
+80049b88   STS_F_reset
+80049b88   _STS_reset
+80049ba0   _SYS_abort
+80049c00   _TRG_stkused
+80049c60   SYS_PUTCFXN
+80049c60   _UTL_doPutc
+80049cc0   _C62_disableIER
+80049cc0   _C64_disableIER
+80049cd8   _C62_enableIER
+80049cd8   _C64_enableIER
+80049cec   _C62_clearIFR
+80049cec   _C64_clearIFR
+80049d00   _MEM_getBaseAddress
+80049d40   _MSGQ_free
+80049d80   _MSGQ_getSrcQueue
+80049dc0   _QUE_get
+80049dc0   __QUE_lat1beg
+80049de0   __QUE_lat1end
+80049de8   _QUE_put
+80049de8   __QUE_lat2beg
+80049df4   __QUE_lat2end
+80049e00   SYS_ABORTFXN
+80049e00   _UTL_doAbort
+80049e40   _CLK_countspms
+80049e60   GBL_USERINITFXN
+80049e60   GIO_CREATEFXN
+80049e60   GIO_DELETEFXN
+80049e60   GIO_PENDFXN
+80049e60   GIO_POSTFXN
+80049e60   PWRM_PWRM_SHAREDRESOURCEFXN
+80049e60   PWRM_PWRM_SLOTHOOKFXN
+80049e60   TSK_VCREATEFXN
+80049e60   TSK_VDELETEFXN
+80049e60   TSK_VEXITFXN
+80049e60   _FXN_F_nop
+80049e80   _GBL_getVersion
+80049ea0   _HOOK_setenv
+80049ec0   IDL_F_loop
+80049ec0   _IDL_loop
+80049ee0   _SEM_delete
+80049f00   _STS_set
+80049f20   _SWI_self
+80049f40   _SYS_atexit
+80049f60   _SYS_zero
+80049f68   _SYS_one
+80049f80   SYS_ERRORFXN
+80049f80   _UTL_doError
+80049fa0   SYS_EXITFXN
+80049fa0   _UTL_halt
+80049fc0   CLK_TIMEFXN
+80049fc0   _CLK_gethtime
+80049fe0   _LOG_printf4
+8004f558   __ctypes_
+8004fa68   _MSGQ_ATTRS
+8004fa74   _MSGQ_LOCATEATTRS
+8004fa78   _MSGQ_LOCATEASYNCATTRS
+8004faac   _STATICPOOL_FXNS
+8004fae8   KNL_swi$sts$maxfmt
+8004fae8   ___cinit__
+8004fae8   cinit
+8004faf0   KNL_swi$sts$sumfmt
+8004faf8   KNL_swi$sts$avgfmt
+80051244   KNL_swi$sts$stsobj
+80051244   STS_A_TABBEG
+80051244   _STS_A_TABBEG
+80051248   KNL_swi$sts
+80051254   STS_A_TABEND
+80051254   TRC_cinit
+80051254   _STS_A_TABEND
+80051258   TRC_R_mask
+80051258   _TRC_R_mask
+8005125c   GBL_initdone
+80051260   BIOS_init
+80051260   _BIOS_init
+800514c8   BIOS_start
+800514c8   _BIOS_start
+80051580   _MSGQ_init
+800516c0   _POOL_init
+800517e0   _c_int00
+800518a0   _MEM_init
+80051940   _TSK_init
+800519a0   _OBJ_init
+800519c0   $bss
+800519c0   .bss
+800519c0   _HWI_dispatchTab
+800519c0   ___bss__
+80051ac0   IDL_D_tabbeg
+80051ac4   IDL_D_calibrate
+80051ac8   IDL_D_calbeg
+80051acc   LOG_D_system
+80051acc   _LOG_D_system
+80051ad0   PIP_D_tabbeg
+80051ad4   PIP_D_tablen
+80051ad8   CLK_R_time
+80051adc   CLK_D_timefxn
+80051ae0   CLK_D_tabbeg
+80051ae4   CLK_D_isrhook
+80051ae8   CLK_D_idletime
+80051aec   _CLK_htimeDiv
+80051af0   _CLK_htimeMult
+80051af4   _CLK_ltimeDiv
+80051af8   _CLK_ltimeMult
+80051afc   _CLK_D_dirty
+80051b00   _CLK_D_prd
+80051b04   _CLK_D_tddr
+80051b08   _CLK_D_countspms
+80051b0c   PRD_D_tick
+80051b0c   _PRD_D_tick
+80051b10   PRD_D_cur
+80051b14   PRD_D_elapsed
+80051b18   PRD_D_prevtim
+80051b1c   PRD_D_scalar
+80051b20   PRD_D_swihandle
+80051b24   PRD_D_tabbeg
+80051b28   PRD_D_tablen
+80051b2c   PRD_D_thook
+80051b30   RTA_D_fromHost
+80051b34   RTA_D_toHost
+80051b38   RTA_D_logval
+80051b48   RTA_D_stsval
+80051b54   HST_D_chanmask
+80051b58   HST_D_tabbeg
+80051b5c   HST_D_tabend
+80051b60   _GBL_procId
+80051b64   _GBL_clkIn
+80051b68   _GBL_freq
+80051b6c   _MEM_D_NUMSEGMENTS
+80051b70   _MEM_D_memtab
+80051b74   _MEM_D_freelist
+80051b78   _MEM_D_lockaddr
+80051b7c   _MEM_D_unlockaddr
+80051b80   _SYS
+80051b84   __HOOK_knlId
+80051b88   __HOOK_NUMHOOKS
+80051b8c   SWI_D_runaddr
+80051b8c   _SWI_D_runaddr
+80051b8c   _SWI_data
+80051b90   SWI_D_execaddr
+80051b90   _SWI_D_execaddr
+80051b94   SWI_D_curmask
+80051b94   _SWI_D_curmask
+80051b98   SWI_D_curset
+80051b98   _SWI_D_curset
+80051b9c   SWI_D_lock
+80051b9c   _SWI_D_lock
+80051ba0   SWI_D_curmbox
+80051ba4   SWI_D_curfxn
+80051ba4   _SWI_D_curfxn
+80051ba8   SWI_D_rdybeg
+80051ba8   _SWI_D_rdybeg
+80051bac   SWI_D_inswi
+80051bac   _SWI_D_inswi
+80051bb0   SWI_D_rdytab
+80051c28   _KNL_wFlag
+80051c2c   _KNL_wList
+80051c30   _KNL_alarm
+80051c34   _KNL_setpri
+80051c38   _KNL_inactive
+80051c3c   _KNL_priority
+80051c40   _KNL_set
+80051c44   _KNL_curtask
+80051c48   _KNL_prevtask
+80051c4c   _KNL_curtime
+80051c50   _KNL_swiptr
+80051c54   _KNL_curqueue
+80051c58   _KNL_maxqueue
+80051c5c   _KNL_tswitchfxn
+80051c60   _KNL_tcreatefxn
+80051c64   _KNL_tdeletefxn
+80051c68   _KNL_treadyfxn
+80051c6c   _KNL_idlefxn
+80051c70   _Memory_skipVirtualAddressTranslation
+80051c72   _ti_sdo_ce_Engine_noCommName
+80051c74   _Global_useLinkArbiter
+80051c78   _VISA_checked
+80051c7c   _DSKT2_cacheWBInvFxn
+80051c80   __DSKT2_ALLOW_EXTERNAL_SCRATCH
+80051c84   _ti_sdo_fc_multiProcess
+80051c88   _ti_sdo_ce_alg_ALG_useHeap
+80051c8c   _ti_sdo_ce_alg_ALG_useCache
+80051c90   _ti_sdo_ce_alg_ALG_maxGroups
+80051c94   _ti_sdo_ce_alg_ipcKey
+80051c98   _Memory_numHeaps
+80051c9c   _Global_traceBufferSize
+80051ca0   __DSKT2_memTabList
+80051ca4   __DSKT2_activeAlg
+80051ca8   __DSKT2_lastActiveAlg
+80051cac   __DSKT2_scratchShareRefCount
+80051cb0   __DSKT2_heapId
+80051cb4   __DSKT2_createCallbackFxn
+80051cb8   __DSKT2_algReferenceCount
+80051cbc   __DSKT2_NumYielded
+80051cc0   __DSKT2_yielded
+80051cec   _MEM_memtab
+80051d04   DDR2
+80051d04   HST_DSMBUFSEG
+80051d04   MEM_MALLOCSEG
+80051d04   MEM_SEGZERO
+80051d04   RTDX_DATAMEMSEG
+80051d04   TSK_STACKSEG
+80051d04   _DDR
+80051d04   _DDR2
+80051d04   _Memory_SEGID
+80051d04   __DSKT2_HEAP
+80051d04   __DSKT_EPROG
+80051d04   __DSKT_ESDATA
+80051d08   L1DSRAM
+80051d08   _L1DHEAP
+80051d08   _L1DSRAM
+80051d08   __DSKT_DARAM0
+80051d08   __DSKT_DARAM1
+80051d08   __DSKT_DARAM2
+80051d08   __DSKT_IPROG
+80051d08   __DSKT_SARAM0
+80051d08   __DSKT_SARAM1
+80051d08   __DSKT_SARAM2
+80051d0c   _CLK_htimePerLtime
+80051d10   _EXC_sysTrapTable
+80051d18   _EXC_returnPtr
+80051d32   _Engine_alwaysCollectDspTrace
+80051d34   _Engine_ceDebugDspTraceMask
+80051d70   HWI_D_spsave
+80051d70   _HWI_D_spsave
+80051d70   _HWI_data
+80051d7c   _HWI_D_inhwi
+80051d80   HWI_D_bss
+80051d84   HWI_D_ccmask
+80051da0   _EXC_exceptionHook
+80051da4   _EXC_internalHook
+80051da8   _EXC_externalHook
+80051dac   _EXC_nmiHook
+80051db0   _TSK_nTasks
+80051db4   _TSK_pid
+80051db8   _TSK
+80051dd4   _CLK_DFLTMICROSECS
+80051dd8   _CLK_D_microseconds
+80051ddc   _SYS_exitStackPtr
+80051de0   _SYS_exitStackTop
+80051de4   _ti_sdo_ce__versionString
+80051de8   _ti_sdo_ce__whatString
+80051dec   _Lock_system
+80051df8   _MEM
+80051dfc   _MEM_staticMemtab
+80051e00   _MSGQ
+80051e04   _POOL
+80051e0c   _Server_holdingTraceToken
+80051e18   _Trace_system
+80051e2c   ___end__
+80051e2c   end
+80051e30   TSK_idle$stack
+800521c8   TSK_idle$stkptr
+80052230   GBL_stackbeg
+80052230   _HWI_STKTOP
+80052230   __stack
+80052628   _HWI_STKBOTTOM
+8005262f   GBL_stackend
+80052630   __CIOBUF_
+800527dc   SYS$config
+800527ec   CLK_A_TABBEG
+800527ec   PRD_clock
+800527ec   _PRD_clock
+800527f0   CLK_null
+800527f4   IDL_A_TABBEG
+800527f4   Load_cpuloadIdlObj
+800527f4   _Load_cpuloadIdlObj
+800527f8   IDL_END
+80052800   ti_sdo_ce_osal_LOG_Buffer$buf
+80052c00   HWI_A_VECS
+80052c00   hwi0
+80052c20   hwi1
+80052c40   hwi2
+80052c60   hwi3
+80052c80   hwi4
+80052ca0   hwi5
+80052cc0   hwi6
+80052ce0   hwi7
+80052d00   hwi8
+80052d20   hwi9
+80052d40   hwi10
+80052d60   hwi11
+80052d80   hwi12
+80052da0   hwi13
+80052dc0   hwi14
+80052de0   hwi15
+80052e00   _SYS_PUTCBEG
+80052fff   _SYS_PUTCEND
+80053000   LOG_system$buf
+8005310c   TSK_idle
+8005310c   _TSK_idle
+80053194   LOG_A_TABBEG
+80053194   LOG_system
+80053194   _LOG_A_TABBEG
+80053194   _LOG_system
+800531ac   _ti_sdo_ce_osal_LOG_Buffer
+800531ac   ti_sdo_ce_osal_LOG_Buffer
+800531c4   KNL_swi
+800531c4   LOG_A_TABEND
+800531c4   SWI_A_TABBEG
+800531c4   _KNL_swi
+800531c4   _LOG_A_TABEND
+800531f0   IDL_A_CALBEG
+800531f0   Load_cpuloadIdlObj$
+800531f0   SWI_A_TABEND
+800531f4   IDL_END$
+ffffffff   CACHE_L1D
+ffffffff   CACHE_L2
+ffffffff   ECM_EVTMASK0
+ffffffff   ECM_EVTMASK1
+ffffffff   ECM_EVTMASK2
+ffffffff   ECM_EVTMASK3
+ffffffff   IRAM
+ffffffff   L1PSRAM
+ffffffff   _CACHE_L1D
+ffffffff   _CACHE_L2
+ffffffff   _IRAM
+ffffffff   _L1PSRAM
+ffffffff   ___TI_pprof_out_hndl
+ffffffff   ___TI_prof_data_size
+ffffffff   ___TI_prof_data_start
+ffffffff   ___binit__
+ffffffff   ___c_args__
+ffffffff   ___pinit__
+ffffffff   binit
+ffffffff   pinit
+
+[1414 symbols]

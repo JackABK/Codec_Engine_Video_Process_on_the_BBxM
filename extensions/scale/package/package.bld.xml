@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="ti.sdo.ce.examples.extensions.scale" version="1, 0, 0" producerId="undefined">
+    <units>
+        <interface name="ISCALE"/>
+    </units>
+    <sources>
+        <srcFile name="scale.c"/>
+        <srcFile name="package/package_ti.sdo.ce.examples.extensions.scale.c"/>
+        <srcFile name="scale_skel.c"/>
+        <srcFile name="scale_stubs.c"/>
+    </sources>
+    <configurations>
+    </configurations>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/package.cfg.dep" src="package.xdc"/>
+        <srcFile name="lib/scale.av5T.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/scale/scale.ov5T.dep" src="scale.c"/>
+        <srcFile name="package/lib/lib/scale/package/package_ti.sdo.ce.examples.extensions.scale.ov5T.dep" src="package/package_ti.sdo.ce.examples.extensions.scale.c"/>
+        <srcFile name="package/lib/lib/scale/scale_skel.ov5T.dep" src="scale_skel.c"/>
+        <srcFile name="package/lib/lib/scale/scale_stubs.ov5T.dep" src="scale_stubs.c"/>
+        <srcFile name="lib/scale_debug.a64P.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/scale_debug/scale.o64P.dep" src="scale.c"/>
+        <srcFile name="package/lib/lib/scale_debug/package/package_ti.sdo.ce.examples.extensions.scale.o64P.dep" src="package/package_ti.sdo.ce.examples.extensions.scale.c"/>
+        <srcFile name="package/lib/lib/scale_debug/scale_skel.o64P.dep" src="scale_skel.c"/>
+        <srcFile name="package/lib/lib/scale_debug/scale_stubs.o64P.dep" src="scale_stubs.c"/>
+        <srcFile name="lib/scale.a64P.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/scale/scale.o64P.dep" src="scale.c"/>
+        <srcFile name="package/lib/lib/scale/package/package_ti.sdo.ce.examples.extensions.scale.o64P.dep" src="package/package_ti.sdo.ce.examples.extensions.scale.c"/>
+        <srcFile name="package/lib/lib/scale/scale_skel.o64P.dep" src="scale_skel.c"/>
+        <srcFile name="package/lib/lib/scale/scale_stubs.o64P.dep" src="scale_stubs.c"/>
+        <srcFile name="lib/scale_debug.av5T.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/scale_debug/scale.ov5T.dep" src="scale.c"/>
+        <srcFile name="package/lib/lib/scale_debug/package/package_ti.sdo.ce.examples.extensions.scale.ov5T.dep" src="package/package_ti.sdo.ce.examples.extensions.scale.c"/>
+        <srcFile name="package/lib/lib/scale_debug/scale_skel.ov5T.dep" src="scale_skel.c"/>
+        <srcFile name="package/lib/lib/scale_debug/scale_stubs.ov5T.dep" src="scale_stubs.c"/>
+        <srcFile name="package/rel/ti_sdo_ce_examples_extensions_scale.tar.dep" src="package/rel/ti_sdo_ce_examples_extensions_scale.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="gnu.targets.arm.GCArmv5T"
+            version="gnu.targets.arm.GCArmv5T{1,0,4.3,3"
+            platform="host.platforms.arm"
+            isa="v5T"
+            suffix="v5T"
+            rootDir="/home/jack/CodeSourcery/Sourcery_G++_Lite/"
+            os="Linux"
+            rts="gnu.targets.arm.rtsv5T">
+            <model endian="little"
+                codeModel="undefined"
+                dataModel="undefined"/>
+        </target>
+        <target name="ti.targets.C64P"
+            version="ti.targets.C64P{1,0,6.1,14"
+            platform="ti.platforms.sim6xxx:TMS320CDM420"
+            isa="64P"
+            suffix="64P"
+            rootDir="/home/jack/ti-dvsdk_dm3730-evm_4_01_00_09/cgt6x_6_1_14"
+            os="undefined"
+            rts="ti.targets.rts6000">
+            <model endian="little"
+                codeModel="undefined"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    <library name="lib/scale"
+        pname="lib/scale.av5T"
+        profile="release"
+        target="gnu.targets.arm.GCArmv5T"/>
+    <library name="lib/scale_debug"
+        pname="lib/scale_debug.a64P"
+        profile="debug"
+        target="ti.targets.C64P"/>
+    <library name="lib/scale"
+        pname="lib/scale.a64P"
+        profile="release"
+        target="ti.targets.C64P"/>
+    <library name="lib/scale_debug"
+        pname="lib/scale_debug.av5T"
+        profile="debug"
+        target="gnu.targets.arm.GCArmv5T"/>
+    </libraries>
+    <executables>
+    </executables>
+    <tests>
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="ti_sdo_ce_examples_extensions_scale"
+        pname="ti_sdo_ce_examples_extensions_scale.tar"
+        label="default"
+    >
+        <file name="lib/scale.a64P"/>
+        <file name="package/package.cfg.xdc.inc"/>
+        <file name="package/package.xdc.inc"/>
+        <file name="lib/scale_debug.av5T"/>
+        <file name="package/package.rel.dot"/>
+        <file name="scale.h"/>
+        <file name="package/package.bld.xml"/>
+        <file name="lib/scale_debug.a64P"/>
+        <file name="lib/scale.av5T"/>
+        <file name="package/package.ext.xml"/>
+        <file name="package/build.cfg"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>
