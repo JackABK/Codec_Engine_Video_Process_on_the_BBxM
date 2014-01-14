@@ -101,10 +101,19 @@ static String usage = "%s: input-file output-file\n";
 static Void encode_decode(VIDENC_Handle enc, VIDDEC_Handle dec, FILE *in,
     FILE *out);
 
+
+/*global uart fd var.*/
+struct fd{
+	int uart1;
+	int uart2;
+}fd;
+
+
+/*function define the here.*/
+void read_uart1_task(void *p);
+void read_uart2_task(void *p);
+
 extern GT_Mask curMask;
-
-
-
 
 /*=====v4l2 need to used parameter=====*/
 typedef int BOOL;
@@ -117,8 +126,7 @@ typedef int BOOL;
 
 
 /*extern by v4l2 used buffers raw data*/
-extern struct buffer
-{
+extern struct buffer{
     void * start;
     unsigned int length;
 } * buffers;
@@ -167,6 +175,9 @@ Int smain(Int argc, String argv[])
     String inFile, outFile;
     Memory_AllocParams allocParams;
 
+
+    
+#if 0
     if (argc <= 1) {
         inFile = "./in.dat";
         outFile = "./out.dat";
@@ -181,6 +192,19 @@ Int smain(Int argc, String argv[])
         fprintf(stderr, usage, argv[0]);
         exit(1);
     }
+ #endif   
+
+
+        /*init uart*/
+        uart_init(fd.uart1);
+		uart_init(fd.uart2);
+ 
+         /*thread*/
+         pthread_t thread1 , thread2; 
+         pthread_create(&thread1, NULL , &read_uart1_task, NULL);
+         pthread_create(&thread2, NULL , &read_uart2_task, NULL);
+
+
 
     GT_0trace(curMask, GT_1CLASS, "App-> Application started.\n");
 
@@ -518,3 +542,44 @@ static Void encode_decode(VIDENC_Handle enc, VIDDEC_Handle dec, FILE *in,
  *  @(#) ti.sdo.ce.examples.apps.video_copy; 1, 0, 0,74; 9-20-2010 16:40:32; /db/atree/library/trees/ce/ce-r09x/src/ xlibrary
 
  */
+
+
+/*uart1 read task*/
+void read_uart1_task(void *p)
+{
+        int res;
+        char buf[256];
+        while(1){
+                /*receive from uart*/
+                res = read(fd.uart1, buf, 255);
+                buf[res]=0;
+                printf("res=%d buf=%s\n", res, buf);
+                if (buf[0] == '@') break;
+
+                /*Send to Arduino*/
+                //res=write(fd_usb , buf , sizeof(buf));
+
+                /*else do not somthing*/        
+        }
+        return NULL;
+}
+
+/*uart2 read task*/
+void read_uart2_task(void *p)
+{
+        int res;
+        char buf[256];
+        while(1){
+                /*receive from uart*/
+                res = read(fd.uart2, buf, 255);
+                buf[res]=0;
+                printf("res=%d buf=%s\n", res, buf);
+                if (buf[0] == '@') break;
+
+                /*Send to Arduino*/
+                //res=write(fd_usb , buf , sizeof(buf));
+
+                /*else do not somthing*/        
+        }
+        return NULL;
+}
